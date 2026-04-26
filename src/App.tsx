@@ -1,0 +1,751 @@
+import { useState, useMemo, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import {
+  Search,
+  Book,
+  Brain,
+  GraduationCap,
+  LayoutDashboard,
+  ChevronRight,
+  Menu,
+  X,
+  ArrowLeft,
+  SearchX,
+  Sparkles,
+  Send,
+  MessageCircle,
+  Clock,
+  ExternalLink,
+  ChevronDown,
+  FileText,
+  Settings,
+  Key
+} from 'lucide-react';
+import { TOPICS } from './data';
+import { ModuleCategory, Topic, Section } from './types';
+import { askAiMentor } from './services/geminiService';
+
+const Visualizer = ({ section }: { section: Section }) => {
+  if (!section.visualization) return null;
+
+  const { type, data } = section.visualization;
+
+  return (
+    <div className="mt-6 p-6 bg-slate-900 rounded-2xl overflow-hidden border border-slate-700 shadow-inner">
+      <div className="flex items-center gap-2 mb-4 text-indigo-400 font-bold text-[10px] uppercase tracking-widest">
+        <Sparkles className="w-3 h-3" /> Visualisasi AI
+      </div>
+      
+      {type === 'workflow' && (
+        <div className="flex flex-col md:flex-row items-center gap-4">
+          {(data as string[]).map((step, i) => (
+            <div key={i} className="flex flex-col md:flex-row items-center gap-4 flex-1">
+              <div className="p-3 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-indigo-100 text-xs font-bold text-center w-full">
+                {step}
+              </div>
+              {i < (data as string[]).length - 1 && (
+                <ChevronRight className="w-4 h-4 text-slate-600 rotate-90 md:rotate-0" />
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {type === 'comparison' && (
+        <div className="grid grid-cols-2 gap-4">
+           <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-xl">
+             <p className="text-green-400 text-[10px] font-black uppercase mb-2">Tipe A</p>
+             <p className="text-white text-sm font-bold">{data.left}</p>
+           </div>
+           <div className="p-4 bg-amber-500/10 border border-amber-500/20 rounded-xl">
+              <p className="text-amber-400 text-[10px] font-black uppercase mb-2">Tipe B</p>
+              <p className="text-white text-sm font-bold">{data.right}</p>
+           </div>
+        </div>
+      )}
+
+      {type === 'concept-map' && (
+        <div className="flex flex-wrap justify-center gap-4 p-4">
+          {(data as string[]).map((node, i) => (
+            <div key={i} className="px-5 py-2 bg-gradient-to-r from- indigo-600 to-indigo-800 rounded-full text-white text-sm font-bold shadow-lg shadow-indigo-500/20">
+              {node}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+const App = () => {
+  // Existing states...
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<ModuleCategory | 'Dashboard'>('Dashboard');
+  const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  
+  // AI Chat States
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [chatInput, setChatInput] = useState('');
+  const [chatMessages, setChatMessages] = useState<{ role: 'user' | 'ai', text: string }[]>([]);
+  const [isAiLoading, setIsAiLoading] = useState(false);
+  const [userApiKey, setUserApiKey] = useState(() => localStorage.getItem('GEMINI_API_KEY') || '');
+  const [showApiSettings, setShowApiSettings] = useState(false);
+  const chatEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [chatMessages]);
+
+  const filteredTopics = useMemo(() => {
+    return TOPICS.filter((t) => {
+      const matchesSearch =
+        t.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        t.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        t.sections.some(s => s.content.toLowerCase().includes(searchQuery.toLowerCase()));
+
+      const matchesCategory =
+        selectedCategory === 'Dashboard' || t.category === selectedCategory;
+
+      return matchesSearch && matchesCategory;
+    });
+  }, [searchQuery, selectedCategory]);
+
+  const stats = {
+    total: TOPICS.length,
+    pedagogik: TOPICS.filter(t => t.category === ModuleCategory.PEDAGOGIK).length,
+    profesional: TOPICS.filter(t => t.category === ModuleCategory.PROFESIONAL).length,
+    perangkat: TOPICS.filter(t => t.category === ModuleCategory.PERANGKAT).length,
+    quizCount: 200
+  };
+
+  const navItems = [
+    { label: 'Dashboard', icon: LayoutDashboard, val: 'Dashboard' },
+    { label: 'Profesional', icon: GraduationCap, val: ModuleCategory.PROFESIONAL, stat: stats.profesional },
+    { label: 'Pedagogik', icon: Brain, val: ModuleCategory.PEDAGOGIK, stat: stats.pedagogik },
+    { label: 'Perangkat', icon: Book, val: ModuleCategory.PERANGKAT, stat: stats.perangkat },
+    { label: 'Ujian Mandiri', icon: FileText, val: 'Quiz', stat: stats.quizCount },
+  ];
+
+  const categories = [
+    { name: 'Profesional', icon: '📐', color: '#DCFCE7', val: ModuleCategory.PROFESIONAL, detail: `${stats.profesional} Materi PAI` },
+    { name: 'Pedagogik', icon: '🧬', color: '#E0E7FF', val: ModuleCategory.PEDAGOGIK, detail: `${stats.pedagogik} Materi Utama` },
+    { name: 'Perangkat', icon: '📝', color: '#FEF9C3', val: ModuleCategory.PERANGKAT, detail: `${stats.perangkat} Modul Belajar` },
+    { name: 'Bank Soal', icon: '📝', color: '#FFEDD5', val: 'Quiz', detail: `${stats.quizCount} Latihan Soal` },
+  ];
+
+  const handleSendMessage = async () => {
+    if (!chatInput.trim()) return;
+    
+    const userMsg = chatInput;
+    setChatMessages(prev => [...prev, { role: 'user', text: userMsg }]);
+    setChatInput('');
+    setIsAiLoading(true);
+
+    const context = selectedTopic 
+      ? `Topik: ${selectedTopic.title}. Ringkasan: ${selectedTopic.summary}`
+      : "Umum PPG PAI";
+      
+    const aiResponse = await askAiMentor(userMsg, context, userApiKey);
+    setChatMessages(prev => [...prev, { role: 'ai', text: aiResponse }]);
+    setIsAiLoading(false);
+  };
+
+  const handleSaveApiKey = (key: string) => {
+    setUserApiKey(key);
+    localStorage.setItem('GEMINI_API_KEY', key);
+    setShowApiSettings(false);
+  };
+
+  return (
+    <div className="flex flex-col md:grid md:grid-cols-[260px_1fr] grid-rows-[64px_1fr] h-screen w-full bg-slate-50 overflow-hidden font-sans">
+      {/* Existing Header... */}
+      <header className="col-span-2 bg-white border-b border-slate-200 flex items-center px-4 md:px-6 justify-between z-40 h-16 shrink-0 shadow-sm">
+        <div className="flex items-center gap-3">
+          <button 
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            className="p-2 md:hidden hover:bg-slate-100 rounded-lg transition-colors"
+          >
+            <Menu className="w-5 h-5 text-slate-600" />
+          </button>
+          <div className="bg-gradient-to-br from-indigo-600 to-indigo-800 w-9 h-9 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-200">
+            <Sparkles className="w-5 h-5 text-white" />
+          </div>
+          <div>
+            <span className="text-xl font-black tracking-tighter text-slate-900">SakuPedia</span>
+            <span className="text-[10px] block font-bold text-indigo-500 tracking-widest uppercase -mt-1 ml-0.5">Guru AI Edition</span>
+          </div>
+        </div>
+
+        <div className="hidden md:flex flex-1 max-w-xl mx-12 relative group">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 group-focus-within:text-indigo-500 transition-colors" />
+          <input
+            type="text"
+            placeholder="Cari teori, PBL, PjBL, atau dalil..."
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              if (selectedTopic) setSelectedTopic(null);
+            }}
+            className="w-full bg-slate-100/80 border-2 border-transparent rounded-2xl py-2.5 pl-12 pr-4 text-sm focus:bg-white focus:border-indigo-100 focus:ring-4 focus:ring-indigo-500/5 transition-all outline-none"
+          />
+        </div>
+
+        <div className="flex items-center gap-4">
+           <button 
+             onClick={() => setIsChatOpen(!isChatOpen)}
+             className="relative flex items-center justify-center w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all group"
+           >
+             <MessageCircle className="w-5 h-5" />
+             {chatMessages.length > 0 && (
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-white ring-1 ring-red-200">
+                  {chatMessages.length}
+                </span>
+             )}
+           </button>
+           <div className="hidden sm:block text-right">
+              <p className="text-xs font-bold text-slate-900">Aminudin</p>
+              <p className="text-[9px] font-bold text-green-600 uppercase tracking-wider">Online</p>
+           </div>
+           <div className="w-10 h-10 bg-slate-100 rounded-xl border border-slate-200 flex items-center justify-center text-slate-400">
+             <GraduationCap className="w-6 h-6" />
+           </div>
+        </div>
+      </header>
+
+
+
+      {/* Sidebar Overlay */}
+      <AnimatePresence>
+        {isSidebarOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsSidebarOpen(false)}
+            className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 md:hidden"
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Sidebar */}
+      <aside className={`
+        fixed inset-y-0 left-0 w-64 bg-white border-r border-slate-200 p-5 flex flex-col gap-1 z-[60] transition-transform duration-300 transform md:relative md:translate-x-0 md:z-auto
+        ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+      `}>
+        <div className="flex md:hidden items-center justify-between mb-6">
+          <span className="text-lg font-bold text-slate-900">Menu</span>
+          <button onClick={() => setIsSidebarOpen(false)}>
+            <X className="w-5 h-5 text-slate-400" />
+          </button>
+        </div>
+
+        <div className="text-[11px] font-bold uppercase text-slate-400 mb-3 px-3 tracking-widest leading-none">Menu Utama</div>
+        {navItems.map((item) => (
+          <button
+            key={item.label}
+            onClick={() => {
+              setSelectedCategory(item.val as any);
+              setSelectedTopic(null);
+              setSearchQuery('');
+              setIsSidebarOpen(false);
+            }}
+            className={`nav-item ${selectedCategory === item.val ? 'active' : ''}`}
+          >
+            <item.icon className="w-4 h-4" />
+            <span>{item.label}</span>
+            {item.stat !== undefined && <span className="stat-badge">{item.stat}</span>}
+          </button>
+        ))}
+        
+        <div className="h-px bg-slate-100 my-4 mx-3" />
+        <div className="text-[11px] font-bold uppercase text-slate-400 mb-3 px-3 tracking-widest leading-none">Koleksi</div>
+        <div className="nav-item"><span>⭐️</span> Favorit</div>
+        <div className="nav-item"><span>🕒</span> Terakhir Dibaca</div>
+        
+        <div className="mt-auto p-3 bg-slate-50 rounded-xl border border-slate-100">
+           <p className="text-[10px] text-slate-400 font-mono">V 2.0 • 2025</p>
+        </div>
+      </aside>
+
+      {/* Main Content Area */}
+      <main className="p-4 md:p-8 overflow-y-auto flex flex-col gap-8 custom-scrollbar col-start-2 row-start-2 h-full">
+        {/* Mobile Search */}
+        <div className="md:hidden relative group">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+          <input
+            type="text"
+            placeholder="Cari materi..."
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              if (selectedTopic) setSelectedTopic(null);
+            }}
+            className="w-full bg-white border border-slate-200 rounded-xl py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-indigo-500/20 transition-all outline-none shadow-sm"
+          />
+        </div>
+        <AnimatePresence mode="wait">
+          {selectedTopic ? (
+            <motion.div
+              key="detail"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="max-w-4xl mx-auto w-full space-y-6"
+            >
+              <button 
+                onClick={() => setSelectedTopic(null)}
+                className="flex items-center gap-2 text-indigo-600 font-semibold text-sm hover:translate-x-[-4px] transition-transform"
+              >
+                <ArrowLeft className="w-4 h-4" /> Kembali
+              </button>
+
+              <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                <div className="p-8 border-b border-slate-100 bg-slate-50/30">
+                  <span className="tag tag-blue mb-4">{selectedTopic.category}</span>
+                  <h1 className="text-3xl font-extrabold text-slate-900 mb-4">{selectedTopic.title}</h1>
+                  <p className="text-slate-500 leading-relaxed text-lg">{selectedTopic.summary}</p>
+                </div>
+                
+                <div className="p-8 space-y-10">
+                  {selectedTopic.sections.map((section, idx) => (
+                    <section key={idx} className="space-y-4">
+                      <h3 className="text-xl font-bold text-slate-800 flex items-center gap-2">
+                        <div className="w-1.5 h-6 bg-indigo-500 rounded-full" />
+                        {section.title}
+                      </h3>
+                      <p className="text-slate-600 leading-relaxed">{section.content}</p>
+                      {section.subsections && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                           {section.subsections.map((sub, sIdx) => (
+                             <div key={sIdx} className="p-5 bg-slate-50 rounded-xl border border-slate-200/60">
+                               <h4 className="font-bold text-slate-800 text-sm mb-2">{sub.title}</h4>
+                               <p className="text-sm text-slate-500 leading-relaxed">{sub.content}</p>
+                             </div>
+                           ))}
+                        </div>
+                      )}
+                      
+                      {/* Visualizer Component */}
+                      <Visualizer section={section} />
+                    </section>
+                  ))}
+
+                  {selectedTopic.readingMaterial && (
+                    <div className="pt-10 border-t border-slate-100">
+                      <div className="flex items-center gap-3 mb-6">
+                         <div className="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center font-bold">
+                           <Book className="w-5 h-5" />
+                         </div>
+                         <div>
+                            <h3 className="font-bold text-slate-900">Materi Referensi Mendalam</h3>
+                            <p className="text-xs text-slate-400 font-medium tracking-wide">SUMBER: MODUL PPG PAI 2025</p>
+                         </div>
+                      </div>
+                      <div className="reading-content p-8 bg-indigo-50/30 rounded-3xl border border-indigo-100/50 leading-loose text-slate-600 italic">
+                        {selectedTopic.readingMaterial}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Quick AI Tip Card */}
+              <div className="p-6 bg-gradient-to-br from-slate-900 to-indigo-950 rounded-3xl text-white flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden relative group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl group-hover:bg-indigo-500/20 transition-all" />
+                <div className="space-y-2 relative z-10">
+                   <h4 className="text-lg font-bold flex items-center gap-2">
+                     <Sparkles className="w-5 h-5 text-indigo-400" /> Tanya Mentor AI
+                   </h4>
+                   <p className="text-sm text-slate-300 max-w-md">
+                     Ingin tahu implementasi praktis atau dalil terkait topik ini? Tanyakan langsung pada SakuPedia AI.
+                   </p>
+                </div>
+                <button 
+                  onClick={() => setIsChatOpen(true)}
+                  className="px-8 py-3 bg-white text-indigo-950 font-black rounded-xl hover:bg-indigo-50 transition-all relative z-10"
+                >
+                  Mulai Diskusi
+                </button>
+              </div>
+            </motion.div>
+          ) : selectedCategory === 'Quiz' ? (
+            <motion.div
+              key="quiz"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="space-y-8"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-2xl font-black text-slate-900">Ujian Mandiri & Bank Soal</h2>
+                  <p className="text-slate-500 font-medium">100 Soal PG & 100 Soal Essay Terintegrasi</p>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                   <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                     <FileText className="w-6 h-6" />
+                   </div>
+                   <h3 className="font-bold text-lg text-slate-900">Pilihan Ganda (100 Soal)</h3>
+                   <p className="text-sm text-slate-500 mb-6">Latihan soal objektif dengan kunci jawaban dan penjelasan mendalam.</p>
+                   <button className="w-full py-3 bg-slate-100 rounded-xl font-bold text-slate-600 hover:bg-slate-900 hover:text-white transition-all">Lihat Bank Soal PG</button>
+                </div>
+
+                <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                   <div className="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                     <Book className="w-6 h-6" />
+                   </div>
+                   <h3 className="font-bold text-lg text-slate-900">Soal Essay (100 Soal)</h3>
+                   <p className="text-sm text-slate-500 mb-6">Latihan soal uraian untuk menguji pemahaman konsep dan pedagogik.</p>
+                   <button className="w-full py-3 bg-slate-100 rounded-xl font-bold text-slate-600 hover:bg-slate-900 hover:text-white transition-all">Lihat Bank Soal Essay</button>
+                </div>
+              </div>
+
+              <div className="p-8 bg-indigo-50 rounded-3xl border border-indigo-100">
+                <h4 className="font-bold text-indigo-900 mb-2">Panduan Belajar:</h4>
+                <p className="text-sm text-indigo-700 leading-relaxed">
+                  Semua soal disusun berdasarkan 24 modul referensi PPG PAI. Disarankan untuk membaca materi di modul utama sebelum mengerjakan latihan soal ini untuk hasil maksimal.
+                </p>
+              </div>
+            </motion.div>
+          ) : selectedCategory === 'Dashboard' && !searchQuery ? (
+
+            <motion.div
+              key="dashboard"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="flex flex-col gap-8 w-full max-w-6xl mx-auto"
+            >
+              <div className="flex justify-between items-end border-b border-slate-200 pb-6">
+                <div className="space-y-1">
+                  <h1 className="text-4xl font-extrabold text-slate-900 tracking-tighter">Selamat Belajar, Guru! 👋</h1>
+                  <p className="text-slate-500 font-medium">{new Intl.DateTimeFormat('id-ID', { dateStyle: 'full' }).format(new Date())}</p>
+                </div>
+                <div className="flex gap-2">
+                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold">TERHUBUNG</span>
+                </div>
+              </div>
+
+              {/* Category Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {categories.map((cat) => (
+                  <div 
+                    key={cat.name} 
+                    className="category-card"
+                    onClick={() => {
+                        if (cat.val !== 'Dashboard') {
+                            setSelectedCategory(cat.val as ModuleCategory);
+                        }
+                    }}
+                  >
+                    <div className="icon-circle" style={{ backgroundColor: cat.color }}>{cat.icon}</div>
+                    <div>
+                      <div className="font-bold text-slate-900">{cat.name}</div>
+                      <div className="text-[12px] text-slate-500 font-medium">{cat.detail}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Content Preview */}
+              <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] min-h-[400px]">
+                <div className="p-8 border-r border-slate-100">
+                   <span className="tag tag-blue mb-4">Materi Unggulan</span>
+                   <h2 className="text-3xl font-extrabold text-slate-900 mb-4">{TOPICS[2].title}</h2>
+                   <p className="text-slate-500 leading-relaxed mb-8">
+                     {TOPICS[2].summary} {TOPICS[2].sections[0].content}
+                   </p>
+                   
+                   <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                      <code className="text-indigo-600 font-black text-lg block mb-2 font-mono">QS. Al-Baqarah: 143</code>
+                      <p className="text-xs text-slate-500 font-medium italic border-l-2 border-indigo-200 pl-4 py-1">
+                        "Dan demikian pula Kami telah menjadikan kamu (umat Islam) umat pertengahan agar kamu menjadi saksi atas (perbuatan) manusia..."
+                      </p>
+                   </div>
+                </div>
+                <div className="bg-slate-50/50 p-8 flex flex-col">
+                  <h3 className="text-lg font-bold text-slate-800 mb-6">Ringkasan Moderasi</h3>
+                  <ul className="space-y-4 flex-1">
+                    {[
+                      { t: 'Tawassuth', d: 'Membentuk cara pandang yang seimbang dan tidak ekstrem.' },
+                      { t: 'Toleransi', d: 'Menghargai perbedaan SARA sebagai fitrah manusia.' },
+                      { t: 'Keadilan', d: 'Menegakkan hak dan kewajiban secara proporsional.' },
+                    ].map((item, i) => (
+                      <li key={i} className="flex gap-4 items-start">
+                        <div className="w-2 h-2 rounded-full bg-indigo-500 mt-2 shrink-0" />
+                        <div className="space-y-1">
+                          <p className="text-sm font-bold text-slate-700 leading-none">{item.t}</p>
+                          <p className="text-xs text-slate-500 leading-relaxed font-medium">{item.d}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="pt-8 space-y-3">
+                    <button 
+                      onClick={() => setSelectedTopic(TOPICS[2])}
+                      className="w-full py-3 bg-indigo-600 text-white rounded-xl font-bold text-sm hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200"
+                    >
+                      Buka Materi Lengkap
+                    </button>
+                    <button className="w-full py-3 border border-slate-200 text-slate-600 rounded-xl font-bold text-sm hover:bg-white transition-all bg-transparent">
+                      Simpan ke Favorit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ) : (
+            <motion.div
+              key="list"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="space-y-6 w-full max-w-6xl mx-auto"
+            >
+              <div className="flex items-center justify-between mb-2">
+                <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+                  {searchQuery ? `Hasil Pencarian: "${searchQuery}"` : selectedCategory}
+                </h2>
+                <span className="text-xs font-bold text-slate-400 bg-slate-200/50 px-2 py-1 rounded">
+                  {filteredTopics.length} TEMUAN
+                </span>
+              </div>
+
+              {filteredTopics.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {filteredTopics.map((topic) => (
+                    <button
+                      key={topic.id}
+                      onClick={() => setSelectedTopic(topic)}
+                      className="text-left bg-white border border-slate-200 p-6 rounded-2xl hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/5 transition-all group relative"
+                    >
+                      <div className="flex justify-between items-start mb-4">
+                        <div className="p-2.5 bg-indigo-50 text-indigo-600 rounded-xl group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                          <Book className="w-5 h-5" />
+                        </div>
+                        <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-indigo-500 group-hover:translate-x-1 transition-all" />
+                      </div>
+                      <p className="text-[10px] font-black text-indigo-600 uppercase tracking-widest mb-1">{topic.category}</p>
+                      <h4 className="text-lg font-extrabold text-slate-800 mb-2">{topic.title}</h4>
+                      <p className="text-sm text-slate-500 line-clamp-2 leading-relaxed font-medium">
+                        {topic.summary}
+                      </p>
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <div className="py-24 text-center bg-white border border-slate-200 rounded-3xl">
+                  <SearchX className="w-12 h-12 text-slate-200 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-slate-800">Tidak ada materi ditemukan</h3>
+                  <p className="text-slate-500 text-sm mt-1">Coba kata kunci lain atau pilih kategori yang berbeda.</p>
+                  <button 
+                    onClick={() => { setSearchQuery(''); setSelectedCategory('Dashboard'); }}
+                    className="mt-6 px-6 py-2.5 bg-indigo-600 text-white rounded-xl font-bold text-sm shadow-lg shadow-indigo-100"
+                  >
+                    Atur Ulang
+                  </button>
+                </div>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </main>
+
+      {/* AI Chat Drawer */}
+      <AnimatePresence>
+        {isChatOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsChatOpen(false)}
+              className="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[100]"
+            />
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="fixed inset-y-0 right-0 w-full sm:w-[450px] bg-white z-[110] shadow-2xl flex flex-col border-l border-slate-200"
+            >
+              <div className="p-6 bg-indigo-600 text-white flex items-center justify-between shadow-lg">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                    <Sparkles className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold">Mentor AI SakuPedia</h3>
+                    <p className="text-[10px] text-indigo-100 uppercase tracking-widest font-black">Online • Siap Mendampingi</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1">
+                  <button 
+                    onClick={() => setShowApiSettings(!showApiSettings)}
+                    className={`p-2 rounded-lg transition-colors ${showApiSettings ? 'bg-white/20 text-white' : 'hover:bg-white/10 text-indigo-100'}`}
+                    title="API Settings"
+                  >
+                    <Settings className="w-5 h-5" />
+                  </button>
+                  <button 
+                    onClick={() => setIsChatOpen(false)}
+                    className="p-2 hover:bg-white/10 rounded-lg"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+
+              <AnimatePresence>
+                {showApiSettings && (
+                  <motion.div 
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="bg-indigo-50 border-b border-indigo-100 overflow-hidden"
+                  >
+                    <div className="p-4 space-y-3">
+                      <div className="flex items-center justify-between">
+                         <label className="text-[10px] font-black text-indigo-900 uppercase tracking-widest flex items-center gap-1">
+                           <Key className="w-3 h-3" /> Google Gemini API Key
+                         </label>
+                         <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer" className="text-[10px] text-indigo-600 font-bold hover:underline flex items-center gap-1">
+                           Dapatkan Key <ExternalLink className="w-2 h-2" />
+                         </a>
+                      </div>
+                      <div className="flex gap-2">
+                        <input 
+                          type="password"
+                          placeholder="Masukkan API Key Anda..."
+                          value={userApiKey}
+                          onChange={(e) => setUserApiKey(e.target.value)}
+                          className="flex-1 bg-white border border-indigo-200 rounded-lg py-2 px-3 text-xs outline-none focus:ring-2 focus:ring-indigo-500/20"
+                        />
+                        <button 
+                          onClick={() => handleSaveApiKey(userApiKey)}
+                          className="px-4 py-2 bg-indigo-600 text-white text-xs font-bold rounded-lg hover:bg-indigo-700 transition-all"
+                        >
+                          Simpan
+                        </button>
+                      </div>
+                      <p className="text-[9px] text-indigo-400 font-medium italic">
+                        *Key disimpan secara lokal di browser Anda dan hanya digunakan untuk memanggil AI SakuPedia.
+                      </p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              <div className="flex-1 overflow-y-auto p-6 space-y-6 bg-slate-50 custom-scrollbar">
+                {chatMessages.length === 0 && (
+                  <div className="text-center py-12 space-y-4">
+                     <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto shadow-sm border border-slate-100">
+                        <MessageCircle className="w-8 h-8 text-indigo-600" />
+                     </div>
+                     <div>
+                        <p className="font-bold text-slate-800">Halo, Bapak/Ibu Guru!</p>
+                        <p className="text-sm text-slate-500 max-w-[250px] mx-auto mt-1">
+                          Saya adalah asisten AI yang dilatih khusus dengan kurikulum PPG PAI. Apa yang bisa saya bantu hari ini?
+                        </p>
+                     </div>
+                     <div className="flex flex-wrap justify-center gap-2 pt-4">
+                        {['Apa itu PBL?', 'Contoh Takdir Muallaq', 'Download Modul AI'].map(q => (
+                          <button 
+                            key={q} 
+                            onClick={() => setChatInput(q)}
+                            className="px-4 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold text-indigo-600 hover:border-indigo-600 transition-all shadow-sm"
+                          >
+                            {q}
+                          </button>
+                        ))}
+                     </div>
+                  </div>
+                )}
+                
+                {chatMessages.map((msg, i) => (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    key={i} 
+                    className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                  >
+                    <div className={`max-w-[85%] p-4 rounded-2xl text-sm leading-relaxed ${
+                      msg.role === 'user' 
+                        ? 'bg-indigo-600 text-white rounded-tr-none' 
+                        : 'bg-white text-slate-700 shadow-sm border border-slate-200 rounded-tl-none'
+                    }`}>
+                      {msg.text}
+                    </div>
+                  </motion.div>
+                ))}
+                
+                {isAiLoading && (
+                  <div className="flex justify-start">
+                    <div className="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm border border-slate-200">
+                      <div className="flex gap-1">
+                        <div className="w-1.5 h-1.5 bg-indigo-300 rounded-full animate-bounce" />
+                        <div className="w-1.5 h-1.5 bg-indigo-500 rounded-full animate-bounce [animation-delay:0.2s]" />
+                        <div className="w-1.5 h-1.5 bg-indigo-300 rounded-full animate-bounce [animation-delay:0.4s]" />
+                      </div>
+                    </div>
+                  </div>
+                )}
+                <div ref={chatEndRef} />
+              </div>
+
+              <div className="p-4 bg-white border-t border-slate-100 flex items-center gap-3">
+                <input
+                  type="text"
+                  placeholder="Ketik pertanyaan Anda..."
+                  value={chatInput}
+                  onChange={(e) => setChatInput(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
+                  className="flex-1 bg-slate-100 border-none rounded-xl py-3 px-4 text-sm focus:ring-2 focus:ring-indigo-500/20 outline-none transition-all"
+                />
+                <button 
+                  onClick={handleSendMessage}
+                  disabled={!chatInput.trim() || isAiLoading}
+                  className="p-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 disabled:opacity-50 disabled:grayscale transition-all shadow-md shadow-indigo-100"
+                >
+                  <Send className="w-5 h-5" />
+                </button>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+const TopicCard = ({ topic, onClick }: { topic: Topic; onClick: (t: Topic) => void }) => {
+  return (
+    <button
+      id={`card-${topic.id}`}
+      onClick={() => onClick(topic)}
+      className="group text-left bg-white p-7 rounded-[32px] border border-slate-200 hover:border-blue-400 hover:shadow-2xl transition-all flex flex-col h-full relative overflow-hidden"
+    >
+      <div className="mb-6 flex justify-between items-center">
+        <span className="text-[9px] font-black tracking-widest text-blue-600 px-3 py-1 bg-blue-50 rounded-full transition-all uppercase ring-1 ring-blue-500/10">
+          {topic.category.split(' ')[0]}
+        </span>
+        <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all">
+            <ChevronRight className="w-4 h-4" />
+        </div>
+      </div>
+      <h3 className="text-xl font-bold text-slate-900 mb-3 font-display leading-tight pr-4">
+        {topic.title}
+      </h3>
+      <p className="text-sm text-slate-500 leading-relaxed line-clamp-3 mb-6">
+        {topic.summary}
+      </p>
+      
+      <div className="mt-auto pt-6 border-t border-slate-50 flex items-center text-[10px] font-black tracking-widest text-blue-500 uppercase">
+        Dalami Materi
+      </div>
+    </button>
+  );
+};
+
+export default App;

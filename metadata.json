@@ -1,0 +1,6 @@
+{
+  "name": "Buku Saku PPG PAI",
+  "description": "Aplikasi buku saku digital untuk Modul Pengembangan Perangkat Pembelajaran, Pedagogik, dan Profesional PPG PAI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["Structured Learning Materials", "Searchable Database", "Modern UI/UX"]
+}
