@@ -22,6 +22,7 @@ import {
   Key
 } from 'lucide-react';
 import { TOPICS } from './data';
+import { QUIZ_DATA, QuizQuestion } from './quizData';
 import { ModuleCategory, Topic, Section } from './types';
 import { askAiMentor } from './services/geminiService';
 
@@ -80,8 +81,9 @@ const Visualizer = ({ section }: { section: Section }) => {
 const App = () => {
   // Existing states...
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<ModuleCategory | 'Dashboard'>('Dashboard');
+  const [selectedCategory, setSelectedCategory] = useState<ModuleCategory | 'Dashboard' | 'Quiz'>('Dashboard');
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
+  const [activeQuizType, setActiveQuizType] = useState<'PG' | 'Essay' | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   
   // AI Chat States
@@ -130,7 +132,7 @@ const App = () => {
   const categories = [
     { name: 'Profesional', icon: '📐', color: '#DCFCE7', val: ModuleCategory.PROFESIONAL, detail: `${stats.profesional} Materi PAI` },
     { name: 'Pedagogik', icon: '🧬', color: '#E0E7FF', val: ModuleCategory.PEDAGOGIK, detail: `${stats.pedagogik} Materi Utama` },
-    { name: 'Perangkat', icon: '📝', color: '#FEF9C3', val: ModuleCategory.PERANGKAT, detail: `${stats.perangkat} Modul Belajar` },
+    { name: 'Perangkat', icon: '📂', color: '#FEF9C3', val: ModuleCategory.PERANGKAT, detail: `${stats.perangkat} Modul Belajar` },
     { name: 'Bank Soal', icon: '📝', color: '#FFEDD5', val: 'Quiz', detail: `${stats.quizCount} Latihan Soal` },
   ];
 
@@ -155,6 +157,14 @@ const App = () => {
     setUserApiKey(key);
     localStorage.setItem('GEMINI_API_KEY', key);
     setShowApiSettings(false);
+  };
+
+  const handleNavClick = (val: ModuleCategory | 'Dashboard' | 'Quiz') => {
+    setSelectedCategory(val);
+    setSelectedTopic(null);
+    setActiveQuizType(null);
+    setSearchQuery('');
+    setIsSidebarOpen(false);
   };
 
   return (
@@ -244,12 +254,7 @@ const App = () => {
         {navItems.map((item) => (
           <button
             key={item.label}
-            onClick={() => {
-              setSelectedCategory(item.val as any);
-              setSelectedTopic(null);
-              setSearchQuery('');
-              setIsSidebarOpen(false);
-            }}
+            onClick={() => handleNavClick(item.val as any)}
             className={`nav-item ${selectedCategory === item.val ? 'active' : ''}`}
           >
             <item.icon className="w-4 h-4" />
@@ -378,30 +383,98 @@ const App = () => {
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <h2 className="text-2xl font-black text-slate-900">Ujian Mandiri & Bank Soal</h2>
-                  <p className="text-slate-500 font-medium">100 Soal PG & 100 Soal Essay Terintegrasi</p>
+                  <div className="flex items-center gap-2 mb-1">
+                    {activeQuizType && (
+                      <button 
+                        onClick={() => setActiveQuizType(null)}
+                        className="p-1 hover:bg-slate-100 rounded-lg text-indigo-600 mr-2"
+                      >
+                        <ArrowLeft className="w-5 h-5" />
+                      </button>
+                    )}
+                    <h2 className="text-2xl font-black text-slate-900">
+                      {activeQuizType === 'PG' ? 'Bank Soal Pilihan Ganda' : activeQuizType === 'Essay' ? 'Bank Soal Essay' : 'Ujian Mandiri & Bank Soal'}
+                    </h2>
+                  </div>
+                  <p className="text-slate-500 font-medium">
+                    {activeQuizType ? `Total ${QUIZ_DATA.filter(q => q.type === activeQuizType).length} Soal` : '100 Soal PG & 100 Soal Essay Terintegrasi'}
+                  </p>
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
-                   <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                     <FileText className="w-6 h-6" />
-                   </div>
-                   <h3 className="font-bold text-lg text-slate-900">Pilihan Ganda (100 Soal)</h3>
-                   <p className="text-sm text-slate-500 mb-6">Latihan soal objektif dengan kunci jawaban dan penjelasan mendalam.</p>
-                   <button className="w-full py-3 bg-slate-100 rounded-xl font-bold text-slate-600 hover:bg-slate-900 hover:text-white transition-all">Lihat Bank Soal PG</button>
-                </div>
+              {!activeQuizType ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                    <div className="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                      <FileText className="w-6 h-6" />
+                    </div>
+                    <h3 className="font-bold text-lg text-slate-900">Pilihan Ganda (100 Soal)</h3>
+                    <p className="text-sm text-slate-500 mb-6">Latihan soal objektif dengan kunci jawaban dan penjelasan mendalam.</p>
+                    <button 
+                      onClick={() => setActiveQuizType('PG')}
+                      className="w-full py-3 bg-slate-100 rounded-xl font-bold text-slate-600 hover:bg-slate-900 hover:text-white transition-all"
+                    >
+                      Lihat Bank Soal PG
+                    </button>
+                  </div>
 
-                <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
-                   <div className="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition-colors">
-                     <Book className="w-6 h-6" />
-                   </div>
-                   <h3 className="font-bold text-lg text-slate-900">Soal Essay (100 Soal)</h3>
-                   <p className="text-sm text-slate-500 mb-6">Latihan soal uraian untuk menguji pemahaman konsep dan pedagogik.</p>
-                   <button className="w-full py-3 bg-slate-100 rounded-xl font-bold text-slate-600 hover:bg-slate-900 hover:text-white transition-all">Lihat Bank Soal Essay</button>
+                  <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                    <div className="w-12 h-12 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                      <Book className="w-6 h-6" />
+                    </div>
+                    <h3 className="font-bold text-lg text-slate-900">Soal Essay (100 Soal)</h3>
+                    <p className="text-sm text-slate-500 mb-6">Latihan soal uraian untuk menguji pemahaman konsep dan pedagogik.</p>
+                    <button 
+                      onClick={() => setActiveQuizType('Essay')}
+                      className="w-full py-3 bg-slate-100 rounded-xl font-bold text-slate-600 hover:bg-slate-900 hover:text-white transition-all"
+                    >
+                      Lihat Bank Soal Essay
+                    </button>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div className="space-y-4">
+                  {QUIZ_DATA.filter(q => q.type === activeQuizType).map((quiz, idx) => (
+                    <div key={quiz.id} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                      <div className="flex justify-between items-start">
+                        <span className="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200">
+                          {quiz.category.split(' ')[0]}
+                        </span>
+                        <span className="text-xs font-bold text-slate-400">SOAL #{idx + 1}</span>
+                      </div>
+                      <p className="text-slate-800 font-bold leading-relaxed">{quiz.question}</p>
+                      
+                      {quiz.type === 'PG' && quiz.options && (
+                        <div className="grid grid-cols-1 gap-2 mt-4">
+                          {quiz.options.map(opt => (
+                            <div key={opt} className="p-3 bg-slate-50 border border-slate-100 rounded-xl text-sm text-slate-600 flex items-center gap-3">
+                              <div className="w-6 h-6 rounded-full bg-white border border-slate-200 flex items-center justify-center text-[10px] font-bold text-slate-400">
+                                {opt.charAt(0)}
+                              </div>
+                              {opt.substring(3)}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
+                      <div className="pt-4 border-t border-slate-50">
+                        <details className="group">
+                          <summary className="flex items-center justify-between cursor-pointer list-none">
+                            <span className="text-indigo-600 font-black text-[10px] uppercase tracking-[0.2em] hover:opacity-80 transition-opacity">
+                              Lihat Kunci & Penjelasan
+                            </span>
+                            <ChevronDown className="w-4 h-4 text-slate-300 group-open:rotate-180 transition-transform" />
+                          </summary>
+                          <div className="mt-4 p-4 bg-indigo-50/50 rounded-2xl border border-indigo-100/50">
+                            <p className="text-xs font-black text-indigo-900 uppercase mb-2">Jawaban Benar: {quiz.answer}</p>
+                            <p className="text-sm text-slate-600 leading-relaxed italic">{quiz.explanation}</p>
+                          </div>
+                        </details>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               <div className="p-8 bg-indigo-50 rounded-3xl border border-indigo-100">
                 <h4 className="font-bold text-indigo-900 mb-2">Panduan Belajar:</h4>
@@ -428,19 +501,14 @@ const App = () => {
                 </div>
               </div>
 
-              {/* Category Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {categories.map((cat) => (
                   <div 
                     key={cat.name} 
-                    className="category-card"
-                    onClick={() => {
-                        if (cat.val !== 'Dashboard') {
-                            setSelectedCategory(cat.val as ModuleCategory);
-                        }
-                    }}
+                    className="category-card cursor-pointer group"
+                    onClick={() => handleNavClick(cat.val as any)}
                   >
-                    <div className="icon-circle" style={{ backgroundColor: cat.color }}>{cat.icon}</div>
+                    <div className="icon-circle group-hover:scale-110 transition-transform" style={{ backgroundColor: cat.color }}>{cat.icon}</div>
                     <div>
                       <div className="font-bold text-slate-900">{cat.name}</div>
                       <div className="text-[12px] text-slate-500 font-medium">{cat.detail}</div>
