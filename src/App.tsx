@@ -83,7 +83,132 @@ const Visualizer = ({ section }: { section: Section }) => {
   );
 };
 
-const TopicSection = ({ section, idx }: { section: Section, idx: number, key?: any }) => {
+const ProphetTimeline = ({ subsections }: { subsections: any[] }) => {
+  return (
+    <div className="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+      {subsections.map((sub, idx) => {
+        const parts = sub.content.split(' | ').reduce((acc: any, part: string) => {
+          const [key, value] = part.split(': ');
+          if (key && value) acc[key.trim()] = value.trim();
+          return acc;
+        }, {});
+
+        return (
+          <div key={idx} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+            {/* Dot */}
+            <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-100 group-hover:bg-indigo-600 transition-colors shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+              <span className="text-xs font-black text-slate-500 group-hover:text-white">{idx + 1}</span>
+            </div>
+            
+            {/* Card */}
+            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 sm:p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                <h4 className="font-black text-lg text-indigo-950 uppercase tracking-tight">{sub.title}</h4>
+                <div className="px-3 py-1 bg-indigo-50 text-indigo-700 text-[10px] font-black rounded-full uppercase tracking-widest whitespace-nowrap">
+                  {parts['Usia'] ? `Usia: ${parts['Usia']}` : 'Kisah Nabi'}
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+                <div className="space-y-1">
+                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none">Lahir & Wafat</p>
+                  <p className="text-xs text-slate-700 font-bold">{parts['Lahir'] || '-'} / {parts['Wafat'] || parts['Diangkat'] || '-'}</p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none">Kota Kelahiran</p>
+                  <p className="text-xs text-slate-700 font-bold">{parts['Kota Lahir'] || '-'}</p>
+                </div>
+                <div className="col-span-2 pt-2 border-t border-slate-100 flex items-start gap-4">
+                  <div className="w-8 h-8 bg-amber-50 rounded-lg flex items-center justify-center shrink-0">
+                    <Sparkles className="w-4 h-4 text-amber-600" />
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Misi Dakwah</p>
+                    <p className="text-xs text-slate-600 leading-relaxed italic">{parts['Dakwah'] || sub.content}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+const ParentingCard = ({ section }: { section: Section }) => {
+  return (
+    <div className="bg-rose-50/30 rounded-3xl p-6 sm:p-8 border border-rose-100 flex flex-col gap-6">
+      <div>
+        <h4 className="text-2xl font-black text-rose-900 mb-2 leading-tight">{section.title}</h4>
+        <p className="text-rose-700/80 leading-relaxed italic">{section.content}</p>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="p-5 bg-white/80 backdrop-blur-sm rounded-2xl border border-rose-100 shadow-sm shadow-rose-200/20">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-8 h-8 rounded-lg bg-rose-500 flex items-center justify-center">
+              <Sparkles className="w-4 h-4 text-white" />
+            </div>
+            <p className="text-xs font-black text-rose-900 uppercase tracking-widest">Aktivitas Belajar</p>
+          </div>
+          <p className="text-sm text-slate-600 leading-relaxed font-medium">{section.learningActivity}</p>
+        </div>
+        
+        <div className="p-5 bg-white/80 backdrop-blur-sm rounded-2xl border border-rose-100 shadow-sm shadow-rose-200/20">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center">
+              <Heart className="w-4 h-4 text-white" />
+            </div>
+            <p className="text-xs font-black text-emerald-900 uppercase tracking-widest">Penerapan Harian</p>
+          </div>
+          <p className="text-sm text-slate-600 leading-relaxed font-medium">{section.dailyLife}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const PillarGrid = ({ subsections }: { subsections: any[] }) => {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {subsections.map((sub, idx) => (
+        <div key={idx} className="group relative bg-white border border-slate-200 rounded-3xl p-6 hover:border-emerald-500 transition-all hover:shadow-xl hover:shadow-emerald-500/10">
+          <div className="absolute -top-4 -right-4 w-12 h-12 bg-slate-900 rounded-2xl flex items-center justify-center text-white font-black text-lg group-hover:bg-emerald-600 transition-colors rotate-6 group-hover:rotate-0">
+            {idx + 1}
+          </div>
+          <h4 className="text-xl font-black text-slate-950 mb-3 pr-8">{sub.title.split(': ')[1] || sub.title}</h4>
+          <p className="text-sm text-slate-500 leading-relaxed mb-4">{sub.content}</p>
+          {sub.explanation && (
+            <div className="bg-slate-50 rounded-xl p-3 border border-slate-100 italic text-[11px] text-slate-600 font-medium">
+              {sub.explanation}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const HijriyahLayout = ({ subsections }: { subsections: any[] }) => {
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      {subsections.map((sub, idx) => (
+        <div key={idx} className="flex flex-col gap-3 p-4 bg-sky-50/50 rounded-2xl border border-sky-100 hover:bg-white hover:border-sky-400 transition-all text-center group">
+          <div className="mx-auto w-10 h-10 rounded-full bg-sky-500 flex items-center justify-center text-white font-black group-hover:scale-110 transition-transform">
+            {idx + 1}
+          </div>
+          <div>
+            <h5 className="font-black text-sky-950 text-xs sm:text-sm uppercase tracking-tight">{sub.title}</h5>
+            <p className="text-[10px] text-sky-700/70 font-bold leading-tight mt-1">{sub.content}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const TopicSection = ({ section, idx, isProphets, category }: { section: Section, idx: number, isProphets?: boolean, category?: ModuleCategory, key?: any }) => {
   const [activeTab, setActiveTab] = useState<'content' | 'activity' | 'daily'>('content');
   
   return (
@@ -127,22 +252,48 @@ const TopicSection = ({ section, idx }: { section: Section, idx: number, key?: a
         >
           {activeTab === 'content' && (
             <div className="space-y-6">
-              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">{section.content}</p>
-              {section.subsections && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                   {section.subsections.map((sub, sIdx) => (
-                     <div key={sIdx} className="p-5 bg-slate-50 rounded-xl border border-slate-200/60 transition-all hover:bg-white hover:shadow-md hover:shadow-slate-200/50">
-                       <h4 className="font-bold text-slate-800 text-sm mb-2">{sub.title}</h4>
-                       <p className="text-sm text-slate-500 leading-relaxed mb-3">{sub.content}</p>
-                       {sub.explanation && (
-                         <div className="pt-3 border-t border-slate-200/60">
-                           <p className="text-[11px] font-bold text-indigo-600 uppercase tracking-widest mb-1">Penjelasan Detail:</p>
-                           <p className="text-[12px] text-slate-600 leading-relaxed italic">{sub.explanation}</p>
-                         </div>
-                       )}
-                     </div>
-                   ))}
+              {category === ModuleCategory.PARENTING ? (
+                <ParentingCard section={section} />
+              ) : isProphets && section.subsections && section.title.includes("25 Nabi") ? (
+                <div className="mt-10">
+                  <ProphetTimeline subsections={section.subsections} />
                 </div>
+              ) : category === ModuleCategory.PILLARS && section.subsections ? (
+                <div className="mt-4">
+                   <h4 className="text-xl font-black text-slate-900 mb-6 flex items-center gap-2">
+                     <div className="w-2 h-8 bg-emerald-500 rounded-full" />
+                     {section.title}
+                   </h4>
+                   <PillarGrid subsections={section.subsections} />
+                </div>
+              ) : category === ModuleCategory.HIJRIYAH && section.subsections ? (
+                <div className="mt-4">
+                  <h4 className="text-xl font-black text-sky-900 mb-6 flex items-center gap-2">
+                     <div className="w-2 h-8 bg-sky-500 rounded-full" />
+                     {section.title}
+                  </h4>
+                  <HijriyahLayout subsections={section.subsections} />
+                </div>
+              ) : (
+                <>
+                  <p className="text-slate-600 leading-relaxed text-sm sm:text-base">{section.content}</p>
+                  {section.subsections && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                       {section.subsections.map((sub, sIdx) => (
+                         <div key={sIdx} className="p-5 bg-slate-50 rounded-xl border border-slate-200/60 transition-all hover:bg-white hover:shadow-md hover:shadow-slate-200/50">
+                           <h4 className="font-bold text-slate-800 text-sm mb-2">{sub.title}</h4>
+                           <p className="text-sm text-slate-500 leading-relaxed mb-3">{sub.content}</p>
+                           {sub.explanation && (
+                             <div className="pt-3 border-t border-slate-200/60">
+                               <p className="text-[11px] font-bold text-indigo-600 uppercase tracking-widest mb-1">Penjelasan Detail:</p>
+                               <p className="text-[12px] text-slate-600 leading-relaxed italic">{sub.explanation}</p>
+                             </div>
+                           )}
+                         </div>
+                       ))}
+                    </div>
+                  )}
+                </>
               )}
               {section.explanation && !section.subsections && (
                  <div className="p-5 bg-indigo-50/50 rounded-2xl border border-indigo-100/50">
@@ -438,7 +589,13 @@ const App = () => {
                 
                 <div className="p-4 sm:p-8 space-y-12">
                   {selectedTopic.sections.map((section, idx) => (
-                    <TopicSection key={idx} section={section} idx={idx} />
+                    <TopicSection 
+                      key={idx} 
+                      section={section} 
+                      idx={idx} 
+                      isProphets={selectedTopic.category === ModuleCategory.PROPHETS}
+                      category={selectedTopic.category}
+                    />
                   ))}
 
                   {selectedTopic.readingMaterial && (
