@@ -1269,6 +1269,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Motivasi & Kesungguhan",
         content: "Nasihat tentang pentingnya usaha keras dan kejujuran.",
+        learningActivity: "Metode Setoran & Syarah: Peserta didik menghafal kata-kata mutiara dan menjelaskan maknanya di depan kelas menggunakan bahasa mereka sendiri.",
+        dailyLife: "Menjadikan mahfudzat sebagai pengingat (notifikasi) harian dalam berinteraksi dengan teman dan guru.",
         subsections: [
           {
             title: "Man Jadda Wajada",
@@ -1320,6 +1322,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Ilmu & Belajar",
         content: "Pentingnya menuntut ilmu dan mengamalkannya.",
+        learningActivity: "Diskusi Hikmah: Menganalisis kutipan mahfudzat tentang ilmu dan mempresentasikannya dalam bentuk poster digital.",
+        dailyLife: "Mempraktekkan budaya membaca setiap hari sebagai perwujudan dari semangat menuntut ilmu.",
         subsections: [
           {
             title: "Al-Ilmu Bila 'Amalin",
@@ -1371,6 +1375,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Adab & Akhlak",
         content: "Membentuk karakter yang mulia.",
+        learningActivity: "Role Play Adab: Menampilkan drama pendek yang mengilustrasikan penerapan adab sesuai mahfudzat yang dipelajari.",
+        dailyLife: "Menjaga lisan dan perilaku santun kepada orang yang lebih tua dan teman sebaya.",
         subsections: [
           {
             title: "Salamul Insan fi Hifzhil Lisan",
@@ -1422,6 +1428,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Persahabatan & Sosial",
         content: "Membangun hubungan yang baik dengan sesama.",
+        learningActivity: "Analisis Jaringan Sosial: Mengidentifikasi kriteria teman yang baik menurut mahfudzat dan mendiskusikan cara menjaga persahabatan.",
+        dailyLife: "Menjadi teman yang suportif dan selalu mengajak kepada kebaikan dalam pergaulan sehari-hari.",
         subsections: [
           {
             title: "Ikhbarit Tibqa Ash-Shadiqi",
@@ -1473,6 +1481,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Sabar & Tawakal",
         content: "Nasihat tentang keteguhan hati and kepasrahan kepada Allah.",
+        learningActivity: "Refleksi Diri: Menuliskan jurnal tentang pengalaman pribadi dalam bersabar menghadapi tantangan sesuai tuntunan mahfudzat.",
+        dailyLife: "Menghadapi kesulitan dengan tenang dan senantiasa bertawakal kepada Allah dalam setiap hasil usaha.",
         subsections: [
           {
             title: "As-Shabru ka ash-Shobbiri",
@@ -1534,6 +1544,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Kejujuran & Kebenaran",
         content: "Nilai moral tentang integritas diri.",
+        learningActivity: "Studi Kasus Integritas: Menganalisis dampak dari kejujuran dan kebohongan dalam berbagai situasi kehidupan melalui diskusi kelompok.",
+        dailyLife: "Berani berkata jujur meskipun itu sulit dan tetap memegang teguh nilai kebenaran.",
         subsections: [
           {
             title: "Qul al-Haqqa walau Kana Murran",
@@ -1595,6 +1607,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Waktu & Kesempatan",
         content: "Nasihat tentang efisiensi hidup.",
+        learningActivity: "Audit Waktu: Siswa mencatat penggunaan waktu mereka selama sehari dan mendiskusikan cara mengalokasikan waktu lebih baik berdasarkan mahfudzat.",
+        dailyLife: "Disiplin dalam membagi waktu antara belajar, beribadah, dan membantu orang tua.",
         subsections: [
           {
             title: "Anta fi Waqtika",
@@ -1656,6 +1670,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Bicara & Rahasia",
         content: "Nasihat tentang komunikasi and privasi.",
+        learningActivity: "Simulasi Komunikasi: Latihan menyampaikan pesan dengan ringkas dan menjaga rahasia teman dalam berbagai skenario.",
+        dailyLife: "Menjadi pendengar yang baik dan tidak menyebarkan berita yang belum tentu kebenarannya.",
         subsections: [
           {
             title: "Istaghnuu bi al-Kitmani",
@@ -1717,6 +1733,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Amal & Keberhasilan",
         content: "Etos kerja Islami.",
+        learningActivity: "Proyek Kebaikan: Merancang sebuah kegiatan amal kecil dan melaksanakannya sebagai bentuk kerja nyata dari nilai mahfudzat.",
+        dailyLife: "Bekerja dengan sungguh-sungguh dan menjaga kebersihan lingkungan di setiap tempat.",
         subsections: [
           {
             title: "Man Jadda Wajada (Repeat)",
@@ -1778,6 +1796,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Kebijaksanaan Hidup",
         content: "Renungan tentang eksistensi diri.",
+        learningActivity: "Menulis Esai Reflektif: Membuat tulisan tentang makna hidup dan tujuan akhirat berdasarkan kumpulan mahfudzat kebijaksanaan.",
+        dailyLife: "Selalu mengevaluasi diri (muhasabah) setiap malam sebelum tidur untuk memperbaiki kualitas hidup besok.",
         subsections: [
           {
             title: "Ad-Dunia Sijnul Mu'min",
@@ -1833,6 +1853,11 @@ export const TOPICS: Topic[] = [
             title: "Khairun Naasi Anfauhum",
             content: "خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ Meaning: Sebaik-baik manusia adalah yang paling bermanfaat.",
             explanation: "Jadikan hidupmu sebagai rahmat bagi semesta alam."
+          },
+          {
+            title: "Al-Ummu Madrasatun",
+            content: "الأُمُّ مَدْرَسَةٌ إِذَا أَعْدَدْتَهَا أَعْدَدْتَ شَعْبًا طَيِّبَ الأَعْرَاقِ Meaning: Ibu adalah sekolah pertama, jika engkau mempersiapkannya dengan baik, maka engkau mempersiapkan bangsa yang berkarakter mulia.",
+            explanation: "Peran ibu sangat vital dalam membentuk generasi masa depan yang berkualitas."
           }
         ]
       }
@@ -1847,6 +1872,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Inti Niat & Amal",
         content: "Hadits-hadits pembuka yang menjelaskan pondasi setiap perbuatan.",
+        learningActivity: "Tahfidz & Analisis: Menghafal 42 hadits secara bertahap dan membedah kandungan hukum serta hikmah setiap hadits dalam diskusi kelompok.",
+        dailyLife: "Mempraktekkan satu hadits setiap hari secara bergantian, dimulai dari hadits tentang niat dalam segala aktivitas.",
         subsections: [
           {
             title: "Hadits 1: Niat",
@@ -1873,6 +1900,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Ibadah & Larangan",
         content: "Prinsip dalam menjalankan syariat.",
+        learningActivity: "Klasifikasi Hukum: Siswa mengelompokkan hadits-hadits tentang perintah dan larangan serta mendiskusikan dampaknya dalam masyarakat.",
+        dailyLife: "Senantiasa berhati-hati dalam bertindak, memastikan apakah perbuatan tersebut sesuai syariat atau tidak.",
         subsections: [
           {
             title: "Hadits 5: Bid'ah",
@@ -1914,6 +1943,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Akhlak & Muamalah",
         content: "Interaksi sosial antar umat.",
+        learningActivity: "Simulasi Kasus: Memberikan skenario masalah sosial dan meminta siswa mencari solusinya berdasarkan hadits arba'in yang relevan.",
+        dailyLife: "Membangun hubungan yang harmonis dengan tetangga dan teman tanpa membeda-bedakan.",
         subsections: [
           {
             title: "Hadits 12: Meninggalkan yang Tak Bermanfaat",
