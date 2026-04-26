@@ -21,7 +21,8 @@ import {
   Settings,
   Key,
   BookOpen,
-  Heart
+  Heart,
+  RotateCcw
 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -766,6 +767,13 @@ const App = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-1">
+                  <button 
+                    onClick={() => setChatMessages([])}
+                    className="p-2 hover:bg-white/10 rounded-lg text-indigo-100"
+                    title="Bersihkan Chat"
+                  >
+                    <RotateCcw className="w-4 h-4" />
+                  </button>
                   <button 
                     onClick={() => setShowApiSettings(!showApiSettings)}
                     className={`p-2 rounded-lg transition-colors ${showApiSettings ? 'bg-white/20 text-white' : 'hover:bg-white/10 text-indigo-100'}`}

@@ -795,6 +795,90 @@ export const TOPICS: Topic[] = [
       }
     ]
   },
+  {
+    id: "parenting-4",
+    title: "Kecerdasan Spiritual Anak",
+    category: ModuleCategory.PARENTING,
+    summary: "Membentuk hubungan batin anak dengan Sang Pencipta melampaui sekadar rutinitas ritual.",
+    sections: [{
+      title: "Love-Based Devotion",
+      content: "Mengenalkan Allah melalui keindahan alam dan kasih sayang.",
+      learningActivity: "Journaling Syukur: Mengajak anak menulis 3 hal yang ia syukuri pada Allah setiap malam.",
+      dailyLife: "Menghubungkan keberhasilan anak dengan bantuan Allah (doa).",
+    }]
+  },
+  {
+    id: "parenting-5",
+    title: "Mengatasi Kecanduan Gadget",
+    category: ModuleCategory.PARENTING,
+    summary: "Langkah-langkah detoks digital dan membangun kebiasaan menggunakan teknologi secara sehat.",
+    sections: [{
+      title: "Digital Minimalism",
+      content: "Menetapkan zona bebas gadget di rumah (Meja makan & Kamar tidur).",
+      learningActivity: "Screen-Free Weekend: Membuat daftar kegiatan luar ruangan yang seru untuk dilakukan bersama.",
+      dailyLife: "Orang tua menjadi teladan dengan tidak bermain HP saat sedang berbicara dengan anak.",
+    }]
+  },
+  {
+    id: "parenting-6",
+    title: "Pendidikan Seks Dasar dalam Islam",
+    category: ModuleCategory.PARENTING,
+    summary: "Mengenalkan konsep aurat, privasi, dan batasan sentuhan sejak dini sesuai syariat.",
+    sections: [{
+      title: "Sentuhan Boleh & Tidak",
+      content: "Mengajarkan anak bagian tubuh mana yang hanya boleh disentuh diri sendiri dan orang tua/dokter.",
+      learningActivity: "Anatomi Kertas: Menandai area 'privasi' pada gambar tubuh manusia bersama anak.",
+      dailyLife: "Membiasakan mengetuk pintu sebelum masuk ke kamar orang lain.",
+    }]
+  },
+  {
+    id: "parenting-7",
+    title: "Budaya Literasi Al-Qur'an",
+    category: ModuleCategory.PARENTING,
+    summary: "Menjadikan rumah sebagai taman surga dengan lantunan ayat-ayat suci.",
+    sections: [{
+      title: "Home Quranic Environment",
+      content: "Menciptakan waktu khusus mengaji bersama keluarga (Maghrib-Isya).",
+      learningActivity: "Tebak Ayat: Permainan menebak sambungan ayat atau kisah di balik sebuah surat.",
+      dailyLife: "Menyetel murattal di rumah untuk menciptakan suasana tenang.",
+    }]
+  },
+  {
+    id: "parenting-8",
+    title: "Manajemen Keuangan Keluarga Syariah",
+    category: ModuleCategory.PARENTING,
+    summary: "Mengajarkan anak tentang konsep halal-haram, hemat, dan berbagi (sedekah).",
+    sections: [{
+      title: "Jar System (Tabungan Keranjang)",
+      content: "Membagi uang saku anak ke dalam tabungan: Jajan, Menabung, dan Sedekah.",
+      learningActivity: "Kalkulasi Belanja: Melibatkan anak menghitung total belanja bulanan dan memprioritaskan kebutuhan.",
+      dailyLife: "Mengajak anak memberikan sedekah langsung kepada kaum dhuafa.",
+    }]
+  },
+  {
+    id: "parenting-9",
+    title: "Manajemen Sibling Rivalry",
+    category: ModuleCategory.PARENTING,
+    summary: "Menangani konflik antar kakak-adik agar terjalin ukhuwah yang kuat.",
+    sections: [{
+      title: "Adil Tidak Harus Sama",
+      content: "Memahami bahwa setiap anak memiliki kebutuhan yang berbeda.",
+      learningActivity: "Sidang Keluarga: Membuat aturan bersama tentang bergantian menggunakan barang.",
+      dailyLife: "Jangan membandingkan kepandaian anak yang satu dengan yang lain di depan mereka.",
+    }]
+  },
+  {
+    id: "parenting-10",
+    title: "Persiapan Menjelang Baligh",
+    category: ModuleCategory.PARENTING,
+    summary: "Mendampingi masa pubertas anak dari sisi fisik, emosi, dan tanggung jawab hukum agama.",
+    sections: [{
+      title: "Welcome to Taklif",
+      content: "Menjelaskan perubahan fisik dan kewajiban ibadah yang sudah menjadi tanggungan sendiri.",
+      learningActivity: "Q&A Box: Menyediakan kotak pertanyaan anonim bagi anak untuk bertanya hal-hal 'tabu' atau sensitif.",
+      dailyLife: "Mengajarkan tata cara mandi wajib dengan sabar dan detail.",
+    }]
+  },
   // --- SMP Kelas VII (Lanjutan ke-10) ---
   {
     id: "smp7-5",
@@ -868,6 +952,42 @@ export const TOPICS: Topic[] = [
       dailyLife: "Berani membela teman yang dizalimi atau diperlakukan tidak adil.",
     }]
   },
+  {
+    id: "smp7-11",
+    title: "Sejarah: Fathu Makkah (Kemenangan Damai)",
+    category: ModuleCategory.SMP_7,
+    summary: "Strategi pembebasan kota Makkah tanpa pertumpahan darah dan pemaafan massal.",
+    sections: [{
+      title: "Indahnya Pemaafan",
+      content: "Rasulullah memaafkan penduduk Makkah yang dulu menyakitinya.",
+      learningActivity: "Role-Play: Mensimulasikan sikap memaafkan kesalahan teman yang sudah meminta maaf.",
+      dailyLife: "Tidak menyimpan dendam kepada orang yang pernah berbuat salah.",
+    }]
+  },
+  {
+    id: "smp7-12",
+    title: "Al-Qur'an: Amanah dan Kejujuran",
+    category: ModuleCategory.SMP_7,
+    summary: "Menerapkan nilai kejujuran dalam setiap perkataan dan perbuatan.",
+    sections: [{
+      title: "Sifat Orang Beriman",
+      content: "Amanah adalah titipan yang harus dijaga dan dikembalikan kepada pemiliknya.",
+      learningActivity: "Eksperimen Kantin Kejujuran: Berlatih membeli dan membayar sendiri tanpa pengawasan.",
+      dailyLife: "Mengembalikan uang kembalian yang berlebih saat belanja di warung.",
+    }]
+  },
+  {
+    id: "smp7-13",
+    title: "Fikih: Shalat Jamak dan Qashar",
+    category: ModuleCategory.SMP_7,
+    summary: "Kemudahan (Rukhshah) dalam beribadah saat sedang dalam perjalanan jauh.",
+    sections: [{
+      title: "Syarat Musafir",
+      content: "Tata cara meringkas (Qashar) dan menggabungkan (Jamak) waktu shalat.",
+      learningActivity: "Simulasi: Merancang jadwal shalat saat melakukan perjalanan studi tour sekolah.",
+      dailyLife: "Tetap menjaga shalat fardu meskipun sedang sibuk dalam perjalanan.",
+    }]
+  },
 
   // --- SMP Kelas VIII (Lanjutan ke-10) ---
   {
@@ -939,7 +1059,43 @@ export const TOPICS: Topic[] = [
       title: "Ilmuwan Abbasiyah",
       content: "Al-Khawarizmi (Matematika), Ibnu Sina (Kedokteran).",
       learningActivity: "Presentasi: Mengenalkan profil singkat satu ilmuwan Muslim dan jasanya bagi dunia.",
-      dailyLife: "Bangga menjadi muslim yang berilmu dan berpikiran maju.",
+      dailyLife: "Bangga menjadi muslim yang berilmu and berpikiran maju.",
+    }]
+  },
+  {
+    id: "smp8-11",
+    title: "Al-Qur'an: Etika Berkarya",
+    category: ModuleCategory.SMP_8,
+    summary: "Semangat kerja keras dan produktivitas sebagai bentuk ibadah.",
+    sections: [{
+      title: "Tangan di Atas",
+      content: "Islam mendorong umatnya untuk menjadi pemberi (produktif) bukan peminta.",
+      learningActivity: "Project: Merancang rencana usaha kecil-kecilan (entrepreneurship) di sekolah.",
+      dailyLife: "Mengerjakan tugas sekolah dengan sungguh-sungguh tanpa menunda.",
+    }]
+  },
+  {
+    id: "smp8-12",
+    title: "Akidah: Iman Kepada Kitab-Kitab Allah",
+    category: ModuleCategory.SMP_8,
+    summary: "Meyakini wahyu Allah sebagai pedoman hidup manusia sepanjang zaman.",
+    sections: [{
+      title: "Al-Qur'an sebagai Penyempurna",
+      content: "Kewajiban membaca, memahami, dan mengamalkan isi Al-Qur'an.",
+      learningActivity: "Kajian: Mencari ayat-ayat yang berkaitan dengan sains dalam Al-Qur'an.",
+      dailyLife: "Rutin membaca Al-Qur'an setiap selesai shalat maghrib.",
+    }]
+  },
+  {
+    id: "smp8-13",
+    title: "Fikih: Ibadah Haji dan Umrah",
+    category: ModuleCategory.SMP_8,
+    summary: "Memahami rukun, syarat, and filosofi perjalanan suci ke Baitullah.",
+    sections: [{
+      title: "Filosofi Tawaf",
+      content: "Simbol ketaatan total manusia yang berpusat pada Allah SWT.",
+      learningActivity: "Manasik: Melakukan praktik manasik haji mini di lapangan sekolah.",
+      dailyLife: "Memupuk kerinduan untuk bisa mengunjungi Ka'bah suatu hari nanti.",
     }]
   },
 
@@ -1014,6 +1170,42 @@ export const TOPICS: Topic[] = [
       content: "Kontribusi besar Islam terhadap kemajuan ilmu pengetahuan di Eropa.",
       learningActivity: "Laporan Visual: Mengumpulkan foto-foto peninggalan arsitektur Islam di dunia.",
       dailyLife: "Memiliki wawasan global dan bangga akan sejarah besar umat Islam di dunia.",
+    }]
+  },
+  {
+    id: "smp9-11",
+    title: "Sejarah: Wali Songo di Indonesia",
+    category: ModuleCategory.SMP_9,
+    summary: "Strategi dakwah kultural yang mengislamkan Nusantara dengan damai.",
+    sections: [{
+      title: "Dakwah Sunan Kalijaga",
+      content: "Penggunaan media wayang dan tembang sebagai sarana dakwah.",
+      learningActivity: "Analisis Budaya: Mencari tradisi lokal yang disisipi nilai-nilai Islam oleh para wali.",
+      dailyLife: "Menghargai budaya lokal tanpa meninggalkan prinsip-prinsip syariat.",
+    }]
+  },
+  {
+    id: "smp9-12",
+    title: "Akhlak: Etika Berbisnis",
+    category: ModuleCategory.SMP_9,
+    summary: "Prinsip kejujuran dan keadilan dalam transaksi muamalah.",
+    sections: [{
+      title: "Larangan Riba dan Curang",
+      content: "Kewajiban menyempurnakan takaran dan timbangan.",
+      learningActivity: "Market Day: Berlatih jual beli dengan jujur dan transparan di sekolah.",
+      dailyLife: "Berterus terang jika barang yang dijual/ditukar memiliki cacat.",
+    }]
+  },
+  {
+    id: "smp9-13",
+    title: "Fikih: Waris Dasar (Mawaris)",
+    category: ModuleCategory.SMP_9,
+    summary: "Pengaturan harta peninggalan secara adil berdasarkan syariat Islam.",
+    sections: [{
+      title: "Keadilan dalam Waris",
+      content: "Memahami konsep ahli waris dan pembagian porsinya.",
+      learningActivity: "Studi Kasus: Menghitung pembagian warisan dalam skenario keluarga sederhana.",
+      dailyLife: "Menghindari perselisihan dengan saudara hanya karena masalah harta.",
     }]
   },
 
