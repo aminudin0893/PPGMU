@@ -22,7 +22,8 @@ import {
   Key,
   BookOpen,
   Heart,
-  RotateCcw
+  RotateCcw,
+  Quote
 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -208,6 +209,49 @@ const HijriyahLayout = ({ subsections }: { subsections: any[] }) => {
   );
 };
 
+const ClassicTextLayout = ({ subsections }: { subsections: any[] }) => {
+  return (
+    <div className="space-y-8">
+      {subsections.map((sub, idx) => (
+        <div key={idx} className="group bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 hover:border-indigo-500 transition-all shadow-sm hover:shadow-xl hover:shadow-indigo-500/5">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-black text-xl shadow-sm">
+              {idx + 1}
+            </div>
+            <h4 className="text-xl font-black text-slate-900 tracking-tight">{sub.title}</h4>
+          </div>
+          
+          <div className="space-y-6">
+            <div className="bg-slate-50 rounded-3xl p-6 sm:p-8 text-right">
+              <p className="text-3xl sm:text-4xl text-slate-900 font-arabic leading-[1.8] tracking-wide" dir="rtl">
+                {sub.content.split('Meaning:')[0].trim()}
+              </p>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="p-4 bg-emerald-50/50 rounded-2xl border border-emerald-100">
+                <p className="text-[10px] font-black text-emerald-900 uppercase tracking-widest mb-1">Terjemahan</p>
+                <p className="text-slate-700 leading-relaxed font-medium capitalize">
+                   {sub.content.includes('Meaning:') ? sub.content.split('Meaning:')[1].trim() : sub.content}
+                </p>
+              </div>
+              
+              {sub.explanation && (
+                <div className="p-4 bg-indigo-50/30 rounded-2xl border border-indigo-100">
+                  <p className="text-[10px] font-black text-indigo-900 uppercase tracking-widest mb-1">Penjelasan & Hikmah</p>
+                  <p className="text-slate-600 leading-relaxed italic text-sm">
+                    {sub.explanation}
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const TopicSection = ({ section, idx, isProphets, category }: { section: Section, idx: number, isProphets?: boolean, category?: ModuleCategory, key?: any }) => {
   const [activeTab, setActiveTab] = useState<'content' | 'activity' | 'daily'>('content');
   
@@ -273,6 +317,10 @@ const TopicSection = ({ section, idx, isProphets, category }: { section: Section
                      {section.title}
                   </h4>
                   <HijriyahLayout subsections={section.subsections} />
+                </div>
+              ) : (category === ModuleCategory.MAHFUDZAT || category === ModuleCategory.ARBAIN) && section.subsections ? (
+                <div className="mt-4">
+                  <ClassicTextLayout subsections={section.subsections} />
                 </div>
               ) : (
                 <>
@@ -381,11 +429,15 @@ const App = () => {
     angels: TOPICS.filter(t => t.category === ModuleCategory.ANGELS).length,
     pillars: TOPICS.filter(t => t.category === ModuleCategory.PILLARS).length,
     asmaulHusna: TOPICS.filter(t => t.category === ModuleCategory.ASMAUL_HUSNA).length,
+    mahfudzat: TOPICS.filter(t => t.category === ModuleCategory.MAHFUDZAT).length,
+    arbain: TOPICS.filter(t => t.category === ModuleCategory.ARBAIN).length,
     quizCount: 200
   };
 
   const navItems = [
     { label: 'Dashboard', icon: LayoutDashboard, val: 'Dashboard' },
+    { label: "Arba'in Nawawi", icon: BookOpen, val: ModuleCategory.ARBAIN, stat: stats.arbain },
+    { label: 'Mahfudzat', icon: Quote, val: ModuleCategory.MAHFUDZAT, stat: stats.mahfudzat },
     { label: 'Profesional', icon: GraduationCap, val: ModuleCategory.PROFESIONAL, stat: stats.profesional },
     { label: 'Pedagogik', icon: Brain, val: ModuleCategory.PEDAGOGIK, stat: stats.pedagogik },
     { label: 'Perangkat', icon: Book, val: ModuleCategory.PERANGKAT, stat: stats.perangkat },
@@ -399,6 +451,8 @@ const App = () => {
   ];
 
   const categories = [
+    { name: "Arba'in", icon: '📚', color: '#F0FDFA', val: ModuleCategory.ARBAIN, detail: `${stats.arbain} Hadits Terbaik` },
+    { name: 'Mahfudzat', icon: '📜', color: '#FFF7ED', val: ModuleCategory.MAHFUDZAT, detail: `${stats.mahfudzat} Kata Mutiara` },
     { name: 'Profesional', icon: '📐', color: '#DCFCE7', val: ModuleCategory.PROFESIONAL, detail: `${stats.profesional} Materi PAI` },
     { name: 'Pedagogik', icon: '🧬', color: '#E0E7FF', val: ModuleCategory.PEDAGOGIK, detail: `${stats.pedagogik} Materi Utama` },
     { name: 'Perangkat', icon: '📂', color: '#FEF9C3', val: ModuleCategory.PERANGKAT, detail: `${stats.perangkat} Modul Belajar` },

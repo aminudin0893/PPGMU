@@ -1259,5 +1259,819 @@ export const TOPICS: Topic[] = [
         dailyLife: "Membiasakan diri mengucapkan salah satu Asmaul Husna saat melihat peristiwa yang relevan (misal: Subhanallah Ya Razzaq saat melihat panen melimpah)."
       }
     ]
+  },
+  {
+    id: "mahfudzat-1",
+    title: "Mahfudzat: Kata Mutiara Islami",
+    category: ModuleCategory.MAHFUDZAT,
+    summary: "Kumpulan kata bijak bahasa Arab yang penuh hikmah dan motivasi hidup.",
+    sections: [
+      {
+        title: "Motivasi & Kesungguhan",
+        content: "Nasihat tentang pentingnya usaha keras dan kejujuran.",
+        subsections: [
+          {
+            title: "Man Jadda Wajada",
+            content: "مَنْ جَدَّ وَجَدَ Meaning: Siapa yang bersungguh-sungguh, maka dia akan berhasil.",
+            explanation: "Kesuksesan bukanlah hasil dari keberuntungan semata, melainkan buah dari kerja keras dan ketekunan yang konsisten."
+          },
+          {
+            title: "Man Sabara Zhafira",
+            content: "مَنْ صَبَرَ ظَفِرَ Meaning: Siapa yang bersabar, maka dia akan beruntung.",
+            explanation: "Sabar adalah kunci kemenangan. Orang yang mampu menahan diri dan tetap istiqamah dalam kesulitan akan meraih hasil yang manis."
+          },
+          {
+            title: "Man Sara 'Ala Darbi Wasala",
+            content: "مَنْ سَارَ عَلَى الدَّرْبِ وَصَلَ Meaning: Barang siapa berjalan pada jalannya, maka sampailah ia.",
+            explanation: "Pentingnya memiliki visi dan tujuan yang jelas (jalur) agar usaha kita tidak sia-sia dan sampai pada target yang diinginkan."
+          },
+          {
+            title: "Jalisul Khairi Ghonimah",
+            content: "جَلِيْسُ الخَيْرِ غَنِيْمَةٌ Meaning: Teman duduk yang baik adalah keuntungan (harta rampasan).",
+            explanation: "Memiliki teman yang shalih dan bijak adalah keberuntungan besar karena mereka akan membawa kita pada kebaikan."
+          },
+          {
+            title: "Al-Waqtu Atsmanu Minad Dzahabi",
+            content: "وَقْتُ أَثْمَنُ مِنَ الذَّهَبِ Meaning: Waktu itu lebih berharga daripada emas.",
+            explanation: "Emas yang hilang bisa dicari lagi, tapi waktu yang lewat tidak akan pernah kembali. Gunakan waktu seefektif mungkin."
+          },
+          {
+            title: "Idza Shadaqa al-'Azmu",
+            content: "إِذَا صَدَقَ العَزْمُ وَضَحَ السَّبِيْلُ Meaning: Jika benar kemauannya, niscaya terbukalah jalannya.",
+            explanation: "Tekad yang kuat akan membantu kita menemukan jalan keluar dari setiap kesulitan."
+          },
+          {
+            title: "Man Ta'anna Naala Ma Taman-na",
+            content: "مَنْ تَأَنَّى نَالَ مَا تَمَنَّى Meaning: Barangsiapa berhati-hati niscaya mendapatkan apa yang ia cita-citakan.",
+            explanation: "Ketelitian and kesabaran dalam melangkah akan mengantarkan kita pada tujuan dengan selamat and sukses."
+          },
+          {
+            title: "Bi al-Imtihani Yukramu al-Mar'u",
+            content: "بالاِمْتِحَانِ يُكْرَمُ المَرْءُ أَوْ يُهَانُ Meaning: Dengan ujian seseorang itu menjadi mulia atau menjadi hina.",
+            explanation: "Ujian adalah wahana pembuktian kualitas diri. Hadapi tantangan untuk meraih derajat yang lebih tinggi."
+          },
+          {
+            title: "Ad-Dahru Yaumaani",
+            content: "الدَّهْرُ يَوْمَانِ يَوْمٌ لَكَ وَيَوْمٌ عَلَيْكَ Meaning: Waktu itu ada dua hari, hari untukmu and hari melawanmu.",
+            explanation: "Roda kehidupan selalu berputar; bersyukurlah saat di atas and bersabarlah saat di bawah."
+          }
+        ]
+      },
+      {
+        title: "Ilmu & Belajar",
+        content: "Pentingnya menuntut ilmu dan mengamalkannya.",
+        subsections: [
+          {
+            title: "Al-Ilmu Bila 'Amalin",
+            content: "العِلْمُ بِلَا عَمَلٍ كَالشَّجَرِ بِلَا ثَمَرٍ Meaning: Ilmu tanpa amal bagaikan pohon yang tidak berbuah.",
+            explanation: "Ilmu yang kita miliki tidak akan bermanfaat jika tidak dipraktikkan dalam kehidupan sehari-hari."
+          },
+          {
+            title: "Uthlubul 'Ilma minal Mahdi",
+            content: "اُطْلُبِ العِلْمَ مِنَ المَهْدِ إِلَى اللَّحْدِ Meaning: Tuntutlah ilmu dari buaian hingga liang lahat.",
+            explanation: "Belajar adalah proses seumur hidup. Tidak ada kata terlambat atau berhenti untuk mencari ilmu."
+          },
+          {
+            title: "Baidhatul Yaumi Khairun",
+            content: "بَيْضَةُ اليَوْمِ خَيْرٌ مِنْ دَجَاجَةِ الغَدِ Meaning: Telur hari ini lebih baik daripada ayam esok hari.",
+            explanation: "Sesuatu yang kecil tapi pasti (ada sekarang) lebih baik daripada sesuatu yang besar tapi masih berupa janji atau angan-angan."
+          },
+          {
+            title: "Aafatu al-'Ilmi an-Nisyanu",
+            content: "آفَةُ العِلْمِ النِّسْيَانُ Meaning: Penyakit ilmu adalah lupa.",
+            explanation: "Pentingnya mengulang-ulang pelajaran (muraja'ah) agar ilmu tetap melekat dalam ingatan."
+          },
+          {
+            title: "Khairu Jaliisin fī az-Zamaani Kitaabun",
+            content: "خَيْرُ جَلِيْسٍ فِي الزَّمَانِ كِتَابٌ Meaning: Sebaik-baik kawan duduk setiap waktu adalah buku.",
+            explanation: "Membaca buku adalah cara terbaik untuk memperkaya wawasan tanpa dibatasi ruang and waktu."
+          },
+          {
+            title: "At-Ta'allumu fī ash-Shighari",
+            content: "التَّعَلُّمُ فِي الصِّغَرِ كَالنَّقْشِ عَلَى الحَجَرِ Meaning: Belajar di waktu kecil bagaikan mengukir di atas batu.",
+            explanation: "Apa yang dipelajari di usia dini akan sangat kuat membekas and sulit dilupakan."
+          },
+          {
+            title: "At-Ta'allumu fī al-Kibari",
+            content: "التَّعَلُّمُ فِي الكِبَرِ كَالنَّقْشِ عَلَى المَاءِ Meaning: Belajar di waktu tua bagaikan mengukir di atas air.",
+            explanation: "Meski sulit, belajar di masa tua tetaplah mulia, walau daya ingat mungkin tidak sekuat masa muda."
+          },
+          {
+            title: "Laisa al-Yatiimu man Maata Abuhu",
+            content: "لَيْسَ اليَتِيْمُ مَنْ مَاتَ أَبُوْهُ Meaning: Bukanlah yatim itu orang yang bapaknya meninggal dunia, tapi yatim itu yang tidak memiliki ilmu and adab.",
+            explanation: "Kehilangan orang tua adalah duka, tapi kehilangan ilmu and adab adalah kerugian hakiki."
+          },
+          {
+            title: "Al-’Ulamau Waratsatu al-Anbiya'i",
+            content: "العُلَمَاءُ وَرَثَةُ الأَنْبِيَاءِ Meaning: Ulama adalah pewaris para nabi.",
+            explanation: "Menghormati para ahli ilmu adalah bagian dari menghargai risalah yang dibawa para nabi."
+          }
+        ]
+      },
+      {
+        title: "Adab & Akhlak",
+        content: "Membentuk karakter yang mulia.",
+        subsections: [
+          {
+            title: "Salamul Insan fi Hifzhil Lisan",
+            content: "سَلَامَةُ الإِنْسَانِ فِي حِفْظِ اللِّسَانِ Meaning: Keselamatan manusia terletak pada penjagaan lisannya.",
+            explanation: "Banyak masalah timbul karena ucapan. Menjaga lisan adalah cara terbaik untuk menjaga diri dan hubungan dengan orang lain."
+          },
+          {
+            title: "Adabul Mar'i Khairun",
+            content: "أَدَبُ المَرْءِ خَيْرٌ مِنْ ذَهَبِهِ Meaning: Adab seseorang lebih baik daripada emasnya (kekayaannya).",
+            explanation: "Kemuliaan seseorang tidak diukur dari hartanya, melainkan dari budi pekerti dan kesopanannya."
+          },
+          {
+            title: "Laula Al-Adabu Lakanannasu",
+            content: "لَوْلَا الأَدَبُ لَكَانَ النَّاسُ كَالبَهَائِمِ Meaning: Jika bukan karena adab, niscaya manusia itu seperti binatang.",
+            explanation: "Adab yang membedakan manusia dengan makhluk lainnya. Tanpa moralitas, manusia akan kehilangan kemanusiaannya."
+          },
+          {
+            title: "Syarrafu al-Mar'i bi al-Adabi",
+            content: "شَرَفُ المَرْءِ بِالأَدَبِ لَا بِالنَّسَبِ Meaning: Kemuliaan seseorang itu dengan adabnya, bukan dengan nasabnya (keturunan).",
+            explanation: "Kualitas diri seseorang diukur dari perilakunya, bukan dari siapa orang tuanya atau sukunya."
+          },
+          {
+            title: "Innama al-Umamu al-Akhlaqu Ma Baqiyat",
+            content: "إِنَّمَا الأُمَمُ الأَخْلَاقُ مَا بَقِيَتْ Meaning: Sesungguhnya kejayaan suatu bangsa terletak pada akhlaknya selama akhlak itu masih ada.",
+            explanation: "Bangsa yang besar adalah bangsa yang menjunjung tinggi nilai-nilai moral and etika."
+          },
+          {
+            title: "Man Qalla Chidquhu Qalla Shodiiquhu",
+            content: "مَنْ قَلَّ صِدْقُهُ قَلَّ صَدِيْقُهُ Meaning: Barangsiapa yang sedikit kejujurannya, maka sedikit pula temannya.",
+            explanation: "Kejujuran adalah pondasi kepercayaan dalam setiap hubungan pertemanan."
+          },
+          {
+            title: "Al-Ittihaadu Asasu an-Najaahi",
+            content: "الاِتِّحَادُ أَسَاسُ النَّجَاحِ Meaning: Persatuan adalah pangkal keberhasilan.",
+            explanation: "Kesuksesan besar hanya bisa diraih melalui kerja sama and kesolidan dalam komunitas."
+          },
+          {
+            title: "Man Hafizha Lisanahu Salima",
+            content: "مَنْ حَفِظَ لِسَانَهُ سَلِمَ Meaning: Barangsiapa menjaga lidahnya niscaya ia selamat.",
+            explanation: "Hati-hatilah dalam berucap karena lidah tak bertulang bisa melukai lebih dalam dari pedang."
+          },
+          {
+            title: "Laa Tahtaqir man Duunaka",
+            content: "لَا تَحْتَقِرْ مَنْ دُوْنَكَ فَلِكُلِّ شَيْءٍ مَزِيَّةٌ Meaning: Jangan menghina orang yang lebih rendah darimu, karena setiap sesuatu itu memiliki kelebihan.",
+            explanation: "Rendah hati and hargailah setiap orang tanpa memandang status sosial atau fisik."
+          }
+        ]
+      },
+      {
+        title: "Persahabatan & Sosial",
+        content: "Membangun hubungan yang baik dengan sesama.",
+        subsections: [
+          {
+            title: "Ikhbarit Tibqa Ash-Shadiqi",
+            content: "اخْتَبِرْ صَدِيْقَكَ قَبْلَ أَنْ تَعْتَمِدَ عَلَيْهِ Meaning: Ujilah temanmu sebelum kamu mempercayainya.",
+            explanation: "Kepercayaan adalah hal yang mahal. Kita perlu mengenal seseorang dengan baik sebelum benar-benar mengandalkannya."
+          },
+          {
+            title: "Man 'Arafa Bu'das Safari",
+            content: "مَنْ عَرَفَ بُعْدَ السَّفَرِ اسْتَعَدَّ Meaning: Barang siapa tahu jauhnya perjalanan, bersiap-siaplah ia.",
+            explanation: "Persiapan adalah kunci keberhasilan. Menyadari tantangan di depan membuat kita lebih waspada dan siap."
+          },
+          {
+            title: "Khairul Ashhabi man Yadulluka",
+            content: "خَيْرُ الأَصْحَابِ مَنْ يَدُلُّكَ عَلَى الخَيْرِ Meaning: Sebaik-baik teman adalah yang menunjukkanmu kepada kebaikan.",
+            explanation: "Carilah teman yang selalu memotivasi dan membimbing kita menuju jalan yang benar."
+          },
+          {
+            title: "Idza Shadaqa al-'Azmu",
+            content: "إِذَا صَدَقَ العَزْمُ وَضَحَ السَّبِيْلُ Meaning: Jika benar kemauannya, niscaya terbukalah jalannya.",
+            explanation: "Tekad yang kuat akan membantu kita menemukan jalan keluar dari setiap kesulitan."
+          },
+          {
+            title: "Man laa Yarham laa Yurham",
+            content: "مَنْ لَا يَرْحَمْ لَا يُرْحَمْ Meaning: Barangsiapa tidak menyayangi niscaya tidak disayangi.",
+            explanation: "Kasih sayang adalah sifat yang harus dimiliki setiap manusia agar mendapatkan rahmat dari Allah and sesama."
+          },
+          {
+            title: "Khairu an-Naasi Anfauhum li an-Naasi",
+            content: "خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ Meaning: Sebaik-baik manusia adalah yang paling bermanfaat bagi orang lain.",
+            explanation: "Tujuan hidup yang mulia adalah menjadi solusi and pemberi manfaat bagi lingkungan sekitar."
+          },
+          {
+            title: "Man laa Yadhuqu Dzulla at-Ta'allumi",
+            content: "مَنْ لَا يَذُقْ ذُلَّ التَّعَلُّمِ سَاعَةً Meaning: Barangsiapa tidak merasakan pahitnya belajar sesaat, ia akan merasakan hinanya kebodohan sepanjang hayat.",
+            explanation: "Pengorbanan dalam belajar adalah investasi untuk masa depan yang bermartabat."
+          },
+          {
+            title: "As-Shabru yu'inu 'ala kulli 'amalin",
+            content: "الصَّبْرُ يُعِيْنُ عَلَى كُلِّ عَمَلٍ Meaning: Kesabaran itu membantu penuntasan setiap pekerjaan.",
+            explanation: "Tanpa kesabaran, pekerjaan sulit akan terasa mustahil and pekerjaan mudah akan terasa membosankan."
+          },
+          {
+            title: "Lan Tarji'a al-Ayyaamu",
+            content: "لَنْ تَرْجِعَ الأَيَّامُ الَّتِي مَضَتْ Meaning: Tidak akan pernah kembali hari-hari yang telah berlalu.",
+            explanation: "Hargailah setiap detik yang kita miliki karena ia adalah aset yang paling tidak bisa diperbarui."
+          }
+        ]
+      },
+      {
+        title: "Sabar & Tawakal",
+        content: "Nasihat tentang keteguhan hati and kepasrahan kepada Allah.",
+        subsections: [
+          {
+            title: "As-Shabru ka ash-Shobbiri",
+            content: "الصَّبْرُ كَالصَّبِرِ مُرٌّ فِي مَذَاقَتِهِ Meaning: Kesabaran itu seperti empedu, pahit rasanya, tapi hasilnya lebih manis dari madu.",
+            explanation: "Menjalani kesabaran memang berat, namun buah dari kesabaran tersebut sangatlah indah."
+          },
+          {
+            title: "Idza Tamma al-'Aqlu Qalla al-Kalamu",
+            content: "إِذَا تَمَّ العَقْلُ قَلَّ الكَلَامُ Meaning: Apabila akal telah sempurna, niscaya sedikitlah bicara.",
+            explanation: "Orang yang bijak lebih banyak berpikir and merenung daripada sekadar bicara tanpa arah."
+          },
+          {
+            title: "Al-Qana'atu Kanzun Laa Yafna",
+            content: "القَنَاعَةُ كَنْزٌ لَا يَفْنَى Meaning: Sifat merasa cukup (qana’ah) adalah simpanan yang tidak akan habis.",
+            explanation: "Kebahagiaan sejati datang dari hati yang selalu merasa cukup dengan pemberian Allah."
+          },
+          {
+            title: "I'mash-Shighara Tashur-ul Kibara",
+            content: "اعْصِ الصِّغَارَ تَصُرِ الكِبَارَ Meaning: Lawanlah hawa nafsu yang kecil, niscaya kamu akan mampu mengendalikan yang besar.",
+            explanation: "Disiplin diri dimulai dari hal-hal kecil untuk membangun karakter yang kuat."
+          },
+          {
+            title: "Al-Haqqu Bila Nizham",
+            content: "الحَقُّ بِلَا نِظَامٍ يَغْلِبُهُ البَاطِلُ بِنِظَامٍ Meaning: Kebenaran yang tidak terorganisir akan dikalahkan oleh kebatilan yang terorganisir.",
+            explanation: "Pentingnya manajemen and kesolidan dalam memperjuangkan nilai-nilai kebaikan."
+          },
+          {
+            title: "Ad-Dunuwwu minal Khairi yajlibu al-Khaira",
+            content: "الدُّنُوُّ مِنَ الخَيْرِ يَجْلِبُ الخَيْرَ Meaning: Mendekat kepada kebaikan akan membawa kebaikan.",
+            explanation: "Lingkungan and pergaulan yang positif akan mempengaruhi diri kita menjadi lebih baik."
+          },
+          {
+            title: "Al-Istiqomatu Khairun min al-Alfi Karomatin",
+            content: "الاِسْتِقَامَةُ خَيْرٌ مِنْ أَلْفِ كَرَامَةٍ Meaning: Istiqomah (konsistensi) itu lebih baik daripada seribu karomah.",
+            explanation: "Kualitas seseorang dilihat dari keteguhannya dalam melakukan kebaikan secara rutin."
+          },
+          {
+            title: "Man 'Arafa Nafsahu 'Arafa Rabbahu",
+            content: "مَنْ عَرَفَ نَفْسَهُ عَرَفَ رَبَّهُ Meaning: Barangsiapa mengenal dirinya, niscaya ia mengenal Tuhannya.",
+            explanation: "Mengenali keterbatasan diri akan menuntun kita pada kesadaran akan kebesaran Sang Pencipta."
+          },
+          {
+            title: "Ash-Shidqu munjin wa al-Kadzibu muhlikun",
+            content: "الصِّدْقُ مُنْجٍ وَالكَذِبُ مُهْلِكٌ Meaning: Kejujuran itu menyelamatkan and kedustaan itu membinasakan.",
+            explanation: "Meski pahit, kejujuran membawa ketenangan, sementara dusta hanya akan menumpuk masalah."
+          },
+          {
+            title: "Al-Ajalu Aafatu al-'Amali",
+            content: "العَجَلُ آفَةُ العَمَلِ Meaning: Tergesa-gesa itu perusak pekerjaan.",
+            explanation: "Lakukan segala sesuatu dengan tenang and terencana agar hasilnya maksimal."
+          },
+          {
+            title: "Ar-Rifqu bi al-Hayawani min al-Imani",
+            content: "الرِّفْقُ بِالحَيَوَانِ مِنَ الإِيْمَانِ Meaning: Berbuat baik kepada hewan adalah bagian dari iman.",
+            explanation: "Kasih sayang Islam meliputi seluruh makhluk ciptaan Allah."
+          }
+        ]
+      },
+      {
+        title: "Kejujuran & Kebenaran",
+        content: "Nilai moral tentang integritas diri.",
+        subsections: [
+          {
+            title: "Qul al-Haqqa walau Kana Murran",
+            content: "قُلِ الحَقَّ وَلَوْ كَانَ مُرًّا Meaning: Katakanlah kebenaran itu walau terasa pahit.",
+            explanation: "Integritas menuntut kita untuk tetap pada kebenaran meski berisiko tinggi."
+          },
+          {
+            title: "Afat-ul Insaani fi al-Lisaani",
+            content: "آفَةُ الإِنْسَانِ فِي اللِّسَانِ Meaning: Bencana manusia itu terdapat pada lidahnya.",
+            explanation: "Banyak penyesalan bermula dari kata-kata yang tidak dipikirkan matang-matang."
+          },
+          {
+            title: "Laa Takun Rathban fatu'shara",
+            content: "لَا تَكُنْ رَطْبًا فَتُعْصَرَ وَلَا يَابِسًا فَتُكْسَرَ Meaning: Janganlah kamu terlalu lemah sehingga mudah diperas, and jangan terlalu keras sehingga mudah dipatahkan.",
+            explanation: "Pentingnya keseimbangan and fleksibilitas dalam menghadapi berbagai situasi hidup."
+          },
+          {
+            title: "Khairul 'Umuuri Ausatuha",
+            content: "خَيْرُ الأُمُوْرِ أَوْسَطُهَا Meaning: Sebaik-baik perkara adalah yang di tengah-tengah (moderat).",
+            explanation: "Islam menganjurkan sikap pertengahan dalam segala hal, menghindari ekstrimisme."
+          },
+          {
+            title: "Likulli Maqomin Maqolun",
+            content: "لِكُلِّ مَقَامٍ مَقَالٌ وَلِكُلِّ مَقَالٍ مَقَامٌ Meaning: Setiap tempat ada perkataannya, and setiap perkataan ada tempatnya.",
+            explanation: "Berbicaralah sesuai konteks, situasi, and audience agar pesan tersampaikan dengan baik."
+          },
+          {
+            title: "Innama al-Mar'u bi Ashgharaihi",
+            content: "إِنَّمَا المَرْءُ بِأَصْغَرَيْهِ قَلْبِهِ وَلِسَانِهِ Meaning: Seseorang itu dinilai dari dua organ terkecilnya: hati and lidahnya.",
+            explanation: "Kesucian hati and kebenaran lisan adalah penentu kemuliaan seseorang."
+          },
+          {
+            title: "Al-Kalamu Yanfudzu ma laa tanfudzuhu al-Ibaratu",
+            content: "الكَلَامُ يَنْفُذُ مَا لَا تَنْفُذُهُ الإِبْرَةُ Meaning: Kata-kata dapat menembus apa yang tidak bisa ditembus oleh jarum.",
+            explanation: "Kekuatan diplomasi and komunikasi seringkali lebih efektif daripada kekuatan fisik."
+          },
+          {
+            title: "Man 'Adzuba Lisanuhu Katsura Ichwanuhu",
+            content: "مَنْ عَذُبَ لِسَانُهُ كَثُرَ إِخْوَانُهُ Meaning: Barangsiapa manis tutur katanya, niscaya banyak temannya.",
+            explanation: "Ramah tamah and kata-kata yang baik adalah magnet sosial yang kuat."
+          },
+          {
+            title: "Lan Tarji'al Ayyaamu llati Madhat",
+            content: "لَنْ تَرْجِعَ الأَيَّامُ الَّتِي مَضَتْ Meaning: Hari-hari yang telah berlalu tidak akan pernah kembali.",
+            explanation: "Gunakan kesempatan yang ada sekarang sebelum ia menjadi kenangan and penyesalan."
+          },
+          {
+            title: "Al-Ghibatu Ashaddu minal Qatli",
+            content: "الغِيْبَةُ أَشَدُّ مِنَ القَتْلِ Meaning: Mengumpat (ghibah) itu lebih kejam daripada pembunuhan.",
+            explanation: "Membicarakan keburukan orang lain merusak kehormatan yang dosanya sangat berat."
+          },
+          {
+            title: "Al-Hayaa'u minal Iiman",
+            content: "الحَيَاءُ مِنَ الإِيْمَانِ Meaning: Malu adalah sebagian dari iman.",
+            explanation: "Rasa malu mencegah seseorang dari perbuatan yang merendahkan martabat."
+          }
+        ]
+      },
+      {
+        title: "Waktu & Kesempatan",
+        content: "Nasihat tentang efisiensi hidup.",
+        subsections: [
+          {
+            title: "Anta fi Waqtika",
+            content: "أَنْتَ فِي وَقْتِكَ كَالسَّيْفِ إِنْ لَمْ تَقْطَعْهُ قَطَعَكَ Meaning: Waktumu seperti pedang, jika kau tidak memotongnya maka ia yang akan memotongmu.",
+            explanation: "Waktu akan terus berjalan and menghancurkanmu jika kau tidak memanfaatkannya dengan bijak."
+          },
+          {
+            title: "Fakkir qabla an Ta'zima",
+            content: "فَكِّرْ قَبْلَ أَنْ تَعْزِمَ Meaning: Berpikirlah sebelum kamu bertekad (melangkah).",
+            explanation: "Analisis and pertimbangan yang matang adalah langkah awal menuju kesuksesan."
+          },
+          {
+            title: "Al-Barokatu fī al-Bukuuri",
+            content: "البَرَكَةُ فِي البُكُوْرِ Meaning: Berkah itu ada pada pagi hari.",
+            explanation: "Memulai aktivitas lebih awal membawa produktivitas and energi yang lebih besar."
+          },
+          {
+            title: "Laa Tu'ajjil 'Amal al-Yaumi",
+            content: "لَا تُؤَجِّلْ عَمَلَ اليَوْمِ إِلَى الغَدِ Meaning: Jangan menunda pekerjaan hari ini sampai besok.",
+            explanation: "Menunda-nunda adalah pencuri waktu yang akan menumpuk beban di masa depan."
+          },
+          {
+            title: "Al-Khairu fiman ikhtaarohu Allahu",
+            content: "الخَيْرُ فِيمَا اخْتَارَهُ اللَّهُ Meaning: Kebaikan itu ada pada apa yang telah dipilihkan Allah.",
+            explanation: "Ridho terhadap takdir membawa ketenangan jiwa and keyakinan akan hikmah di balik peristiwa."
+          },
+          {
+            title: "Ma faza man kasila",
+            content: "مَا فَازَ مَنْ كَسِلَ Meaning: Tidak akan menang orang yang malas.",
+            explanation: "Kemalasan adalah penghalang utama bagi setiap cita-cita untuk menjadi nyata."
+          },
+          {
+            title: "Inna al-Chayā-a Minal Iiman",
+            content: "إِنَّ الحَيَاءَ مِنَ الإِيْمَانِ Meaning: Sesungguhnya rasa malu itu bagian dari iman.",
+            explanation: "Malu berbuat maksiat adalah tanda sehatnya keimanan seseorang."
+          },
+          {
+            title: "Likulli Syai-in Maziyyah",
+            content: "لِكُلِّ شَيْءٍ مَزِيَّةٌ Meaning: Segala sesuatu itu memiliki kelebihannya masing-masing.",
+            explanation: "Jangan merasa rendah diri karena Allah menciptakan setiap makhluk dengan potensi unik."
+          },
+          {
+            title: "Ash-Shihhatu Taajun",
+            content: "الصِّحَّةُ تَاجٌ عَلَى رُؤُوْسِ الأَصِحَّاءِ Meaning: Kesehatan adalah mahkota di atas kepala orang sehat yang hanya bisa dilihat oleh orang sakit.",
+            explanation: "Hargailah nikmat sehat sebelum ia dicabut and kau baru menyadari betapa berharganya itu."
+          },
+          {
+            title: "Al-Qalb-ul Qawī",
+            content: "القَلْبُ القَوِيُّ يَغْلِبُ الظُّرُوْفَ Meaning: Hati yang kuat akan mengalahkan segala keadaan.",
+            explanation: "Mentalitas and keteguhan batin adalah kunci untuk bertahan di tengah badai kehidupan."
+          },
+          {
+            title: "Man Sa'a 'Ala al-Ardi",
+            content: "مَنْ سَعَى عَلَى الأَرْضِ نَال مَا تَمَنَّى Meaning: Barangsiapa yang berusaha di muka bumi, ia akan mendapatkan apa yang ia cita-citakan.",
+            explanation: "Dunia memberikan hasil kepada mereka yang aktif and pantang menyerah dalam ikhtiar."
+          }
+        ]
+      },
+      {
+        title: "Bicara & Rahasia",
+        content: "Nasihat tentang komunikasi and privasi.",
+        subsections: [
+          {
+            title: "Istaghnuu bi al-Kitmani",
+            content: "اِسْتَعِيْنُوْا عَلَى المَطَالِبِ بِالكِتْمَانِ Meaning: Bantulah hajat-hajatmu dengan menyimpannya (rahasia).",
+            explanation: "Tidak semua rencana harus diumumkan; menjaga privasi seringkali membantu kelancaran urusan."
+          },
+          {
+            title: "Al-'Ibrahtu bi al-Chotimah",
+            content: "العِبْرَةُ بِالخَاتِمَةِ Meaning: Nilai sesuatu itu bergantung pada akhirnya.",
+            explanation: "Jangan cepat puas atau berputus asa; yang terpenting adalah bagaimana kita mengakhiri perjalanan."
+          },
+          {
+            title: "Laa Tahtaqir ash-Shaghiro",
+            content: "لَا تَحْتَقِرِ الصَّغِيْرَ فَعَسَى أَنْ يَكُوْنَ كَبِيْرًا Meaning: Jangan menganggap remeh hal kecil, karena bisa jadi ia akan menjadi besar.",
+            explanation: "Setiap langkah kecil adalah batu bata yang membangun istana kesuksesan."
+          },
+          {
+            title: "Hubbu al-Wathon minal Iiman",
+            content: "حُبُّ الوَطَنِ مِنَ الإِيْمَانِ Meaning: Mencintai tanah air adalah bagian dari iman.",
+            explanation: "Seorang mukmin yang baik pasti memiliki rasa tanggung jawab and kasih sayang terhadap negerinya."
+          },
+          {
+            title: "At-Taubatu Tajubbu ma Qoblaha",
+            content: "التَّوْبَةُ تَجُبُّ مَا قَبْلَهَا Meaning: Taubat itu menghapus dosa-dosa sebelumnya.",
+            explanation: "Selalu ada kesempatan untuk memulai lembaran baru yang lebih bersih and suci."
+          },
+          {
+            title: "Khairul kalaami ma Qalla wa Dalla",
+            content: "خَيْرُ الكَلَامِ مَا قَلَّ وَدَلَّ Meaning: Sebaik-baik perkataan adalah yang singkat and padat maknanya.",
+            explanation: "Efektivitas bicara lebih penting daripada panjang lebarnya kata-kata."
+          },
+          {
+            title: "Likulli Thaa-iqin Maalun",
+            content: "لِكُلِّ طَائِقٍ مَالٌ Meaning: Setiap yang naik pasti akan turun.",
+            explanation: "Kekuasaan and kesuksesan dunia bersifat sementara, jangan pernah menyombongkan diri."
+          },
+          {
+            title: "Al-Insaanu Mahallul Khotho' wa an-Nisyan",
+            content: "الإِنْسَانُ مَحَلُّ الخَطَأِ وَالنِّسْيَانِ Meaning: Manusia adalah tempatnya salah and lupa.",
+            explanation: "Tanda kedewasaan adalah mengakui kesalahan and terus berupaya memperbaikinya."
+          },
+          {
+            title: "Ad-Dunia Mazro'atul Akhirot",
+            content: "الدُّنْيَا مَزْرَعَةُ الآخِرَةِ Meaning: Dunia ini adalah ladang untuk akhirat.",
+            explanation: "Apa yang kita tanam di dunia ini akan kita tuai hasilnya di akhirat kelak."
+          },
+          {
+            title: "Man dzhallama dzhullima",
+            content: "مَنْ ظَلَمَ ظُلِمَ Meaning: Barangsiapa menzalimi niscaya akan dimalimi.",
+            explanation: "Hukum tabur tuai berlaku mutlak; kejahatan akan kembali kepada pelakunya."
+          },
+          {
+            title: "Al-Qona'atu Asasu at-Taufiq",
+            content: "القَنَاعَةُ أَسَاسُ التَّوْفِيْقِ Meaning: Sifat merasa cukup adalah pangkal keberuntungan.",
+            explanation: "Hati yang merasa cukup akan selalu merasa tenang and mendapatkan hidayah Allah."
+          }
+        ]
+      },
+      {
+        title: "Amal & Keberhasilan",
+        content: "Etos kerja Islami.",
+        subsections: [
+          {
+            title: "Man Jadda Wajada (Repeat)",
+            content: "مَنْ جَدَّ وَجَدَ Meaning: Siapa bersungguh-sungguh, ia akan berhasil.",
+            explanation: "Kunci utama kesuksesan adalah totalitas dalam ikhtiar."
+          },
+          {
+            title: "Al-Yadu al-'Ulya Khairun",
+            content: "اليَدُ العُلْيَا خَيْرٌ مِنَ اليَدِ السُّفْلَى Meaning: Tangan di atas lebih baik daripada tangan di bawah.",
+            explanation: "Jadilah pemberi and pembantu, bukan sekadar penerima and peminta-minta."
+          },
+          {
+            title: "An-Nazhofatu minal Iiman",
+            content: "النَّظَافَةُ مِنَ الإِيْمَانِ Meaning: Kebersihan adalah bagian dari iman.",
+            explanation: "Seorang muslim harus menjaga kebersihan lahiriah (fisik) and batiniah (hati)."
+          },
+          {
+            title: "Al-Imtiyaazu bi al-Amali",
+            content: "الاِمْتِيَازُ بِالعَمَلِ لَا بِالقَوْلِ Meaning: Keunggulan itu dengan perbuatan, bukan dengan perkataan.",
+            explanation: "Buktikan kualitas dirimu lewat karya nyata, bukan sekadar janji muluk."
+          },
+          {
+            title: "Fakkir qobla an Taqshida",
+            content: "فَكِّرْ قَبْلَ أَنْ تَقْصِدَ Meaning: Berpikirlah sebelum kamu melangkah (menuju tujuan).",
+            explanation: "Strategi yang matang menghindarkan kita dari kegagalan and kerugian yang tidak perlu."
+          },
+          {
+            title: "Al-Waqtu Atsmanu",
+            content: "الوَقْتُ أَثْمَنُ مِنَ الذَّهَبِ Meaning: Waktu itu lebih mahal daripada emas.",
+            explanation: "Emas bisa diganti, waktu yang hilang tidak akan pernah kembali."
+          },
+          {
+            title: "At-Ta'awunu miftahu an-Najahi",
+            content: "التَّعَاوُنُ مِفْتَاحُ النَّجَاحِ Meaning: Kerjasama adalah kunci keberhasilan.",
+            explanation: "Beban yang dipikul bersama akan terasa ringan and tujuan besar akan lebih cepat tercapai."
+          },
+          {
+            title: "Man Khothoba al-Ma'ali",
+            content: "مَنْ خَطَبَ المَعَالِي سَهِرَ اللَّيَالِي Meaning: Barangsiapa mengharapkan kemuliaan, hendaklah ia rela berjaga di waktu malam (belajar/ibadah).",
+            explanation: "Kesuksesan menuntut pengorbanan waktu istirahat and kenyamanan diri."
+          },
+          {
+            title: "Laisa al-'Aibu fiman Kaana Faqiiron",
+            content: "لَيْسَ العَيْبُ فِيمَنْ كَانَ فَقِيْرًا Meaning: Bukanlah aib orang yang miskin, tapi aib itu adalah orang yang bodoh and malas.",
+            explanation: "Kemiskinan harta bisa diubah, tapi kemiskinan mental and ilmu adalah kehinaan sejati."
+          },
+          {
+            title: "Al-Ilmu Nurun",
+            content: "العِلْمُ نُوْرٌ Meaning: Ilmu adalah cahaya.",
+            explanation: "Ilmu menuntun manusia keluar dari kegelapan kebodohan menuju terang benderang kebenaran."
+          },
+          {
+            title: "Idza Shadaqa al-Amalu",
+            content: "إِذَا صَدَقَ العَمَلُ نَجَحَ الأملُ Meaning: Jika perbuatan itu benar, niscaya cita-cita akan tercapai.",
+            explanation: "Lakukan segala sesuatu dengan cara yang benar and jujur agar impianmu terwujud."
+          }
+        ]
+      },
+      {
+        title: "Kebijaksanaan Hidup",
+        content: "Renungan tentang eksistensi diri.",
+        subsections: [
+          {
+            title: "Ad-Dunia Sijnul Mu'min",
+            content: "الدُّنْيَا سِجْنُ المُؤْمِنِ وَجَنَّةُ الكَافِرِ Meaning: Dunia ini adalah penjara bagi orang mukmin and surga bagi orang kafir.",
+            explanation: "Dunia penuh dengan aturan and ujian bagi mukmin, sementara puncaknya adalah di akhirat kelak."
+          },
+          {
+            title: "Khairul Ashhab",
+            content: "خَيْرُ الأَصْحَابِ مَنْ يَدُلُّكَ عَلَى الخَيْرِ Meaning: Sebaik-baik teman adalah yang membimbingmu ke jalan kebaikan.",
+            explanation: "Teman sejati adalah mereka yang mempedulikan keselamatan akhiratmu."
+          },
+          {
+            title: "Al-Kalamu Yanfudzu",
+            content: "الكَلَامُ يَنْفُذُ مَا لَا تَنْفُذُهُ الإِبْرَةُ Meaning: Kata-kata dapat menembus hati yang tidak bisa ditembus oleh jarum.",
+            explanation: "Gunakan lisanmu untuk mengobati and memberi semangat, bukan untuk menyakiti."
+          },
+          {
+            title: "Likulli Syai-in Miftah",
+            content: "لِكُلِّ شَيْءٍ مِفْتَاحٌ وَمِفْتَاحُ الجَنَّةِ الصَّلَاةُ Meaning: Setiap sesuatu ada kuncinya, and kunci surga adalah shalat.",
+            explanation: "Jaga hubunganmu dengan Allah jika kau ingin mendapatkan kunci kebahagiaan abadi."
+          },
+          {
+            title: "Al-Hayaa'u min al-Iman",
+            content: "الحَيَاءُ مِنَ الإِيْمَانِ Meaning: Malu itu sebagian dari iman.",
+            explanation: "Rasa malu menjaga integritas moral seseorang dalam berinteraksi."
+          },
+          {
+            title: "I'mas-shighara",
+            content: "اعْصِ الشِّغَارَ تَصُرِ الكِبَارَ Meaning: Lawan nafsu kecilmu, kau akan jadi besar.",
+            explanation: "Kemenangan sejati adalah kemenangan melawan diri sendiri."
+          },
+          {
+            title: "Syarrafu al-Mar'i",
+            content: "شَرَفُ المَرْءِ بِأَدَبِهِ Meaning: Kemuliaan seseorang ada pada adabnya.",
+            explanation: "Harta bisa hilang, tapi adab yang baik akan terus dikenang and dihormati."
+          },
+          {
+            title: "Al-Qona'atu Kanzun",
+            content: "القَنَاعَةُ كَنْزٌ لَا يَفْنَى Meaning: Sifat qana’ah adalah kekayaan yang takkan habis.",
+            explanation: "Merasa cukup adalah rahasia kekayaan hati yang sesungguhnya."
+          },
+          {
+            title: "Man lam Yadhuq",
+            content: "مَنْ لَمْ يَذُقْ مُرَّ التَّعَلُّمِ Meaning: Siapa yang tak rasa pahit belajar, akan rasa hina bodoh.",
+            explanation: "Jangan mengeluh saat belajar, karena bodoh itu jauh lebih menyakitkan."
+          },
+          {
+            title: "Lan Tarji'al Ayyaamu",
+            content: "لَنْ تَرْجِعَ الأَيَّامُ Meaning: Hari-hari takkan kembali.",
+            explanation: "Manfaatkan setiap kesempatan yang datang dalam hidupmu."
+          },
+          {
+            title: "Khairun Naasi Anfauhum",
+            content: "خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ Meaning: Sebaik-baik manusia adalah yang paling bermanfaat.",
+            explanation: "Jadikan hidupmu sebagai rahmat bagi semesta alam."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "arbain-1",
+    title: "Hadits Arba'in Nawawi",
+    category: ModuleCategory.ARBAIN,
+    summary: "42 Hadits pilihan Imam Nawawi yang mencakup inti ajaran Islam.",
+    sections: [
+      {
+        title: "Inti Niat & Amal",
+        content: "Hadits-hadits pembuka yang menjelaskan pondasi setiap perbuatan.",
+        subsections: [
+          {
+            title: "Hadits 1: Niat",
+            content: "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى Meaning: Sesungguhnya setiap perbuatan tergantung niatnya, dan setiap orang akan mendapatkan sesuai dengan apa yang ia niatkan.",
+            explanation: "Hadits ini mengajarkan bahwa nilai suatu ibadah di sisi Allah sangat bergantung pada keikhlasan hati pelakunya."
+          },
+          {
+            title: "Hadits 2: Iman, Islam & Ihsan",
+            content: "فَأَخْبِرْنِي عَنِ الْإِيمَانِ قَالَ أَنْ تُؤْمِنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ وَالْيَوْمِ الْآخِرِ Meaning: Kabarkanlah kepadaku tentang Iman. Beliau bersabda: Engkau beriman kepada Allah, Malaikat-Nya, Kitab-Nya, Rasul-Nya, Hari Akhir...",
+            explanation: "Hadits Jibril yang sangat populer ini merangkum seluruh rukun agama Islam dalam satu percakapan."
+          },
+          {
+            title: "Hadits 3: Rukun Islam",
+            content: "بُنِيَ الإِسْلَامُ عَلَى خَمْسٍ: شَهَادَةِ أَنْ لَا إِلَهَ إِلَّا اللهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللهِ... Meaning: Islam dibangun di atas lima perkara: Syahadat, Shalat, Zakat, Haji, dan Puasa Ramadhan.",
+            explanation: "Pondasi utama agama Islam yang harus ditegakkan oleh setiap muslim."
+          },
+          {
+            title: "Hadits 4: Kejadian Manusia",
+            content: "إِنَّ أَحَدَكُمْ يُجْمَعُ خَلْقُهُ فِي بَطْنِ أُمِّهِ أَرْبَعِينَ يَوْمًا... Meaning: Sesungguhnya setiap kalian dikumpulkan penciptaannya dalam rahim ibunya selama 40 hari (nuthfah)...",
+            explanation: "Proses penciptaan manusia dan penentuan takdir (rezeki, ajal, amal) sejak dalam kandungan."
+          }
+        ]
+      },
+      {
+        title: "Ibadah & Larangan",
+        content: "Prinsip dalam menjalankan syariat.",
+        subsections: [
+          {
+            title: "Hadits 5: Bid'ah",
+            content: "مَنْ أَحْدَثَ فِي أَمْرِنَا هَذَا مَا لَيْسَ فِيهِ فَهُوَ رَدٌّ Meaning: Barangsiapa yang mengada-adakan dalam urusan (agama) kami ini apa yang bukan darinya, maka ia tertolak.",
+            explanation: "Larangan menambah-nambah ajaran agama tanpa dasar dari dalil yang sah."
+          },
+          {
+            title: "Hadits 6: Halal & Haram",
+            content: "إِنَّ الْحَلَالَ بَيِّنٌ وَإِنَّ الْحَرَامَ بَيِّنٌ وَبَيْنَهُمَا مُشْتَبِهَاتٌ Meaning: Sesungguhnya yang halal itu jelas dan yang haram itu jelas, dan di antara keduanya terdapat perkara syubhat.",
+            explanation: "Pentingnya menjaga diri dari perkara yang tidak jelas status hukumnya demi menjaga agama dan kehormatan."
+          },
+          {
+            title: "Hadits 7: Agama adalah Nasihat",
+            content: "الدِّينُ النَّصِيحَةُ قُلْنَا لِمَنْ؟ قَالَ لِلَّهِ وَلِكِتَابِهِ وَلِرَسُولِهِ وَلِأَئِمَّةِ الْمُسْلِمِينَ وَعَامَّتِهِمْ Meaning: Agama adalah nasihat. Kami bertanya: Untuk siapa? Beliau menjawab: Untuk Allah, Kitab-Nya, Rasul-Nya, Pemimpin Muslim, dan rakyat umum.",
+            explanation: "Nasihat bukan sekadar teguran, tapi ketulusan dalam menjalankan kewajiban terhadap Allah dan sesama manusia."
+          },
+          {
+            title: "Hadits 8: Memerangi Manusia",
+            content: "أُمِرْتُ أَنْ أُقَاتِلَ النَّاسَ حَتَّى يَشْهَدُوا أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَنَّ مُحَمَّدًارَسُولُ اللهِ... Meaning: Aku diperintahkan untuk memerangi manusia sampai mereka bersaksi bahwa tidak ada tuhan selain Allah dan Muhammad adalah utusan Allah...",
+            explanation: "Pentingnya tauhid sebagai syarat utama keselamatan dan kehormatan seorang muslim."
+          },
+          {
+            title: "Hadits 9: Sesuai Kemampuan",
+            content: "مَا نَهَيْتُكُمْ عَنْهُ فَاجْتَنِبُوهُ وَمَا أَمَرْتُكُمْ بِهِ فَأْتُوا مِنْهُ مَا اسْتَطعتُمْ Meaning: Apa yang aku larang, tinggalkanlah. Dan apa yang aku perintahkan, kerjakanlah semampu kalian.",
+            explanation: "Islam adalah agama yang memudahkan, memberikan kewajiban sesuai batas kemampuan hamba-Nya."
+          },
+          {
+            title: "Hadits 10: Makan yang Halal",
+            content: "إِنَّ اللَّهَ طَيِّبٌ لَا يَقْبَلُ إِلَّا طَيِّبًا... Meaning: Sesungguhnya Allah itu baik dan tidak menerima kecuali yang baik. Dan Allah memerintahkan orang beriman sebagaimana memerintah para Rasul...",
+            explanation: "Kaitan antara makanan yang halal dengan terkabulnya doa dan kesucian hati."
+          },
+          {
+            title: "Hadits 11: Tinggalkan yang Ragu",
+            content: "دَعْ مَا يَرِيبُكَ إِلَى مَا لَا يَرِيبُكَ Meaning: Tinggalkanlah apa yang meragukanmu menuju apa yang tidak meragukanmu.",
+            explanation: "Wara' (kehati-hatian) dalam agama dengan menjauhi perkara syubhat demi ketenangan jiwa."
+          }
+        ]
+      },
+      {
+        title: "Akhlak & Muamalah",
+        content: "Interaksi sosial antar umat.",
+        subsections: [
+          {
+            title: "Hadits 12: Meninggalkan yang Tak Bermanfaat",
+            content: "مِنْ حُسْنِ إِسْلَامِ الْمَرْءِ تَرْكُهُ مَا لَا يَعْنِيهِ Meaning: Di antara tanda indahnya Islam seseorang adalah meninggalkan apa yang tidak bermanfaat baginya.",
+            explanation: "Fokus pada hal yang produktif dan bermanfaat bagi dunia dan akhirat."
+          },
+          {
+            title: "Hadits 13: Mencintai Saudara",
+            content: "لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ Meaning: Tidaklah beriman salah seorang di antara kalian sampai ia mencintai untuk saudaranya apa yang ia cintai untuk dirinya sendiri.",
+            explanation: "Prinsip empati dan kasih sayang yang tulus dalam persaudaraan Islam."
+          },
+          {
+            title: "Hadits 14: Larangan Menumpahkan Darah",
+            content: "لَا يَحِلُّ دَمُ امْرِئٍ مُسْلِمٍ إِلَّا بِإِحْدَى ثَلَاثٍ: الثَّيِّبُ الزَّانِي، وَالنَّفْسُ بِالنَّفْسِ... Meaning: Tidak halal darah seorang muslim kecuali karena satu dari tiga hal: orang tua yang berzina, jiwa dengan jiwa (qishash)...",
+            explanation: "Kehormatan nyawa seorang muslim sangat dijaga dalam syariat Islam."
+          },
+          {
+            title: "Hadits 15: Berkata Baik",
+            content: "مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيَقُلْ خَيْرًا أَوْ لِيَصْمُتْ Meaning: Barangsiapa beriman kepada Allah dan hari akhir, hendaklah ia berkata baik atau diam.",
+            explanation: "Lisan adalah cerminan iman. Jika tidak ada kebaikan dalam ucapan, diam adalah pilihan terbaik."
+          },
+          {
+            title: "Hadits 16: Jangan Marah",
+            content: "لَا تَغْضَبْ، فَرَدَّدَ مِرَارًا، قَالَ: لَا تَغْضَبْ Meaning: Janganlah engkau marah. Beliau mengulanginya berkali-kali: Janganlah engkau marah.",
+            explanation: "Pentingnya mengendalikan emosi karena kemarahan sering kali menjadi pintu setan dan sumber penyesalan."
+          },
+          {
+            title: "Hadits 17: Berlaku Ihsan",
+            content: "إِنَّ اللَّهَ كَتَبَ الْإِحْسَانَ عَلَى كُلِّ شَيْءٍ Meaning: Sesungguhnya Allah mewajibkan berlaku ihsan (berbuat baik) pada segala sesuatu.",
+            explanation: "Islam mengajarkan profesionalisme dan kebaikan dalam segala hal, bahkan saat menyembelih hewan sekalipun."
+          },
+          {
+            title: "Hadits 18: Taqwa & Akhlak Baik",
+            content: "اتَّقِ اللَّهَ حَيْثُمَا كُنْتَ، وَأَتْبِعِ السَّيِّئَةَ الْحَسَنَةَ تَمْحُهَا Meaning: Bertaqwalah kepada Allah di mana pun engkau berada, dan ikutilah keburukan dengan kebaikan niscaya akan menghapusnya...",
+            explanation: "Hubungan vertikal dengan Allah (taqwa) harus diimbangi dengan hubungan horizontal (akhlak mulia)."
+          },
+          {
+            title: "Hadits 19: Menjaga Allah",
+            content: "احْفَظِ اللَّهَ يَحْفَظْكَ، احْفَظِ اللَّهَ تَجِدْهُ تُجَاهَكَ Meaning: Jagalah Allah, niscaya Dia akan menjagamu. Jagalah Allah, niscaya engkau akan mendapati-Nya di hadapanmu...",
+            explanation: "Keyakinan mutlak bahwa pertolongan dan perlindungan datang hanya dari Allah SWT."
+          },
+          {
+            title: "Hadits 20: Malu",
+            content: "إِنَّ مِمَّا أَدْرَكَ النَّاسُ مِنْ كَلَامِ النُّبُوَّةِ الْأُولَى: إِذَا لَمْ تَسْتَحِ فَاصْنَعْ مَا شِئْتَ Meaning: Sesungguhnya di antara ungkapan kenabian terdahulu adalah: Jika engkau tidak malu, maka berbuatlah sesukamu.",
+            explanation: "Rasa malu adalah benteng terakhir akhlak manusia agar tidak terjerumus dalam kemaksiatan."
+          },
+          {
+            title: "Hadits 21: Istiqamah",
+            content: "قُلْ آمَنْتُ بِاللَّهِ ثُمَّ اسْتَقِمْ Meaning: Katakanlah: Aku beriman kepada Allah, kemudian beristiqamahlah.",
+            explanation: "Konsistensi dalam iman dan ketaatan adalah kunci keberhasilan di dunia dan akhirat."
+          },
+          {
+            title: "Hadits 22: Menunaikan Kewajiban",
+            content: "أَرَأَيْتَ إِذَا صَلَّيْتُ الْمَكْتُوبَاتِ وَصُمْتُ رَمَضَانَ... Meaning: Bagaimana pendapatmu jika aku shalat fardu, puasa Ramadhan... apakah aku masuk surga? Beliau menjawab: Ya.",
+            explanation: "Kesederhanaan dalam beragama dengan fokus pada rukun-rukun utama yang diwajibkan."
+          },
+          {
+            title: "Hadits 23: Macam-macam Kebaikan",
+            content: "الطُّهُورُ شَطْرُ الْإِيمَانِ، وَالْحَمْدُ لِلَّهِ تَمْلأُ الْمِيزَانَ Meaning: Kesucian adalah sebagian dari iman, Alhamdulillah memenuhi timbangan...",
+            explanation: "Dahsyatnya kutamaan zikir dan amal jariyah dalam memenuhi timbangan kebaikan."
+          },
+          {
+            title: "Hadits 24: Larangan Berbuat Zalim",
+            content: "يَا عِبَادِي إِنِّي حَرَّمْتُ الظُّلْمَ عَلَى نَفْسِي وَجَعَلْتُهُ بَيْنَكُمْ مُحَرَّمًا Meaning: Wahai hamba-Ku, sesungguhnya Aku mengharamkan kezaliman atas diri-Ku dan menjadikannya haram di antara kalian...",
+            explanation: "Kezaliman adalah kegelapan di hari kiamat dan sangat dibenci oleh Allah SWT."
+          },
+          {
+            title: "Hadits 25: Sedekah",
+            content: "أَلَيْسَ قَدْ جَعَلَ اللَّهُ لَكُمْ مَا تَصَّدَّقُونَ؟ Meaning: Bukankah Allah telah menjadikan bagi kalian jalan untuk bersedekah? Setiap tasbih adalah sedekah...",
+            explanation: "Pintu sedekah terbuka lebar tidak hanya bagi orang kaya, tapi bagi siapa pun yang berzikir dan berbuat baik."
+          },
+          {
+            title: "Hadits 26: Setiap Persendian Ada Sedekahnya",
+            content: "كُلُّ سُلَامَى مِنَ النَّاسِ عَلَيْهِ صَدَقَةٌ كُلَّ يَوْمٍ تَطْلُعُ فِيهِ الشَّمْسُ Meaning: Setiap persendian manusia memiliki sedekah setiap hari matahari terbit...",
+            explanation: "Membangun kesadaran syukur atas kesehatan dan kemampuan fisik dengan membantu sesama."
+          },
+          {
+            title: "Hadits 27: Kebaikan & Dosa",
+            content: "الْبِرُّ حُسْنُ الْخُلُقِ، وَالإِثْمُ مَا حَاكَ فِي نَفْسِكَ Meaning: Kebaikan adalah akhlak yang baik, dan dosa adalah apa yang mengganjal di hatimu...",
+            explanation: "Hati nurani orang beriman adalah alarm alami untuk mendeteksi kebenaran dan dosa."
+          },
+          {
+            title: "Hadits 28: Berpegang Teguh pada Sunnah",
+            content: "عَلَيْكُمْ بِسُنَّتِي وَسُنَّةِ الْخُلَفَاءِ الرَّاشِدِينَ الْمَهْدِيِّينَ Meaning: Hendaklah kalian berpegang teguh pada sunnahku dan sunnah Khulafaur Rasyidin...",
+            explanation: "Pentingnya mengikuti jejak Rasulullah dan para sahabat saat terjadi perselisihan umat."
+          },
+          {
+            title: "Hadits 29: Jalan Menuju Surga",
+            content: "أَلَا أَدُلُّكَ عَلَى أَبْوَابِ الْخَيْرِ؟ الصَّوْمُ جُنَّةٌ... Meaning: Maukah engkau aku tunjukkan pintu-pintu kebaikan? Puasa adalah perisai, sedekah menghapus dosa...",
+            explanation: "Ringkasan amal-amal utama yang menjadi benteng dari api neraka dan jalan ke surga."
+          },
+          {
+            title: "Hadits 30: Menjaga Batas Allah",
+            content: "إِنَّ اللَّهَ تَعَالَى فَرَضَ فَرَائِضَ فَلَا تُضَيِّعُوهَا Meaning: Sesungguhnya Allah telah menetapkan berbagai kewajiban, maka janganlah kalian menyia-nyiakannya...",
+            explanation: "Disiplin dalam menjalankan syariat dengan menghormati batasan-batasan hukum yang ada."
+          },
+          {
+            title: "Hadits 31: Zuhud terhadap Dunia",
+            content: "ازْهَدْ فِي الدُّنْيَا يُحِبَّكَ اللَّهُ، وَازْهَدْ فِيمَا عِنْدَ النَّاسِ يُحِبَّكَ النَّاسُ Meaning: Zuhudlah terhadap duni, niscaya Allah akan mencintaimu. Zuhudlah terhadap apa yang ada pada manusia, niscaya manusia akan mencintaimu.",
+            explanation: "Ketidakbergantungan hati pada materi membawa ketenangan dan disenangi oleh sesama."
+          },
+          {
+            title: "Hadits 32: Larangan Membahayakan",
+            content: "لَا ضَرَرَ وَلَا ضِرَارَ Meaning: Tidak boleh berbuat yang membahayakan diri sendiri dan tidak boleh membahayakan orang lain.",
+            explanation: "Prinsip dasar keselamatan dan kedamaian dalam hubungan sosial muslim."
+          },
+          {
+            title: "Hadits 33: Bukti bagi Penuntut",
+            content: "الْبَيِّنَةُ عَلَى الْمُدَّعِي، وَالْيَمِينُ عَلَى مَنْ أَنْكَرَ Meaning: Bukti wajib bagi penuntut, dan sumpah bagi yang mengingkari.",
+            explanation: "Asas keadilan dalam sistem hukum Islam untuk mencegah tuduhan palsu."
+          },
+          {
+            title: "Hadits 34: Amar Ma'ruf Nahi Munkar",
+            content: "مَنْ رَأَى مِنْكُمْ مُنْكَرًا فَلْيُغَيِّرْهُ بِيَدِهِ... Meaning: Barangsiapa melihat kemunkaran, hendaklah ia merubahnya dengan tangannya...",
+            explanation: "Tanggung jawab sosial setiap muslim untuk memperbaiki lingkungan sesuai kapasitasnya."
+          },
+          {
+            title: "Hadits 35: Persaudaraan Islam",
+            content: "لَا تَحَاسَدُوا، وَلَا تَنَاجَشُوا، وَلَا تَبَاغَضُوا... Meaning: Janganlah saling mendengki, janganlah saling menipu, janganlah saling membenci...",
+            explanation: "Membangun soliditas umat dengan membuang penyakit hati yang merusak persaudaraan."
+          },
+          {
+            title: "Hadits 36: Membantu Kesulitan Muslim",
+            content: "مَنْ نَفَّسَ عَنْ مُؤْمِنٍ كُرْبَةً مِنْ كُرَبِ الدُّنْيَا... Meaning: Barangsiapa meringankan satu kesulitan orang beriman di dunia, Allah akan meringankan kesulitannya di akhirat...",
+            explanation: "Janji balasan kebaikan yang berlipat ganda bagi orang yang peduli pada saudaranya."
+          },
+          {
+            title: "Hadits 37: Kebaikan & Keburukan",
+            content: "إِنَّ اللَّهَ كَتَبَ الْحَسَنَاتِ وَالسَّيِّئَاتِ ثُمَّ بَيَّنَ ذَلِكَ... Meaning: Sesungguhnya Allah telah menetapkan kebaikan dan keburukan. Barangsiapa berniat baik namun belum melakukannya, ditulis satu kebaikan penuh...",
+            explanation: "Maha Pemurahnya Allah dalam menilai niat baik dan melipatgandakan pahala kebaikan."
+          },
+          {
+            title: "Hadits 38: Ibadah Sunnah & Wali Allah",
+            content: "وَمَا تَقَرَّبَ إِلَيَّ عَبْدِي بِشَيْءٍ أَحَبَّ إِلَيَّ مِمَّا افْتَرَضْتُ عَلَيْهِ... Meaning: Hambaku tidak mendekatkan diri kepada-Ku dengan sesuatu yang lebih Aku cintai daripada apa yang telah Aku wajibkan. Lalu ia terus mendekat dengan amalan sunnah...",
+            explanation: "Jalan menuju kedekatan khusus dengan Allah (wilayah) melalui istiqamah dalam sunnah."
+          },
+          {
+            title: "Hadits 39: Kemaafan bagi Khilaf",
+            content: "إِنَّ اللَّهَ تَجَاوَزَ لِي عَنْ أُمَّتِي الْخَطَأَ وَالنِّسْيَانَ Meaning: Sesungguhnya Allah memaafkan bagi umatku perbuatan yang salah karena tidak sengaja, lupa, dan dipaksa.",
+            explanation: "Rahmat Allah yang sangat luas bagi keterbatasan dan ketidaksengajaan hamba-Nya."
+          },
+          {
+            title: "Hadits 40: Hidup di Dunia Sebagai Orang Asing",
+            content: "كُنْ فِي الدُّنْيَا كَأَنَّكَ غَرِيبٌ أَوْ عَابِرُ سَبِيلٍ Meaning: Jadilah engkau di dunia ini seakan-akan orang asing atau pengelana.",
+            explanation: "Orientasi hidup orang beriman adalah akhirat, dunia hanyalah tempat persinggahan sementara."
+          },
+          {
+            title: "Hadits 41: Tundukkan Hawa Nafsu",
+            content: "لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يَكُونَ هَوَاهُ تَبَعًا لِمَا جِئْتُ بِهِ Meaning: Tidaklah sempurna iman kalian sampai hawa nafsunya mengikuti apa yang aku bawa (wahyu).",
+            explanation: "Hakikat iman adalah penyerahan diri secara total kepada aturan Allah dan Rasul-Nya."
+          },
+          {
+            title: "Hadits 42: Luasnya Ampunan Allah",
+            content: "يَا ابْنَ آدَمَ إِنَّكَ مَا دَعَوْتَنِي وَرَجَوْتَنِي غَفَرْتُ لَكَ... Meaning: Wahai anak Adam, selama engkau berdoa dan berharap kepada-Ku, niscaya Aku ampuni dosamu dan Aku tidak peduli seberapa banyak itu...",
+            explanation: "Harapan besar (Raja') bagi hamba yang berdosa untuk senantiasa kembali kepada ampunan Allah."
+          }
+        ]
+      }
+    ]
   }
 ];

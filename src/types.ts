@@ -8,7 +8,9 @@ export enum ModuleCategory {
   PROPHETS = "Kisah 25 Nabi & Rasul",
   ANGELS = "10 Malaikat & Tugasnya",
   PILLARS = "Rukun Iman & Islam",
-  ASMAUL_HUSNA = "99 Asmaul Husna"
+  ASMAUL_HUSNA = "99 Asmaul Husna",
+  MAHFUDZAT = "100 Mahfudzat",
+  ARBAIN = "42 Hadits Arba'in",
 }
 
 export interface Section {
