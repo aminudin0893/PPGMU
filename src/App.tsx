@@ -23,6 +23,8 @@ import {
   BookOpen,
   Heart
 } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { TOPICS } from './data';
 import { QUIZ_DATA, QuizQuestion } from './quizData';
 import { ModuleCategory, Topic, Section } from './types';
@@ -858,7 +860,15 @@ const App = () => {
                         ? 'bg-indigo-600 text-white rounded-tr-none' 
                         : 'bg-white text-slate-700 shadow-sm border border-slate-200 rounded-tl-none'
                     }`}>
-                      {msg.text}
+                      {msg.role === 'user' ? (
+                        msg.text
+                      ) : (
+                        <div className="markdown-body">
+                          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                            {msg.text}
+                          </ReactMarkdown>
+                        </div>
+                      )}
                     </div>
                   </motion.div>
                 ))}
