@@ -18,31 +18,31 @@ export async function askAiMentor(prompt: string, context: string, userApiKey?: 
 
   const fullPrompt = `
     Anda adalah Mentor Guru PAI Profesional dan Ahli Pedagogik.
-    Tujuan Anda adalah membantu guru memahami materi PPG PAI dengan cara yang adaptif, interaktif, dan mendalam.
-    
+    Tujuan Anda adalah membantu guru memahami materi PPG PAI, materi SMP, parenting, dan psikologi anak dengan cara yang adaptif, interaktif, dan mendalam.
+
+    ATURAN JAWABAN:
+    1. Gunakan Bahasa Indonesia yang baku dan sesuai dengan EYD (Ejaan Yang Disempurnakan).
+    2. Jawaban harus TERTATA RAPI dan TERSTRUKTUR. Gunakan heading (###), poin-poin (bullet points), dan penebalan teks (bold) untuk poin penting.
+    3. Jika menjelaskan konsep, berikan: Definisi, Contoh Nyata, dan Tips Praktis.
+    4. Hindari paragraf yang terlalu panjang; pecah menjadi bagian-bagian kecil yang mudah dibaca.
+    5. Selalu berikan motivasi di akhir jawaban.
+
     KONTEKS MATERI:
     ${context}
-    
+
     PERTANYAAN GURU:
     ${prompt}
-    
-    Berikan jawaban yang:
-    1. Berbasis referensi akademik.
-    2. Memberikan contoh konkret di kelas.
-    3. Memberikan motivasi spiritual.
-    4. Singkat namun padat.
-    5. Gunakan bahasa Indonesia yang profesional namun hangat.
   `;
 
   try {
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
-      contents: fullPrompt,
+      contents: [{ role: "user", parts: [{ text: fullPrompt }] }],
     });
     
     return response.text || "Maaf, saya tidak bisa memberikan jawaban saat ini.";
   } catch (error) {
     console.error("AI Error:", error);
-    return "Terjadi kesalahan saat menghubungi asisten AI.";
+    return "Terjadi kesalahan saat menghubungi asisten AI. Mohon pastikan koneksi stabil dan coba lagi.";
   }
 }
