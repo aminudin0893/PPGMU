@@ -1,13 +1,11 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenAI } from "@google/genai";
 
-const API_KEY = (import.meta as any).env?.VITE_GEMINI_API_KEY || "";
+const API_KEY = process.env.GEMINI_API_KEY || "";
 
-let genAI: GoogleGenerativeAI | null = null;
-
-if (API_KEY) {
-  genAI = new GoogleGenerativeAI(API_KEY);
-}
-
+/**
+ * AI Mentor Service
+ * Uses the modern @google/genai SDK as per platform requirements.
+ */
 export async function askAiMentor(prompt: string, context: string, userApiKey?: string) {
   const apiKeyToUse = userApiKey || API_KEY;
   
@@ -16,9 +14,8 @@ export async function askAiMentor(prompt: string, context: string, userApiKey?: 
     return "Maaf, fitur AI interaktif memerlukan konfigurasi API Key. Namun, secara teori: " + prompt.substring(0, 50) + "...";
   }
 
-  const genAIInstance = new GoogleGenerativeAI(apiKeyToUse);
-  const model = genAIInstance.getGenerativeModel({ model: "gemini-1.5-flash" });
-  
+  const ai = new GoogleGenAI({ apiKey: apiKeyToUse });
+
   const fullPrompt = `
     Anda adalah Mentor Guru PAI Profesional dan Ahli Pedagogik.
     Tujuan Anda adalah membantu guru memahami materi PPG PAI dengan cara yang adaptif, interaktif, dan mendalam.
@@ -38,9 +35,12 @@ export async function askAiMentor(prompt: string, context: string, userApiKey?: 
   `;
 
   try {
-    const result = await model.generateContent(fullPrompt);
-    const response = await result.response;
-    return response.text();
+    const response = await ai.models.generateContent({
+      model: "gemini-3-flash-preview",
+      contents: fullPrompt,
+    });
+    
+    return response.text || "Maaf, saya tidak bisa memberikan jawaban saat ini.";
   } catch (error) {
     console.error("AI Error:", error);
     return "Terjadi kesalahan saat menghubungi asisten AI.";
