@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   Search,
@@ -19,7 +19,9 @@ import {
   ChevronDown,
   FileText,
   Settings,
-  Key
+  Key,
+  BookOpen,
+  Heart
 } from 'lucide-react';
 import { TOPICS } from './data';
 import { QUIZ_DATA, QuizQuestion } from './quizData';
@@ -78,6 +80,106 @@ const Visualizer = ({ section }: { section: Section }) => {
   );
 };
 
+const TopicSection = ({ section, idx }: { section: Section, idx: number, key?: any }) => {
+  const [activeTab, setActiveTab] = useState<'content' | 'activity' | 'daily'>('content');
+  
+  return (
+    <section key={idx} className="space-y-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <h3 className="text-lg sm:text-xl font-bold text-slate-800 flex items-center gap-2">
+          <div className="w-1.5 h-6 bg-indigo-500 rounded-full" />
+          {section.title}
+        </h3>
+        
+        {/* Tabs */}
+        <div className="flex bg-slate-100 p-1 rounded-xl self-start overflow-x-auto max-w-full">
+          {[
+            { id: 'content', label: 'Materi', icon: <Book className="w-3.5 h-3.5" /> },
+            { id: 'activity', label: 'Kegiatan', icon: <FileText className="w-3.5 h-3.5" /> },
+            { id: 'daily', label: 'Harian', icon: <Clock className="w-3.5 h-3.5" /> }
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id as any)}
+              className={`px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all whitespace-nowrap ${
+                activeTab === tab.id 
+                  ? 'bg-white text-indigo-600 shadow-sm' 
+                  : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              {tab.icon}
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, x: 10 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -10 }}
+          transition={{ duration: 0.2 }}
+        >
+          {activeTab === 'content' && (
+            <div className="space-y-6">
+              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">{section.content}</p>
+              {section.subsections && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                   {section.subsections.map((sub, sIdx) => (
+                     <div key={sIdx} className="p-5 bg-slate-50 rounded-xl border border-slate-200/60 transition-all hover:bg-white hover:shadow-md hover:shadow-slate-200/50">
+                       <h4 className="font-bold text-slate-800 text-sm mb-2">{sub.title}</h4>
+                       <p className="text-sm text-slate-500 leading-relaxed mb-3">{sub.content}</p>
+                       {sub.explanation && (
+                         <div className="pt-3 border-t border-slate-200/60">
+                           <p className="text-[11px] font-bold text-indigo-600 uppercase tracking-widest mb-1">Penjelasan Detail:</p>
+                           <p className="text-[12px] text-slate-600 leading-relaxed italic">{sub.explanation}</p>
+                         </div>
+                       )}
+                     </div>
+                   ))}
+                </div>
+              )}
+              {section.explanation && !section.subsections && (
+                 <div className="p-5 bg-indigo-50/50 rounded-2xl border border-indigo-100/50">
+                   <p className="text-xs font-black text-indigo-900 uppercase mb-2">Penjelasan Mendalam</p>
+                   <p className="text-sm text-slate-600 leading-relaxed italic">{section.explanation}</p>
+                 </div>
+              )}
+            </div>
+          )}
+
+          {activeTab === 'activity' && (
+            <div className="bg-amber-50/50 border border-amber-100 p-6 rounded-2xl">
+              <h4 className="text-sm font-bold text-amber-900 mb-3 flex items-center gap-2">
+                <FileText className="w-4 h-4" /> Contoh Dalam Kegiatan Pembelajaran
+              </h4>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                {section.learningActivity || "Belum ada contoh kegiatan pembelajaran spesifik untuk sub-materi ini. Gunakan metode diskusi atau pemecahan masalah sederhana di kelas."}
+              </p>
+            </div>
+          )}
+
+          {activeTab === 'daily' && (
+            <div className="bg-green-50/50 border border-green-100 p-6 rounded-2xl">
+              <h4 className="text-sm font-bold text-green-900 mb-3 flex items-center gap-2">
+                <Clock className="w-4 h-4" /> Contoh Dalam Kehidupan Sehari-hari
+              </h4>
+              <p className="text-sm text-green-800 leading-relaxed">
+                {section.dailyLife || "Penerapan utama dalam kehidupan adalah dengan mengamalkan nilai-nilai luhur dan menjaga akhlak yang baik di mana pun berada."}
+              </p>
+            </div>
+          )}
+        </motion.div>
+      </AnimatePresence>
+      
+      {/* Visualizer Component */}
+      <Visualizer section={section} />
+    </section>
+  );
+};
+
 const App = () => {
   // Existing states...
   const [searchQuery, setSearchQuery] = useState('');
@@ -118,6 +220,11 @@ const App = () => {
     pedagogik: TOPICS.filter(t => t.category === ModuleCategory.PEDAGOGIK).length,
     profesional: TOPICS.filter(t => t.category === ModuleCategory.PROFESIONAL).length,
     perangkat: TOPICS.filter(t => t.category === ModuleCategory.PERANGKAT).length,
+    smp7: TOPICS.filter(t => t.category === ModuleCategory.SMP_7).length,
+    smp8: TOPICS.filter(t => t.category === ModuleCategory.SMP_8).length,
+    smp9: TOPICS.filter(t => t.category === ModuleCategory.SMP_9).length,
+    parenting: TOPICS.filter(t => t.category === ModuleCategory.PARENTING).length,
+    psikologi: TOPICS.filter(t => t.category === ModuleCategory.PSIKOLOGI).length,
     quizCount: 200
   };
 
@@ -126,14 +233,22 @@ const App = () => {
     { label: 'Profesional', icon: GraduationCap, val: ModuleCategory.PROFESIONAL, stat: stats.profesional },
     { label: 'Pedagogik', icon: Brain, val: ModuleCategory.PEDAGOGIK, stat: stats.pedagogik },
     { label: 'Perangkat', icon: Book, val: ModuleCategory.PERANGKAT, stat: stats.perangkat },
-    { label: 'Ujian Mandiri', icon: FileText, val: 'Quiz', stat: stats.quizCount },
+    { label: 'PAI VII', icon: BookOpen, val: ModuleCategory.SMP_7, stat: stats.smp7 },
+    { label: 'PAI VIII', icon: BookOpen, val: ModuleCategory.SMP_8, stat: stats.smp8 },
+    { label: 'PAI IX', icon: BookOpen, val: ModuleCategory.SMP_9, stat: stats.smp9 },
+    { label: 'Parenting', icon: Heart, val: ModuleCategory.PARENTING, stat: stats.parenting },
+    { label: 'Psikologi', icon: Brain, val: ModuleCategory.PSIKOLOGI, stat: stats.psikologi },
   ];
 
   const categories = [
     { name: 'Profesional', icon: '📐', color: '#DCFCE7', val: ModuleCategory.PROFESIONAL, detail: `${stats.profesional} Materi PAI` },
     { name: 'Pedagogik', icon: '🧬', color: '#E0E7FF', val: ModuleCategory.PEDAGOGIK, detail: `${stats.pedagogik} Materi Utama` },
     { name: 'Perangkat', icon: '📂', color: '#FEF9C3', val: ModuleCategory.PERANGKAT, detail: `${stats.perangkat} Modul Belajar` },
-    { name: 'Bank Soal', icon: '📝', color: '#FFEDD5', val: 'Quiz', detail: `${stats.quizCount} Latihan Soal` },
+    { name: 'PAI Kelas VII', icon: '📚', color: '#FFEDD5', val: ModuleCategory.SMP_7, detail: `${stats.smp7} Materi SMP` },
+    { name: 'PAI Kelas VIII', icon: '📚', color: '#FFCFD5', val: ModuleCategory.SMP_8, detail: `${stats.smp8} Materi SMP` },
+    { name: 'PAI Kelas IX', icon: '📚', color: '#E0F2FE', val: ModuleCategory.SMP_9, detail: `${stats.smp9} Materi SMP` },
+    { name: 'Parenting', icon: '❤️', color: '#FDF2F8', val: ModuleCategory.PARENTING, detail: `${stats.parenting} Materi Keluarga` },
+    { name: 'Psikologi', icon: '🧠', color: '#F3E8FF', val: ModuleCategory.PSIKOLOGI, detail: `${stats.psikologi} Teori & Praktik` },
   ];
 
   const handleSendMessage = async () => {
@@ -313,105 +428,9 @@ const App = () => {
                 </div>
                 
                 <div className="p-4 sm:p-8 space-y-12">
-                  {selectedTopic.sections.map((section, idx) => {
-                    const [activeTab, setActiveTab] = useState<'content' | 'activity' | 'daily'>('content');
-                    
-                    return (
-                      <section key={idx} className="space-y-6">
-                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                          <h3 className="text-lg sm:text-xl font-bold text-slate-800 flex items-center gap-2">
-                            <div className="w-1.5 h-6 bg-indigo-500 rounded-full" />
-                            {section.title}
-                          </h3>
-                          
-                          {/* Tabs */}
-                          <div className="flex bg-slate-100 p-1 rounded-xl self-start">
-                            {[
-                              { id: 'content', label: 'Materi', icon: <Book className="w-3.5 h-3.5" /> },
-                              { id: 'activity', label: 'Kegiatan', icon: <FileText className="w-3.5 h-3.5" /> },
-                              { id: 'daily', label: 'Harian', icon: <Clock className="w-3.5 h-3.5" /> }
-                            ].map((tab) => (
-                              <button
-                                key={tab.id}
-                                onClick={() => setActiveTab(tab.id as any)}
-                                className={`px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
-                                  activeTab === tab.id 
-                                    ? 'bg-white text-indigo-600 shadow-sm' 
-                                    : 'text-slate-500 hover:text-slate-700'
-                                }`}
-                              >
-                                {tab.icon}
-                                {tab.label}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-
-                        <AnimatePresence mode="wait">
-                          <motion.div
-                            key={activeTab}
-                            initial={{ opacity: 0, x: 10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -10 }}
-                            transition={{ duration: 0.2 }}
-                          >
-                            {activeTab === 'content' && (
-                              <div className="space-y-6">
-                                <p className="text-slate-600 leading-relaxed text-sm sm:text-base">{section.content}</p>
-                                {section.subsections && (
-                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                                     {section.subsections.map((sub, sIdx) => (
-                                       <div key={sIdx} className="p-5 bg-slate-50 rounded-xl border border-slate-200/60 transition-all hover:bg-white hover:shadow-md hover:shadow-slate-200/50">
-                                         <h4 className="font-bold text-slate-800 text-sm mb-2">{sub.title}</h4>
-                                         <p className="text-sm text-slate-500 leading-relaxed mb-3">{sub.content}</p>
-                                         {sub.explanation && (
-                                           <div className="pt-3 border-t border-slate-200/60">
-                                             <p className="text-[11px] font-bold text-indigo-600 uppercase tracking-widest mb-1">Penjelasan Detail:</p>
-                                             <p className="text-[12px] text-slate-600 leading-relaxed italic">{sub.explanation}</p>
-                                           </div>
-                                         )}
-                                       </div>
-                                     ))}
-                                  </div>
-                                )}
-                                {section.explanation && !section.subsections && (
-                                   <div className="p-5 bg-indigo-50/50 rounded-2xl border border-indigo-100/50">
-                                     <p className="text-xs font-black text-indigo-900 uppercase mb-2">Penjelasan Mendalam</p>
-                                     <p className="text-sm text-slate-600 leading-relaxed italic">{section.explanation}</p>
-                                   </div>
-                                )}
-                              </div>
-                            )}
-
-                            {activeTab === 'activity' && (
-                              <div className="bg-amber-50/50 border border-amber-100 p-6 rounded-2xl">
-                                <h4 className="text-sm font-bold text-amber-900 mb-3 flex items-center gap-2">
-                                  <FileText className="w-4 h-4" /> Contoh Dalam Kegiatan Pembelajaran
-                                </h4>
-                                <p className="text-sm text-amber-800 leading-relaxed">
-                                  {section.learningActivity || "Belum ada contoh kegiatan pembelajaran spesifik untuk sub-materi ini. Gunakan metode diskusi atau pemecahan masalah sederhana di kelas."}
-                                </p>
-                              </div>
-                            )}
-
-                            {activeTab === 'daily' && (
-                              <div className="bg-green-50/50 border border-green-100 p-6 rounded-2xl">
-                                <h4 className="text-sm font-bold text-green-900 mb-3 flex items-center gap-2">
-                                  <Clock className="w-4 h-4" /> Contoh Dalam Kehidupan Sehari-hari
-                                </h4>
-                                <p className="text-sm text-green-800 leading-relaxed">
-                                  {section.dailyLife || "Penerapan utama dalam kehidupan adalah dengan mengamalkan nilai-nilai luhur dan menjaga akhlak yang baik di mana pun berada."}
-                                </p>
-                              </div>
-                            )}
-                          </motion.div>
-                        </AnimatePresence>
-                        
-                        {/* Visualizer Component */}
-                        <Visualizer section={section} />
-                      </section>
-                    );
-                  })}
+                  {selectedTopic.sections.map((section, idx) => (
+                    <TopicSection key={idx} section={section} idx={idx} />
+                  ))}
 
                   {selectedTopic.readingMaterial && (
                     <div className="pt-10 border-t border-slate-100">
@@ -534,17 +553,33 @@ const App = () => {
                         </div>
                       )}
 
+                      {quiz.type === 'Essay' && (
+                        <div className="mt-4">
+                          <textarea
+                            placeholder="Tuliskan jawaban Anda di sini untuk berlatih analisis kritis..."
+                            className="w-full p-4 bg-slate-50 border border-slate-200 rounded-2xl min-h-[120px] text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all resize-none"
+                          />
+                        </div>
+                      )}
+
                       <div className="pt-4 border-t border-slate-50">
                         <details className="group">
                           <summary className="flex items-center justify-between cursor-pointer list-none">
-                            <span className="text-indigo-600 font-black text-[10px] uppercase tracking-[0.2em] hover:opacity-80 transition-opacity">
-                              Lihat Kunci & Penjelasan
+                            <span className="text-indigo-600 font-black text-[10px] uppercase tracking-[0.2em] hover:opacity-80 transition-opacity flex items-center gap-2">
+                              {quiz.type === 'PG' ? 'Lihat Kunci & Penjelasan' : 'Lihat Rekomendasi Jawaban'}
                             </span>
                             <ChevronDown className="w-4 h-4 text-slate-300 group-open:rotate-180 transition-transform" />
                           </summary>
                           <div className="mt-4 p-4 bg-indigo-50/50 rounded-2xl border border-indigo-100/50">
-                            <p className="text-xs font-black text-indigo-900 uppercase mb-2">Jawaban Benar: {quiz.answer}</p>
-                            <p className="text-sm text-slate-600 leading-relaxed italic">{quiz.explanation}</p>
+                            <p className="text-xs font-black text-indigo-900 uppercase mb-2">
+                              {quiz.type === 'PG' ? `Jawaban Benar: ${quiz.answer}` : 'Analisis Jawaban:'}
+                            </p>
+                            <p className="text-sm text-slate-600 leading-relaxed italic">
+                              {quiz.type === 'Essay' ? quiz.answer : quiz.explanation}
+                            </p>
+                            {quiz.type === 'PG' && quiz.explanation && (
+                              <p className="mt-2 text-[12px] text-slate-500">{quiz.explanation}</p>
+                            )}
                           </div>
                         </details>
                       </div>

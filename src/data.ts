@@ -113,7 +113,9 @@ export const TOPICS: Topic[] = [
         content: "Riba adalah tambahan yang dzalim. Islam menawarkan alternatif sistem bagi hasil (Mudharabah).",
         subsections: [
           { title: "Zakat Profesi", content: "Kewajiban zakat 2.5% dari penghasilan halal di era modern." }
-        ]
+        ],
+        learningActivity: "Simulasi Transaksi: Siswa membandingkan jual beli kredit dengan bunga tetap (konvensional) dan dengan margin keuntungan yang disepakati (syariah).",
+        dailyLife: "Membiasakan diri untuk teliti saat meminjam atau meminjamkan uang, menghindari syarat tambahan yang memberatkan pihak lain.",
       }
     ],
     readingMaterial: "Fikih kontemporer menjawab tantangan perbankan, asuransi, dan pasar modal syariah. Prinsipnya adalah 'An-Taradhin' (saling ridha) dan bebas dari unsur gharar (ketidakjelasan) serta maysir (spekulasi/judi)."
@@ -130,7 +132,9 @@ export const TOPICS: Topic[] = [
         subsections: [
           { title: "Umar bin Khattab", content: "Inovator administrasi keuangan negara dan kalender hijriah." },
           { title: "Utsman bin Affan", content: "Standardisasi penulisan Al-Qur'an (Mushaf Utsmani)." }
-        ]
+        ],
+        learningActivity: "Debat Klasikal: Membahas mengapa Umar bin Khattab melakukan ijtihad dalam pembagian zakat muallaf di zamannya, dikaitkan dengan konteks kekinian.",
+        dailyLife: "Meneladani kegigihan Khalifah dalam menjaga persatuan dengan cara aktif mendamaikan teman yang sedang berselisih.",
       }
     ],
     readingMaterial: "Pelajaran utama dari SKI adalah bagaimana nilai Islam mampu bertransformasi menjadi sistem peradaban yang inklusif. Di era sekarang, musyawarah dalam keluarga atau organisasi adalah tiruan dari gaya kepemimpinan mereka."
@@ -167,7 +171,9 @@ export const TOPICS: Topic[] = [
         subsections: [
           { title: "Komitmen Kebangsaan", content: "Menerima Pancasila sebagai kesepakatan akhir bangsa." },
           { title: "Toleransi", content: "Menghormati perbedaan tanpa harus membenarkan keyakinan orang lain." }
-        ]
+        ],
+        learningActivity: "Studi Kasus: Siswa berdiskusi tentang bagaimana merespons perbedaan dalam tata cara ibadah (furu'iyyah) di lingkungan sekolah dengan sikap tasamuh.",
+        dailyLife: "Tetap berteman baik dengan siapa saja tanpa membedakan latar belakang suku atau agama, sambil tetap teguh pada keyakinan diri.",
       }
     ],
     readingMaterial: "Moderasi Beragama adalah cara pandang, sikap, dan praktik beragama dalam kehidupan bersama dengan cara mengejawantahkan esensi ajaran agama yang melindungi martabat kemanusiaan dan membangun kemaslahatan umum."
@@ -264,7 +270,9 @@ export const TOPICS: Topic[] = [
         content: "Pembelajaran yang menyentuh hati (psikologis) serta pikiran (kognitif).",
         subsections: [
           { title: "Meaningful", content: "Siswa tahu untuk apa mereka mempelajari bab ini bagi hidup mereka." }
-        ]
+        ],
+        learningActivity: "Refleksi Terbuka: Guru bertanya 'Apa satu hal dari materi ini yang paling berguna jika kalian sedang dalam kesulitan?', memancing kedalaman makna (Deep Learning).",
+        dailyLife: "Mencoba menerapkan satu ayat Al-Qur'an yang baru dipelajari dalam interaksi sehari-hari di sekolah.",
       }
     ],
     readingMaterial: "Deep Learning mencegah siswa belajar hanya untuk ujian. Guru harus mampu memantik rasa ingin tahu (curiosity) sehingga siswa merasa butuh akan ilmu tersebut (Meaningful Learning)."
@@ -300,7 +308,9 @@ export const TOPICS: Topic[] = [
         content: "Peserta didik masa kini memerlukan umpan balik instan dan visualisasi tinggi.",
         subsections: [
           { title: "Mental Alpha", content: "Visual learner, multitasking, dan butuh kebebasan eksplorasi." }
-        ]
+        ],
+        learningActivity: "Gamifikasi Pembelajaran: Menggunakan aplikasi kuis interaktif yang memberikan skor langsung (instant feedback) untuk memotivasi siswa Gen-Z.",
+        dailyLife: "Mengatur waktu penggunaan gadget (screen time) secara bijak agar tetap produktif dan menjaga kesehatan mental.",
       }
     ],
     readingMaterial: "Guru tidak bisa lagi hanya menggunakan metode ceramah satu jam penuh. Guru harus berperan sebagai fasilitator yang memberikan ruang berekspresi bagi keunikan mental mereka."
@@ -314,6 +324,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Akomodasi Kurikulum",
         content: "Modifikasi materi agar bisa diakses oleh siswa disabilitas (netra, rungu, dll).",
+        learningActivity: "Bimbingan Sebaya: Menugaskan siswa reguler untuk mendampingi rekan ABK dalam memahami instruksi praktek ibadah.",
+        dailyLife: "Memberikan bantuan secara spontan kepada orang di sekitar yang membutuhkan tanpa diminta, sebagai bentuk empati inklusif.",
         visualization: {
           type: 'concept-map',
           data: ["Aksesibilitas", "Modifikasi", "Adaptasi", "Fleksibilitas"]
@@ -331,6 +343,8 @@ export const TOPICS: Topic[] = [
       {
         title: "AI as Assistant",
         content: "AI membantu administrasi dan personifikasi soal, Guru membantu pembentukan batin.",
+        learningActivity: "Eksperimen Prompt: Siswa mencoba meminta AI membuat puisi bertema Asmaul Husna, lalu guru memberikan feedback dari sisi kedalaman nilai spiritualnya.",
+        dailyLife: "Berani mematikan semua teknologi (digital detox) selama satu jam sehari untuk fokus berdzikir dan menenangkan pikiran.",
         visualization: {
           type: 'workflow',
           data: ["Input Data", "Analisis AI", "Feedback Guru", "Karakter Siswa"]
@@ -374,7 +388,9 @@ export const TOPICS: Topic[] = [
         content: "Modul ajar harus memuat tujuan, langkah, asesmen, dan media secara sinkron.",
         subsections: [
           { title: "Kompetensi Awal", content: "Penting untuk memastikan prasyarat sudah dimiliki siswa." }
-        ]
+        ],
+        learningActivity: "Micro-Planning: Guru merancang satu modul ajar sederhana untuk satu kali pertemuan dengan fokus pada satu Tujuan Pembelajaran (TP) yang spesifik.",
+        dailyLife: "Membuat daftar rencana kegiatan harian (to-do list) agar aktivitas lebih terarah dan efisien.",
       }
     ],
     readingMaterial: "ATP ibarat peta perjalanan satu tahun, sedangkan Modul Ajar ibarat petunjuk jalan harian. Pastikan ATP disusun dari yang mudah ke yang sulit (gradasi kognitif)."
@@ -388,6 +404,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Akurasi Metode",
         content: "Menyelaraskan ceramah, diskusi, simulasi, dan inkuiri pada bab yang tepat.",
+        learningActivity: "Role-Play: Menugaskan kelompok siswa untuk mensimulasikan cara bertayammum di atas pesawat sebagai praktek fikih kontemporer.",
+        dailyLife: "Memilih cara berkomunikasi yang tepat saat menasihati adik, disesuaikan dengan suasana hati dan umurnya.",
         visualization: {
           type: 'comparison',
           data: { left: "Materi Fikih (Simulasi)", right: "Materi Aqidah (Refleksi)" }
@@ -405,6 +423,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Visualisasi Data",
         content: "Mengubah teks panjang menjadi infografis atau video singkat yang menarik.",
+        learningActivity: "Karya Digital: Siswa merancang e-poster menggunakan Canva tentang nilai-nilai moderasi beragama untuk diunggah di Instagram sekolah.",
+        dailyLife: "Menggunakan video pendek inspiratif sebagai cara mensyukuri nikmat Tuhan saat sedang merasa lelah.",
         visualization: {
           type: 'concept-map',
           data: ["Visual", "Audio", "Interaktif", "AI-Generated"]
@@ -424,7 +444,9 @@ export const TOPICS: Topic[] = [
         content: "Berbasis HOTS dengan instruksi yang jelas dan memicu eksplorasi mandiri.",
         subsections: [
           { title: "Fitur", content: "Gunakan QR Code atau Link untuk tambahan materi eksternal." }
-        ]
+        ],
+        learningActivity: "Workshop Desain: Guru mencoba membuat satu halaman LKPD yang tidak berisi pertanyaan hafalan, namun berisi panduan analisis sebuah kejadian nyata.",
+        dailyLife: "Menggunakan jurnal harian untuk mencatat perkembangan kebiasaan baik (habit tracker) secara mandiri.",
       }
     ],
     readingMaterial: "LKPD yang baik adalah yang menuntun siswa menemukan konsep (Guided Inquiry), bukan sekadar lembaran soal pilihan ganda yang membosankan."
@@ -438,6 +460,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Tahapan Proyek",
         content: "Siswa belajar memecahkan masalah lingkungan dengan semangat kebinekaan.",
+        learningActivity: "Audit Lingkungan: Siswa berkeliling sekolah mencari masalah sosial (misal: perundungan atau sampah berlebih) and menyusun rencana aksi penanggulangannya.",
+        dailyLife: "Aktif ikut serta dalam kegiatan kerja bakti atau gotong royong di lingkungan RT sebagai wujud nyata nilai Pancasila.",
         visualization: {
           type: 'workflow',
           data: ["Temukan Masalah", "Bayangkan Solusi", "Lakukan Aksi", "Bagikan Inspirasi"]
@@ -457,7 +481,9 @@ export const TOPICS: Topic[] = [
         content: "Menyusun kisi-kisi soal yang selaras dengan indikator tujuan pembelajaran.",
         subsections: [
           { title: "Rubrik", content: "Kriteria penilaian yang jelas agar asesmen bersifat transparan." }
-        ]
+        ],
+        learningActivity: "Peer-Assessment: Siswa menggunakan rubrik sederhana buatan guru untuk menilai kejelasan presentasi kelompok temannya.",
+        dailyLife: "Membuat standar 'keberhasilan' pribadi untuk setiap aktivitas besar agar bisa dievaluasi secara adil bagi diri sendiri.",
       }
     ],
     readingMaterial: "Rubrik sangat penting bagi asesmen kinerja. Dengan rubrik, siswa tahu di mana letak kelebihan dan kekurangan tugas mereka secara detail."
@@ -471,6 +497,8 @@ export const TOPICS: Topic[] = [
       {
         title: "Optimalisasi Potensi",
         content: "Perlakuan berbeda berdasarkan hasil asesmen untuk mewujudkan ketuntasan belajar.",
+        learningActivity: "Klinik Belajar: Guru membuka sesi khusus 15 menit bagi siswa yang masih kesulitan memahami konsep tajwid (Remedial) sekaligus memberikan tantangan tafsir bagi yang sudah mahir (Pengayaan).",
+        dailyLife: "Bersedia mengajari teman yang kesulitan (Tutor Sebaya) sebagai cara memperdalam pemahaman kita sendiri terhadap sebuah ilmu.",
         visualization: {
           type: 'comparison',
           data: { left: "Remedial (Bantuan Khusus)", right: "Pengayaan (Tantangan Baru)" }
@@ -478,5 +506,639 @@ export const TOPICS: Topic[] = [
       }
     ],
     readingMaterial: "Remedial tidak harus mengulang ujian, bisa dengan tutor sebaya atau penyederhanaan instruksi. Pengayaan bertujuan agar siswa pintar tidak merasa bosan di kelas."
+  },
+  {
+    id: "smp7-1",
+    title: "Al-Qur'an dan Hadis: Al-Asma al-Husna",
+    category: ModuleCategory.SMP_7,
+    summary: "Memahami keagungan Allah SWT melalui Asmaul Husna: Al-Alim, Al-Khabir, As-Sami, dan Al-Bashir.",
+    sections: [
+      {
+        title: "Mengenal Sifat Allah",
+        content: "Empat nama Allah yang menunjukkan keluasan ilmu dan pengawasan-Nya.",
+        subsections: [
+          { title: "Al-Alim", content: "Maha Mengetahui segala sesuatu.", explanation: "Pengetahuan Allah meliputi masa lalu, sekarang, dan masa depan tanpa ada yang tersembunyi." },
+          { title: "Al-Khabir", content: "Maha Teliti/Waspada.", explanation: "Allah mengetahui detail terkecil dari setiap kejadian, termasuk niat di balik tindakan." }
+        ],
+        learningActivity: "Game 'CCTV Ilahi': Siswa merenungkan tindakan mereka jika diawasi oleh kamera, lalu dihubungkan dengan sifat Allah Al-Bashir.",
+        dailyLife: "Bertindak jujur meskipun sedang sendirian karena yakin Allah Al-Bashir selalu mengawasi.",
+        visualization: { type: 'concept-map', data: ["Al-Alim", "Al-Khabir", "As-Sami", "Al-Bashir"] }
+      }
+    ]
+  },
+  {
+    id: "smp7-2",
+    title: "Fikih: Taharah (Bersuci)",
+    category: ModuleCategory.SMP_7,
+    summary: "Dasar-dasar mensucikan diri dari najis dan hadas sebagai prasyarat ibadah.",
+    sections: [
+      {
+        title: "Najis dan Hadas",
+        content: "Klasifikasi kotoran yang menghalangi sahnya salat.",
+        subsections: [
+          { title: "Najis Mukhaffafah", content: "Najis ringan (air kencing bayi laki-laki < 2 tahun).", explanation: "Cukup dipercikkan air pada bagian yang terkena." },
+          { title: "Najis Mutawassitah", content: "Najis sedang (darah, nanah, tinja).", explanation: "Harus dibasuh sampai hilang warna, bau, dan rasanya." },
+          { title: "Najis Mugallazah", content: "Najis berat (anjing dan babi).", explanation: "Harus dibasuh 7 kali, salah satunya dengan tanah." }
+        ],
+        learningActivity: "Praktek Langsung: Siswa mendemonstrasikan cara berwudhu dan tayamum yang benar di depan kelas.",
+        dailyLife: "Menjaga kebersihan pakaian dan tempat tinggal sebagai bagian dari iman.",
+        visualization: { type: 'workflow', data: ["Menghilangkan Najis", "Wudhu/Tayamum", "Mandi Wajib", "Suci & Siap Ibadah"] }
+      }
+    ]
+  },
+  {
+    id: "smp8-1",
+    title: "Akidah: Iman Kepada Kitab Allah",
+    category: ModuleCategory.SMP_8,
+    summary: "Meyakini wahyu Allah yang diturunkan kepada para Rasul sebagai pedoman umat manusia.",
+    sections: [
+      {
+        title: "Kitab dan Rasul",
+        content: "Mengenal empat kitab yang wajib diimani.",
+        subsections: [
+          { title: "Taurat", content: "Diturunkan kepada Nabi Musa AS." },
+          { title: "Zabur", content: "Diturunkan kepada Nabi Daud AS." },
+          { title: "Injil", content: "Diturunkan kepada Nabi Isa AS." },
+          { title: "Al-Qur'an", content: "Diturunkan kepada Nabi Muhammad SAW sebagai penyempurna." }
+        ],
+        learningActivity: "Literasi Digital: Mencari ayat-ayat Al-Qur'an yang menjelaskan tentang keberadaan kitab-kitab terdahulu.",
+        dailyLife: "Membiasakan membaca Al-Qur'an setiap habis Maghrib sebagai bentuk interaksi dengan wahyu Allah.",
+        visualization: { type: 'workflow', data: ["Taurat", "Zabur", "Injil", "Al-Qur'an"] }
+      }
+    ]
+  },
+  {
+    id: "smp8-2",
+    title: "Akhlak: Menghindari Perilaku Menyimpang",
+    category: ModuleCategory.SMP_8,
+    summary: "Bahaya mengonsumsi khamr, judi, dan pertengkaran bagi kehidupan pribadi dan sosial.",
+    sections: [
+      {
+        title: "Bahaya Khamr dan Judi",
+        content: "Mengapa Islam melarang keras minuman keras dan perjudian.",
+        explanation: "Khamr merusak akal yang merupakan anugerah terbesar manusia, sedangkan judi menghancurkan ekonomi dan mental secara instan.",
+        learningActivity: "Analisis Berita: Siswa mencari berita tentang kriminalitas akibat pengaruh alkohol dan mendiskusikan solusinya.",
+        dailyLife: "Berani berkata 'Tidak' pada ajakan teman untuk mencoba hal-hal negatif.",
+      }
+    ]
+  },
+  {
+    id: "smp9-1",
+    title: "Akidah: Iman Kepada Hari Akhir",
+    category: ModuleCategory.SMP_9,
+    summary: "Memahami akhir kehidupan dunia dan awal kehidupan hakiki di akhirat.",
+    sections: [
+      {
+        title: "Fase Kehidupan Akhirat",
+        content: "Tahapan yang dilalui manusia setelah kematian.",
+        subsections: [
+          { title: "Yaumul Barzakh", content: "Alam kubur, pintu gerbang akhirat." },
+          { title: "Yaumul Ba'ats", content: "Hari kebangkitan seluruh manusia." },
+          { title: "Yaumul Mizan", content: "Hari penimbangan amal perbuatan." }
+        ],
+        learningActivity: "Muhasabah: Sesi refleksi tentang apa saja bekal yang sudah siap dibawa jika 'hari esok' adalah kiamat.",
+        dailyLife: "Selalu berbuat baik karena sadar setiap tindakan akan dimintai pertanggungjawaban di Mizan.",
+        visualization: { type: 'workflow', data: ["Kematian", "Alam Barzakh", "Kebangkitan", "Hisab & Mizan", "Surga/Neraka"] }
+      }
+    ]
+  },
+  {
+    id: "smp9-2",
+    title: "Sejarah: Islam di Nusantara",
+    category: ModuleCategory.SMP_9,
+    summary: "Masuknya Islam ke Indonesia melalui dakwah yang damai dan adaptasi budaya.",
+    sections: [
+      {
+        title: "Wali Songo",
+        content: "Sembilan tokoh penyebar Islam di tanah Jawa.",
+        explanation: "Dakwah Wali Songo sangat efektif karena menggunakan pendekatan seni, budaya, dan kearifan lokal tanpa kekerasan.",
+        subsections: [
+          { title: "Sunan Kalijaga", content: "Berdakwah melalui media Wayang Kulit dan Gamelan." },
+          { title: "Sunan Kudus", content: "Menghormati sapi sebagai toleransi terhadap umat Hindu di sekitarnya." }
+        ],
+        learningActivity: "Kunjungan Virtual: Menonton dokumenter makam-makam wali dan situs bersejarah Islam di Indonesia.",
+        dailyLife: "Menghargai keragaman budaya di sekitar kita sebagai kekayaan bangsa.",
+        visualization: { type: 'concept-map', data: ["Perdagangan", "Perkawinan", "Pendidikan", "Kesenian"] }
+      }
+    ]
+  },
+  {
+    id: "smp7-3",
+    title: "Akhlak: Adab Makan dan Minum",
+    category: ModuleCategory.SMP_7,
+    summary: "Menerapkan sunnah Nabi Muhammad SAW dalam aktivitas harian sebagai bentuk syukur.",
+    sections: [
+      {
+        title: "Sunnah Makan",
+        content: "Tata cara makan yang sehat dan berpahala menurut Islam.",
+        subsections: [
+          { title: "Membaca Basmalah", content: "Memulai dengan nama Allah agar berkah." },
+          { title: "Menggunakan Tangan Kanan", content: "Mengikuti teladan Rasulullah dan menjaga kesopanan." }
+        ],
+        learningActivity: "Praktik Bersama: Siswa makan siang bersama di kelas sambil mempraktikkan doa dan adab yang telah dipelajari.",
+        dailyLife: "Selalu duduk saat minum dan tidak mencela makanan yang kurang sesuai selera.",
+      }
+    ]
+  },
+  {
+    id: "smp8-3",
+    title: "Fikih: Salat Sunnah Berjamaah dan Munfarid",
+    category: ModuleCategory.SMP_8,
+    summary: "Mengenal jenis-jenis salat sunnah yang sangat dianjurkan untuk menambah pahala.",
+    sections: [
+      {
+        title: "Salat Sunnah Berjamaah",
+        content: "Salat sunnah yang utama dikerjakan bersama-sama.",
+        subsections: [
+          { title: "Salat Idul Fitri/Adha", content: "Salat hari raya dua rakaat." },
+          { title: "Salat Khusuf/Kusuf", content: "Salat saat terjadi gerhana matahari atau bulan." }
+        ],
+        learningActivity: "Simulasi Salat Gerhana: Siswa mempraktekkan tata cara salat gerhana yang memiliki dua kali ruku dalam satu rakaat.",
+        dailyLife: "Menyempatkan salat Duha sebelum memulai aktivitas belajar di sekolah.",
+        visualization: { type: 'concept-map', data: ["Idain", "Gerhana", "Istiska", "Tarawih"] }
+      }
+    ]
+  },
+  {
+    id: "smp9-3",
+    title: "Fikih: Ibadah Haji dan Umrah",
+    category: ModuleCategory.SMP_9,
+    summary: "Memahami rukun, syarat, dan hikmah perjalanan suci ke Tanah Suci (Baitullah).",
+    sections: [
+      {
+        title: "Rukun Haji",
+        content: "Rangkaian ibadah yang tidak boleh ditinggalkan agar haji sah.",
+        subsections: [
+          { title: "Wukuf", content: "Berdiam diri di Padang Arafah pada 9 Zulhijjah." },
+          { title: "Tawaf", content: "Mengelilingi Ka'bah sebanyak 7 kali." },
+          { title: "Sa'i", content: "Berlari kecil antara Bukit Safa dan Marwah." }
+        ],
+        learningActivity: "Manasik Haji SMP: Simulasi berkeliling 'Ka'bah buatan' di lapangan sekolah dengan mengenakan pakaian ihram.",
+        dailyLife: "Melatih kesabaran dalam antrean dan keramaian sebagai miniatur ujian kesabaran saat berhaji.",
+        visualization: { type: 'workflow', data: ["Ihram", "Wukuf", "Tawaf", "Sa'i", "Tahallul"] }
+      }
+    ]
+  },
+  // Additional SMP 7
+  {
+    id: "smp7-4",
+    title: "Akidah: Malaikat Allah yang Setia",
+    category: ModuleCategory.SMP_7,
+    summary: "Mengimani keberadaan malaikat dan tugas-tugas spesifik mereka yang mempengaruhi kehidupan manusia.",
+    sections: [
+      {
+        title: "Tugas 10 Malaikat",
+        content: "Mengenal malaikat utama yang berinteraksi dengan alam semesta dan manusia.",
+        explanation: "Kesadaran akan malaikat pencatat amal (Raqib-Atid) membangun integritas diri yang kuat bahkan tanpa pengawasan manusia.",
+        learningActivity: "Flashcard Challenge: Menebak nama malaikat berdasarkan deskripsi tugas yang diberikan guru secara cepat.",
+        dailyLife: "Menghindari perkataan buruk karena malu kepada malaikat yang selalu mencatat setiap kata.",
+        visualization: { type: 'concept-map', data: ["Jibril", "Mikail", "Israfil", "Izrail", "Munkar/Nakir", "Raqib/Atid", "Ridwan/Malik"] }
+      }
+    ]
+  },
+  // Additional SMP 8
+  {
+    id: "smp8-4",
+    title: "Al-Qur'an: Rendah Hati, Hemat, dan Sederhana",
+    category: ModuleCategory.SMP_8,
+    summary: "Memandai nilai-nilai luhur dari QS. al-Furqan/25: 63 dan QS. al-Isra’/17: 27.",
+    sections: [
+      {
+        title: "Gaya Hidup Muslim",
+        content: "Larangan bersikap sombong dan boros (tabzir).",
+        explanation: "Boros adalah tanda ketidakmampuan mengendalikan nafsu dan hilangnya empati terhadap sesama.",
+        learningActivity: "Audit Uang Saku: Siswa mencatat pengeluaran selama seminggu dan menganalisis mana yang kebutuhan vs keinginan.",
+        dailyLife: "Menghabiskan makanan yang diambil agar tidak menjadi sampah makanan (mubazir).",
+      }
+    ]
+  },
+  // Additional SMP 9
+  {
+    id: "smp9-4",
+    title: "Akhlak: Etika Bergaul dan Adab Bertamu",
+    category: ModuleCategory.SMP_9,
+    summary: "Memperkuat jalinan ukhuwah melalui tata krama sosial yang sesuai syariat Islam.",
+    sections: [
+      {
+        title: "Adab Sosial",
+        content: "Pentingnya izin (isti'zan) dan menjaga pandangan dalam interaksi.",
+        learningActivity: "Role-Play: Mempraktikkan cara bertamu yang sopan, mulai dari mengetuk pintu (maksimal 3x) hingga cara duduk yang benar.",
+        dailyLife: "Selalu meminta izin sebelum meminjam barang milik teman atau saudara.",
+        visualization: { type: 'workflow', data: ["Izin/Ketuk Pintu", "Ucapkan Salam", "Duduk yang Sopan", "Jaga Durasi", "Pamit dengan Baik"] }
+      }
+    ]
+  },
+  // Parenting Section
+  {
+    id: "parenting-1",
+    title: "Fase Toddler (1-3 Tahun): Menanamkan Benih Fitrah",
+    category: ModuleCategory.PARENTING,
+    summary: "Mengenalkan konsep ketuhanan melalui pembiasaan visual dan emosi yang positif.",
+    sections: [
+      {
+        title: "Kecintaan pada Allah",
+        content: "Tahap awal bukan tentang hukum, tapi tentang 'Allah Maha Penyayang'.",
+        explanation: "Anak usia ini menyerap energi emosi orang tua. Hubungkan hal menyenangkan dengan nama Allah.",
+        learningActivity: "Buku Cerita Bergambar: Membacakan buku tentang ciptaan Allah (hewan, bunga) dengan ekspresi kagum.",
+        dailyLife: "Mengucapkan 'Alhamdulillah' dengan ceria setiap kali anak mendapatkan sesuatu yang enak atau bagus.",
+      },
+      {
+        title: "Penanganan Permasalahan: Tantrum",
+        content: "Menghadapi emosi anak yang meluap karena keterbatasan komunikasi.",
+        explanation: "Tantrum adalah bagian dari perkembangan otak. Orang tua harus menjadi 'jangkar' yang tenang.",
+        learningActivity: "Teknik 'Validasi Emosi': Duduk sejajar mata anak, katakan 'Adek sedih ya mainannya rusak?'. Jangan membalas dengan amarah.",
+        dailyLife: "Mendoakan batin anak saat ia sedang tidur agar diberikan ketenangan hati.",
+      }
+    ]
+  },
+  {
+    id: "parenting-2",
+    title: "Fase Kanak-kanak (4-10 Tahun): Disiplin Berbasis Dialog",
+    category: ModuleCategory.PARENTING,
+    summary: "Mulai memperkenalkan aturan ibadah secara bertahap dan menanamkan logika moral.",
+    sections: [
+      {
+        title: "Adab Sebelum Ilmu",
+        content: "Melatih kemandirian ibadah (shalat) secara sukarela.",
+        explanation: "Rasulullah mengajarkan perintah shalat di usia 7 tahun dengan lemah lembut.",
+        learningActivity: "Pohon Shalat: Menempelkan stiker bintang di pohon kertas setiap kali anak shalat tanpa diingatkan.",
+        dailyLife: "Melibatkan anak dalam musyawarah keluarga sederhana (misal: mau liburan ke mana?).",
+      },
+      {
+        title: "Masalah: Berbohong",
+        content: "Anak mulai berimajinasi atau takut dihukum sehingga tidak jujur.",
+        explanation: "Pahami motivasinya: apakah takut? Apakah ingin perhatian? Fokus pada kejujuran, bukan hukumannya.",
+        learningActivity: "Role-Play Kejujuran: Bermain peran tentang situasi sulit dan bagaimana cara mengakui kesalahan dengan berani.",
+        dailyLife: "Memberikan apresiasi tinggi (high five/pelukan) saat anak berani jujur meskipun dia berbuat salah.",
+      }
+    ]
+  },
+  {
+    id: "parenting-3",
+    title: "Fase Remaja (11-18 Tahun): Menjadi Sahabat Diskusi",
+    category: ModuleCategory.PARENTING,
+    summary: "Berkomunikasi dengan remaja yang sedang mencari identitas diri dan membutuhkan privasi.",
+    sections: [
+      {
+        title: "Membangun Kepercayaan",
+        content: "Beralih dari instruksi (perintah) menjadi diskusi (mendengar).",
+        explanation: "Ali bin Abi Thalib menyarankan 'jadikan mereka sahabat' di fase ini.",
+        learningActivity: "Deep Talk: Mengagendakan waktu khusus (kopi sore/jalan pagi) hanya untuk mendengar keluh kesah mereka tanpa menghakimi.",
+        dailyLife: "Menghargai privasi kamar atau gadget anak selama nilai-nilai dasar tetap terjaga.",
+      },
+      {
+        title: "Masalah: Pengaruh Teman (Peer Pressure)",
+        content: "Remaja lebih mendengarkan teman daripada orang tua.",
+        explanation: "Bantu mereka membangun filter internal, bukan melarang mereka berteman.",
+        learningActivity: "Diskusi Nilai: Menonton film bersama dan mendiskusikan keputusan karakter jika mereka dalam posisi yang sama.",
+        dailyLife: "Mengenal teman-temannya dengan cara mengundang mereka main ke rumah (menjadi tuan rumah yang asik).",
+      }
+    ]
+  },
+  // --- SMP Kelas VII (Lanjutan ke-10) ---
+  {
+    id: "smp7-5",
+    title: "Sejarah: Perjuangan Nabi Muhammad SAW di Makkah",
+    category: ModuleCategory.SMP_7,
+    summary: "Ketabahan dan strategi dakwah Rasulullah di tengah penentangan kaum Quraisy.",
+    sections: [{
+      title: "Dakwah Sirriyah & Jahriyah",
+      content: "Tahapan dakwah sembunyi-sembunyi hingga terang-terangan.",
+      learningActivity: "Peta Konsep: Membuat alur waktu (timeline) perjalanan dakwah Nabi di Makkah.",
+      dailyLife: "Meneladani kesabaran Nabi saat menghadapi ejekan atau perlakuan tidak menyenangkan dari orang lain.",
+    }]
+  },
+  {
+    id: "smp7-6",
+    title: "Al-Qur'an: Menghargai Sesama Manusia",
+    category: ModuleCategory.SMP_7,
+    summary: "Memahami pesan toleransi dalam QS. al-Hujurat/49: 13.",
+    sections: [{
+      title: "Keberagaman adalah Anugerah",
+      content: "Allah menciptakan manusia berbangsa-bangsa agar saling mengenal (Lita'arafu).",
+      learningActivity: "Proyek Poster: Membuat poster tentang indahnya keberagaman di sekolah.",
+      dailyLife: "Berteman tanpa membeda-bedakan suku, ras, atau status sosial.",
+    }]
+  },
+  {
+    id: "smp7-7",
+    title: "Fikih: Shalat Berjamaah",
+    category: ModuleCategory.SMP_7,
+    summary: "Keutamaan dan tata cara shalat berjamaah untuk mempererat ukhuwah.",
+    sections: [{
+      title: "Makmum Masbuq",
+      content: "Cara mengikuti imam bagi yang terlambat datang.",
+      learningActivity: "Praktik: Simulasi menjadi makmum masbuq dalam berbagai kondisi rakaat.",
+      dailyLife: "Membiasakan diri datang tepat waktu saat janji bertemu teman.",
+    }]
+  },
+  {
+    id: "smp7-8",
+    title: "Akhlak: Adab Terhadap Orang Tua",
+    category: ModuleCategory.SMP_7,
+    summary: "Kewajiban berbakti (Birrul Walidain) sebagai kunci keberkahan hidup.",
+    sections: [{
+      title: "Ridha Allah pada Ridha Orang Tua",
+      content: "Larangan berkata 'Ah' dan perintah berbuat baik kepada ayah ibu.",
+      learningActivity: "Refleksi: Menulis surat cinta atau kartu ucapan terima kasih untuk orang tua.",
+      dailyLife: "Mencium tangan dan meminta doa restu sebelum berangkat sekolah.",
+    }]
+  },
+  {
+    id: "smp7-9",
+    title: "Fikih: Zikir dan Doa Setelah Shalat",
+    category: ModuleCategory.SMP_7,
+    summary: "Menghidupkan hati dengan mengingat Allah setelah beribadah wajib.",
+    sections: [{
+      title: "Tumakninah dan Khusyuk",
+      content: "Rangkaian bacaan zikir yang diajarkan Rasulullah.",
+      learningActivity: "Hafalan: Menghafalkan 5 doa harian yang paling sering dibutuhkan.",
+      dailyLife: "Tidak terburu-buru beranjak setelah shalat, meluangkan waktu 2 menit untuk berzikir.",
+    }]
+  },
+  {
+    id: "smp7-10",
+    title: "Sejarah: Hijrah ke Habasyah",
+    category: ModuleCategory.SMP_7,
+    summary: "Penyelamatan akidah dan diplomasi awal umat Islam ke negeri Kristen.",
+    sections: [{
+      title: "Keadilan Raja Najasyi",
+      content: "Mengapa Nabi memilih Habasyah sebagai tempat pengungsian.",
+      learningActivity: "Diskusi: Membahas pentingnya perlindungan terhadap hak asasi manusia dalam Islam.",
+      dailyLife: "Berani membela teman yang dizalimi atau diperlakukan tidak adil.",
+    }]
+  },
+
+  // --- SMP Kelas VIII (Lanjutan ke-10) ---
+  {
+    id: "smp8-5",
+    title: "Sejarah: Pertumbuhan Ilmu Pengetahuan Bani Umayyah",
+    category: ModuleCategory.SMP_8,
+    summary: "Masa keemasan peradaban Islam di Damaskus dan Andalusia.",
+    sections: [{
+      title: "Baitul Hikmah",
+      content: "Pusat penerjemahan dan pengembangan sains dunia.",
+      learningActivity: "Infografis: Membuat daftar penemuan ilmuwan Muslim di era Umayyah.",
+      dailyLife: "Semangat belajar tinggi untuk memajukan bangsa dan agama.",
+    }]
+  },
+  {
+    id: "smp8-6",
+    title: "Fikih: Puasa Wajib dan Sunnah",
+    category: ModuleCategory.SMP_8,
+    summary: "Melatih pengendalian diri melalui ibadah puasa.",
+    sections: [{
+      title: "Hikmah Puasa",
+      content: "Detoksifikasi jiwa dan penumbuhan empati kepada kaum miskin.",
+      learningActivity: "Jurnal Ramadhan: Merancang target ibadah selama bulan puasa.",
+      dailyLife: "Belajar menahan emosi marah saat sedang berpuasa atau saat berinteraksi.",
+    }]
+  },
+  {
+    id: "smp8-7",
+    title: "Akhlak: Etika Bermedia Sosial",
+    category: ModuleCategory.SMP_8,
+    summary: "Menerapkan nilai Islam dalam dunia digital agar tidak terjerumus hoaks dan ghibah.",
+    sections: [{
+      title: "Tabayyun (Klarifikasi)",
+      content: "Pentingnya mengecek kebenaran informasi sebelum menyebarkannya.",
+      learningActivity: "Cek Fakta: Berlatih membedakan berita asli dan hoaks dari screenshot media sosial.",
+      dailyLife: "Tidak mengomentari hal yang tidak dipahami dan tidak menyebarkan aib orang lain di internet.",
+    }]
+  },
+  {
+    id: "smp8-8",
+    title: "Akidah: Iman Kepada Rasul Allah",
+    category: ModuleCategory.SMP_8,
+    summary: "Mengenal sifat-sifat mulia para utusan Allah sebagai teladan hidup.",
+    sections: [{
+      title: "Sifat Wajib Rasul",
+      content: "Siddiq, Amanah, Tabligh, dan Fathanah.",
+      learningActivity: "Analisis Karakter: Menghubungkan sifat Fathanah dengan kecerdasan yang dibutuhkan siswa saat ini.",
+      dailyLife: "Menjaga amanah saat diberi tugas oleh guru atau orang tua.",
+    }]
+  },
+  {
+    id: "smp8-9",
+    title: "Fikih: Makanan dan Minuman Halal-Haram",
+    category: ModuleCategory.SMP_8,
+    summary: "Menjaga kesucian tubuh dengan mengonsumsi yang thayyib.",
+    sections: [{
+      title: "Kriteria Halal",
+      content: "Halal dari zatnya, cara memperolehnya, dan cara memprosesnya.",
+      learningActivity: "Label Check: Mengamati logo halal dan komposisi pada kemasan jajanan.",
+      dailyLife: "Membiasakan jajan di tempat yang terjamin kehalalan dan kebersihannya.",
+    }]
+  },
+  {
+    id: "smp8-10",
+    title: "Sejarah: Peradaban Islam di Baghdad (Bani Abbasiyah)",
+    category: ModuleCategory.SMP_8,
+    summary: "Puncak kejayaan intelektual Islam yang memicu Renaisans Eropa.",
+    sections: [{
+      title: "Ilmuwan Abbasiyah",
+      content: "Al-Khawarizmi (Matematika), Ibnu Sina (Kedokteran).",
+      learningActivity: "Presentasi: Mengenalkan profil singkat satu ilmuwan Muslim dan jasanya bagi dunia.",
+      dailyLife: "Bangga menjadi muslim yang berilmu dan berpikiran maju.",
+    }]
+  },
+
+  // --- SMP Kelas IX (Lanjutan ke-10) ---
+  {
+    id: "smp9-5",
+    title: "Al-Qur'an: Keluhuran Etika Berilmu",
+    category: ModuleCategory.SMP_9,
+    summary: "Kewajiban menuntut ilmu dan derajat orang berilmu dalam QS. al-Mujadilah/58: 11.",
+    sections: [{
+      title: "Derajat Ahli Ilmu",
+      content: "Allah mengangkat derajat orang yang beriman dan berilmu beberapa derajat.",
+      learningActivity: "Debat: 'Mana yang lebih utama, ilmu atau harta?' berdasarkan perspektif Islam.",
+      dailyLife: "Menghargai guru dan buku sebagai sumber ilmu yang berharga.",
+    }]
+  },
+  {
+    id: "smp9-6",
+    title: "Akidah: Iman Kepada Qada dan Qadar",
+    category: ModuleCategory.SMP_9,
+    summary: "Memahami rahasia takdir dan pentingnya ikhtiar serta tawakal.",
+    sections: [{
+      title: "Ikhtiar dan Doa",
+      content: "Perbedaan takdir Mubram dan takdir Muallaq.",
+      learningActivity: "Case Study: Bagaimana menyikapi kegagalan dalam ujian setelah belajar keras.",
+      dailyLife: "Tidak mudah putus asa dan selalu bersyukur atas apapun hasil yang diterima.",
+    }]
+  },
+  {
+    id: "smp9-7",
+    title: "Fikih: Penyembelihan Hewan, Aqiqah, dan Kurban",
+    category: ModuleCategory.SMP_9,
+    summary: "Adab terhadap binatang dan semangat berbagi dalam ibadah kurban.",
+    sections: [{
+      title: "Syarat Sah Kurban",
+      content: "Jenis hewan, waktu penyembelihan, dan pembagian daging.",
+      learningActivity: "Simulasi: Menghitung pembagian daging kurban untuk fakir miskin di lingkungan sekitar.",
+      dailyLife: "Menyayangi binatang dan tidak menyiksanya.",
+    }]
+  },
+  {
+    id: "smp9-8",
+    title: "Akhlak: Berbakti kepada Guru",
+    category: ModuleCategory.SMP_9,
+    summary: "Guru sebagai pewaris nabi dan orang tua di sekolah yang harus dihormati.",
+    sections: [{
+      title: "Adab Berguru",
+      content: "Mendengarkan penjelasan, bertanya dengan sopan, dan mendoakan guru.",
+      learningActivity: "Video Tribute: Membuat video singkat ucapan terima kasih untuk guru favorit.",
+      dailyLife: "Menyapa guru dengan ramah saat bertemu di dalam maupun di luar sekolah.",
+    }]
+  },
+  {
+    id: "smp9-9",
+    title: "Fikih: Zakat Fitrah dan Zakat Mal",
+    category: ModuleCategory.SMP_9,
+    summary: "Pembersihan jiwa dan harta melalui instrumen ekonomi Islam.",
+    sections: [{
+      title: "Mustahik Zakat",
+      content: "8 golongan yang berhak menerima zakat (Asnaf).",
+      learningActivity: "Perhitungan Zakat: Siswa berlatih menghitung nishab dan kadar zakat emas atau tabungan.",
+      dailyLife: "Suka bersedekah meskipun dalam jumlah kecil sebagai latihan kedermawanan.",
+    }]
+  },
+  {
+    id: "smp9-10",
+    title: "Sejarah: Perkembangan Islam di Benua Lain",
+    category: ModuleCategory.SMP_9,
+    summary: "Jejak dakwah Islam di Asia, Eropa, Amerika, dan Australia.",
+    sections: [{
+      title: "Islam di Andalusia (Spanyol)",
+      content: "Kontribusi besar Islam terhadap kemajuan ilmu pengetahuan di Eropa.",
+      learningActivity: "Laporan Visual: Mengumpulkan foto-foto peninggalan arsitektur Islam di dunia.",
+      dailyLife: "Memiliki wawasan global dan bangga akan sejarah besar umat Islam di dunia.",
+    }]
+  },
+
+  // --- Psikologi Anak (Menu Baru) ---
+  {
+    id: "psikologi-1",
+    title: "Perkembangan Kognitif Piaget",
+    category: ModuleCategory.PSIKOLOGI,
+    summary: "Memahami tahapan berpikir anak mulai dari sensorimotor hingga operasional formal.",
+    sections: [{
+      title: "Tahap Pra-Operasional (2-7 th)",
+      content: "Anak mulai menggunakan simbol dan bahasa, namun masih egosentris.",
+      explanation: "Jangan memarahi anak jika mereka belum bisa berbagi dengan sempurna, karena secara perkembangan mereka masih melihat dunia dari sudut pandang diri sendiri.",
+      learningActivity: "Eksperimen Konservasi: Guru menunjukkan dua gelas air yang sama, lalu menuang satu ke wadah lebar untuk melihat respon anak.",
+      dailyLife: "Gunakan bahasa konkret dan visual saat memberikan instruksi pada anak balita.",
+    }]
+  },
+  {
+    id: "psikologi-2",
+    title: "Teori Psikososial Erikson",
+    category: ModuleCategory.PSIKOLOGI,
+    summary: "Delapan tahapan krisis emosional yang membentuk kepribadian manusia.",
+    sections: [{
+      title: "Trust vs Mistrust (0-1.5 th)",
+      content: "Membangun rasa aman melalui responsivitas pengasuh.",
+      learningActivity: "Analisis Video: Mengamati interaksi ibu-bayi dan dampaknya pada keterikatan (attachment).",
+      dailyLife: "Segera merespon tangisan bayi agar ia merasa dunia adalah tempat yang aman.",
+    }]
+  },
+  {
+    id: "psikologi-3",
+    title: "Kesehatan Mental Remaja",
+    category: ModuleCategory.PSIKOLOGI,
+    summary: "Mengenali tanda-tanda stres, kecemasan, dan depresi pada usia sekolah menengah.",
+    sections: [{
+      title: "Self-Harm dan Ide Bunuh Diri",
+      content: "Faktor risiko dan cara memberikan pertolongan pertama psikologis.",
+      explanation: "Penting bagi guru untuk tidak meremehkan curhatan siswa dan menjadi pendengar yang empatik (non-judgmental).",
+      learningActivity: "Simulasi Konseling: Guru berlatih menggunakan teknik 'Active Listening' saat siswa bercerita masalah pribadi.",
+      dailyLife: "Terbuka untuk mencari bantuan profesional (psikolog/psikiater) jika merasa emosi tidak terkendali.",
+    }]
+  },
+  {
+    id: "psikologi-4",
+    title: "Gaya Belajar Anak (VAK)",
+    category: ModuleCategory.PSIKOLOGI,
+    summary: "Menyesuaikan metode mengajar dengan kecenderungan otak anak: Visual, Auditori, atau Kinestetik.",
+    sections: [{
+      title: "Visual Learner",
+      content: "Anak yang lebih cepat paham dengan gambar, grafik, dan warna.",
+      learningActivity: "Tes Gaya Belajar: Siswa mengisi kuesioner singkat untuk mengetahui kecenderungan belajar mereka.",
+      dailyLife: "Gunakan pulpen warna-warni (highlighter) saat mencatat pelajaran agar lebih mudah diingat.",
+    }]
+  },
+  {
+    id: "psikologi-5",
+    title: "Psikologi Komunikasi Orang Tua-Anak",
+    category: ModuleCategory.PSIKOLOGI,
+    summary: "Teknik 'I-Message' dan 'Active Listening' untuk mencegah konflik dalam keluarga.",
+    sections: [{
+      title: "Teknik I-Message",
+      content: "Menyampaikan perasaan tanpa menyalahkan anak (Misal: 'Mama sedih...' bukan 'Kamu nakal...').",
+      learningActivity: "Workshop Kata: Mengubah kalimat negatif 'Kamu malas belajar!' menjadi I-Message.",
+      dailyLife: "Berhenti sejenak saat marah, tarik nafas, lalu bicara dengan nada rendah.",
+    }]
+  },
+  {
+    id: "psikologi-6",
+    title: "Gangguan Belajar (Learning Disabilities)",
+    category: ModuleCategory.PSIKOLOGI,
+    summary: "Mengenali Disleksia, Diskalkulia, dan Disgrafia agar anak mendapatkan dukungan tepat.",
+    sections: [{
+      title: "Disleksia",
+      content: "Kesulitan dalam memproses bahasa, terutama membaca dan mengeja.",
+      explanation: "Ini bukan masalah kecerdasan, tapi cara otak memproses informasi yang berbeda.",
+      learningActivity: "Simulasi Membaca: Orang tua/guru mencoba membaca teks yang hurufnya dibolak-balik untuk merasakan kesulitan anak disleksia.",
+      dailyLife: "Gunakan media audio atau video untuk membantu anak yang sulit membaca teks panjang.",
+    }]
+  },
+  {
+    id: "psikologi-7",
+    title: "Kecerdasan Majemuk (Multiple Intelligences)",
+    category: ModuleCategory.PSIKOLOGI,
+    summary: "Memahami 8 jenis kecerdasan menurut Howard Gardner.",
+    sections: [{
+      title: "Kecerdasan Intrapersonal vs Interpersonal",
+      content: "Membedakan anak yang kuat dalam memahami diri sendiri vs memahami orang lain.",
+      learningActivity: "Wheel of Intelligence: Siswa mewarnai roda kecerdasan untuk melihat potensi dominan mereka.",
+      dailyLife: "Dukung minat anak meskipun tidak berkaitan langsung dengan mata pelajaran akademik di sekolah.",
+    }]
+  },
+  {
+    id: "psikologi-8",
+    title: "Bullying & Dampak Psikologisnya",
+    category: ModuleCategory.PSIKOLOGI,
+    summary: "Mengenali tanda-tanda perundungan dan cara membangun resiliensi pada korban.",
+    sections: [{
+      title: "Cyberbullying",
+      content: "Perundungan di dunia digital yang sering tidak terlihat oleh orang tua.",
+      learningActivity: "Role-Play: Bagaimana cara merespons komentar jahat di media sosial dengan bijak.",
+      dailyLife: "Membangun komunikasi terbuka agar anak berani melapor jika mengalami ketidaknyamanan.",
+    }]
+  },
+  {
+    id: "psikologi-9",
+    title: "Peran Ayah dalam Psikologi Anak",
+    category: ModuleCategory.PSIKOLOGI,
+    summary: "Pentingnya 'Father Hunger' dan dampak kehadiran ayah bagi kemandirian anak.",
+    sections: [{
+      title: "Fathering vs Mothering",
+      content: "Ayah cenderung mendorong eksplorasi dan keberanian mengambil risiko.",
+      learningActivity: "Forum Ayah: Sesi berbagi pengalaman antar ayah dalam mengasuh anak di era digital.",
+      dailyLife: "Meluangkan waktu 'One-on-One' antara ayah dan anak minimal 15 menit sehari tanpa gadget.",
+    }]
+  },
+  {
+    id: "psikologi-10",
+    title: "Psikologi Perkembangan Moral",
+    category: ModuleCategory.PSIKOLOGI,
+    summary: "Tahapan penalaran moral Kohlberg: Dari takut hukuman hingga prinsip etika universal.",
+    sections: [{
+      title: "Tahap Konvensional",
+      content: "Anak melakukan hal baik karena ingin dianggap 'anak baik' oleh lingkungan.",
+      learningActivity: "Dilema Moral: Mendiskusikan kasus 'Heinz Dilemma' (mencuri obat demi menyelamatkan nyawa istri).",
+      dailyLife: "Membantu anak memahami alasan di balik sebuah aturan, bukan sekadar 'karena dilarang'.",
+    }]
   }
 ];

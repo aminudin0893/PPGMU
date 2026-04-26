@@ -1,7 +1,12 @@
 export enum ModuleCategory {
   PERANGKAT = "Pengembangan Perangkat",
   PEDAGOGIK = "Pedagogik",
-  PROFESIONAL = "Profesional"
+  PROFESIONAL = "Profesional",
+  SMP_7 = "PAI Kelas VII",
+  SMP_8 = "PAI Kelas VIII",
+  SMP_9 = "PAI Kelas IX",
+  PARENTING = "Parenting & Keluarga",
+  PSIKOLOGI = "Psikologi Anak"
 }
 
 export interface Section {
