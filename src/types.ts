@@ -7,7 +7,10 @@ export enum ModuleCategory {
 export interface Section {
   title: string;
   content: string;
-  subsections?: { title: string; content: string }[];
+  explanation?: string; // Add this
+  subsections?: { title: string; content: string; explanation?: string }[];
+  learningActivity?: string; 
+  dailyLife?: string;      
   visualization?: {
     type: 'workflow' | 'concept-map' | 'comparison' | 'code';
     data: any;

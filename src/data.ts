@@ -14,9 +14,19 @@ export const TOPICS: Topic[] = [
         title: "Konsep Dasar",
         content: "Al-Qur'an terdiri dari ayat Muhkamat sebagai fondasi hukum dan Mutasyabihat sebagai ujian intelektual.",
         subsections: [
-          { title: "Muhkamat", content: "Ayat yang maknanya jelas (mubayyan) dan tidak mengandung ambiguitas (misal: perintah zakat)." },
-          { title: "Mutasyabihat", content: "Ayat yang maknanya samar bagi manusia namun jelas bagi Allah (misal: huruf muqatta'ah atau sifat Allah)." }
+          { 
+            title: "Muhkamat", 
+            content: "Ayat yang maknanya jelas (mubayyan).",
+            explanation: "Ayat ini bersifat pasti (qat'i) dan tidak memerlukan penafsiran panjang untuk dipahami maksud hukumnya, seperti perintah shalat dan zakat."
+          },
+          { 
+            title: "Mutasyabihat", 
+            content: "Ayat yang maknanya samar (zanni).",
+            explanation: "Ayat ini mengandung makna yang hanya diketahui hakikatnya oleh Allah, atau memerlukan takwil jika menyangkut sifat-sifat Allah agar tidak terjebak pada penyerupaan (tasybih)."
+          }
         ],
+        learningActivity: "Guru meminta siswa memilah 5 ayat dari surat pendek: mana yang bercerita tentang hukum tetap (Muhkam) dan mana yang menggunakan bahasa kiasan/sifat Allah (Mutasyabih).",
+        dailyLife: "Menerapkan sikap rendah hati (tawadhu) saat menemui hal-hal yang belum dipahami dalam agama, tidak memaksakan logika pada rahasia Ilahi.",
         visualization: {
           type: 'comparison',
           data: { left: "Muhkamat (Pasti/Textual)", right: "Mutasyabihat (Zanni/Interpretative)" }
@@ -34,6 +44,9 @@ export const TOPICS: Topic[] = [
       {
         title: "Lima Syarat Sahih",
         content: "Hadis dinyatakan sahih jika memenuhi syarat kumulatif sanad dan matan.",
+        explanation: "Kesahihan hadis bukan hanya soal siapa perawinya, tapi juga kebersambungan rantai informasi tanpa ada cacat tersembunyi.",
+        learningActivity: "Siswa melakukan simulasi 'Permainan Pesan Berantai' untuk memahami bagaimana informasi bisa berubah jika perawinya tidak teliti (Dhabith) atau tidak jujur (Adil).",
+        dailyLife: "Melakukan 'Saring sebelum Sharing' saat menerima berita di media sosial untuk menghindari fitnah dan hoax.",
         visualization: {
           type: 'workflow',
           data: ["Sanad Bersambung", "Perawi Adil", "Perawi Dhabith", "Tidak Syadz", "Tidak 'Illat"]
@@ -52,9 +65,19 @@ export const TOPICS: Topic[] = [
         title: "Sistem Takdir",
         content: "Keseimbangan antara ketetapan Allah dan ikhtiar manusia.",
         subsections: [
-          { title: "Qada Mu'allaq", content: "Dapat berubah dengan doa dan usaha (misal: kesuksesan)." },
-          { title: "Qada Mubram", content: "Ketetapan mutlak (misal: kematian)." }
-        ]
+          { 
+            title: "Qada Mu'allaq", 
+            content: "Dapat berubah dengan doa dan usaha.",
+            explanation: "Contohnya adalah kesehatan dan rezeki. Meskipun sudah ditulis, Allah memberi ruang bagi manusia untuk menjemputnya melalui gaya hidup sehat dan kerja keras."
+          },
+          { 
+            title: "Qada Mubram", 
+            content: "Ketetapan mutlak Allah.",
+            explanation: "Hal ini meliputi kelahiran, kematian, dan jenis kelamin saat lahir yang tidak bisa diganggu gugat oleh keinginan manusia."
+          }
+        ],
+        learningActivity: "Metode Diskusi Kelompok: Menganalisis kasus seorang siswa yang pintar tapi gagal ujian karena tidak belajar, dikaitkan dengan konsep Mu'allaq.",
+        dailyLife: "Tetap optimis mengejar cita-cita (Mu'allaq) namun ikhlas menerima kegagalan setelah berusaha maksimal (Mubram).",
       }
     ],
     readingMaterial: "Mukjizat berfungsi sebagai bukti kenabian untuk melemahkan musuh Allah. Karomah adalah kemuliaan bagi hamba saleh yang istiqomah. Hidup seimbang berarti bekerja keras untuk Qada Muallaq namun tawakal pada Qada Mubram."
@@ -68,6 +91,9 @@ export const TOPICS: Topic[] = [
       {
         title: "Empat Kekuatan Jiwa",
         content: "Akhlak mulia lahir dari keseimbangan kekuatan akal, emosi, dan nafsu.",
+        explanation: "Konsep ini disebut Itidal (Keseimbangan). Jika salah satu potensi mendominasi tanpa bimbingan akal dan wahyu, perilaku manusia akan menyimpang.",
+        learningActivity: "Simulasi Peran: Siswa memerankan tokoh yang sedang marah (Ghadhab) dan bagaimana menyeimbangkannya dengan akal (Hikmah).",
+        dailyLife: "Mampu menahan diri untuk tidak membeli barang yang tidak perlu (Iffah) meskipun ada nafsu untuk memilikinya.",
         visualization: {
           type: 'concept-map',
           data: ["Al-Ilmi (Hikmah)", "Al-Ghadhab (Syaja'ah)", "Ash-Shahwat ('Iffah)", "Al-Adalah (Keadilan)"]
@@ -118,6 +144,9 @@ export const TOPICS: Topic[] = [
       {
         title: "Pilar Karakter",
         content: "Menuju profil pelajar yang mencerminkan integritas kerasulan.",
+        explanation: "Empat sifat ini bukan hanya untuk Nabi, tapi adalah standar manajemen diri bagi setiap muslim dalam profesi apa pun.",
+        learningActivity: "Projek Literasi: Menulis esai tentang tokoh masa kini yang mencerminkan salah satu dari 4 sifat Nabi.",
+        dailyLife: "Melaksanakan amanah tugas sekolah tanpa harus diawasi oleh guru atau orang tua.",
         visualization: {
           type: 'concept-map',
           data: ["Siddiq", "Amanah", "Tabligh", "Fathanah"]
@@ -156,6 +185,9 @@ export const TOPICS: Topic[] = [
       {
         title: "Model PBL & PjBL",
         content: "Menggunakan masalah nyata (Problem) atau proyek (Project) sebagai pemantik nalar kritis.",
+        explanation: "PBL melatih siswa memecahkan masalah kognitif, sedangkan PjBL menghasilkan artefak nyata sebagai bukti kompetensi.",
+        learningActivity: "Siswa diminta merancang 'Kampanye Anti-Hoax' (PjBL) setelah menganalisis dampak berita bohong terhadap kerukunan (PBL).",
+        dailyLife: "Menerapkan kerangka solusi saat menghadapi konflik di lingkungan rumah dengan cara mencari akar masalah terlebih dahulu.",
         visualization: {
           type: 'comparison',
           data: { left: "PBL (Solusi Masalah)", right: "PjBL (Produk Nyata)" }
@@ -173,6 +205,26 @@ export const TOPICS: Topic[] = [
       {
         title: "Tiga Aspek Differentiations",
         content: "Guru memodifikasi elemen kelas berdasarkan kesiapan (readiness) dan minat siswa.",
+        explanation: "Keadilan dalam pendidikan bukan berarti menyamaratakan semua, tapi memberikan apa yang dibutuhkan oleh tingkat kognitif masing-masing anak.",
+        subsections: [
+          { 
+            title: "Konten", 
+            content: "Variasi materi ajar.",
+            explanation: "Menyediakan bacaan tingkat dasar bagi yang baru mengenal dan bacaan tingkat lanjut bagi yang sudah mahir."
+          },
+          { 
+            title: "Proses", 
+            content: "Variasi aktivitas.",
+            explanation: "Ada yang belajar melalui video, ada yang melalui games, ada yang melalui bacaan teks." 
+          },
+          { 
+            title: "Produk", 
+            content: "Variasi hasil karya.",
+            explanation: "Siswa boleh memilih mengumpulkan tugas dalam bentuk video, poster, atau makalah."
+          }
+        ],
+        learningActivity: "Memberikan 3 pilihan tugas setelah bab Sejarah Islam: membuat video TikTok sejarah, menulis artikel, atau menggambar peta rute hijrah.",
+        dailyLife: "Menghargai perbedaan pendapat dalam keluarga dengan cara berkomunikasi sesuai dengan bahasa kasih masing-masing anggota.",
         visualization: {
           type: 'concept-map',
           data: ["Konten", "Proses", "Produk"]
@@ -190,6 +242,9 @@ export const TOPICS: Topic[] = [
       {
         title: "Irisan Pengetahuan",
         content: "Kemampuan guru mengintegrasikan tool digital secara bermakna pada materi PAI.",
+        explanation: "TPACK bukan sekadar tentang canggihnya alat, tapi tentang ketepatan alat tersebut dalam menyalurkan pesan pedagogis.",
+        learningActivity: "Self-Assessment Guru: Menilai diri sendiri di level mana penguasaan T, P, dan C-nya menggunakan kuesioner mandiri.",
+        dailyLife: "Menggunakan aplikasi pengingat waktu shalat atau Al-Qur'an digital untuk meningkatkan kualitas ibadah harian.",
         visualization: {
           type: 'workflow',
           data: ["Content Knowledge", "Pedagogical Knowledge", "Technological Knowledge", "TPACK Result"]
@@ -223,6 +278,9 @@ export const TOPICS: Topic[] = [
       {
         title: "Formatif vs Sumatif",
         content: "Fokus lebih besar pada proses (Formatif) daripada sekadar angka akhir (Sumatif).",
+        explanation: "Asesmen formatif bertujuan untuk memperbaiki cara belajar, sedangkan sumatif untuk melaporkan hasil belajar.",
+        learningActivity: "Peer-Feedback: Siswa saling mengoreksi hafalan ayat secara bergantian dan memberikan masukan yang membangun.",
+        dailyLife: "Melakukan refleksi diri setiap malam sebelum tidur (Muhaasabah) sebagai 'asesmen formatif' bagi perilaku hari itu.",
         visualization: {
           type: 'comparison',
           data: { left: "Formatif (Proses/Feedback)", right: "Sumatif (Hasil/Nilai)" }
@@ -294,6 +352,9 @@ export const TOPICS: Topic[] = [
       {
         title: "Prosedur Analisis",
         content: "Mencari kata kerja operasional (Kompetensi) dan lingkup materi di dalam paragraf CP.",
+        explanation: "Analisis ini membantu guru agar tidak 'tersesat' dalam keluasan materi dan tetap fokus pada inti kompetensi yang diminta kurikulum.",
+        learningActivity: "Workshop Guru: Menandai kata kerja (misal: 'menganalisis', 'mengevaluasi') pada dokumen CP untuk dijadikan indikator TP.",
+        dailyLife: "Membreakdown tujuan besar (seperti renovasi rumah) menjadi langkah-langkah kecil yang bisa dikerjakan mingguan.",
         visualization: {
           type: 'workflow',
           data: ["Baca CP", "Cari Kompetensi", "Tentukan Materi", "Susun TP"]

@@ -32,7 +32,7 @@ const Visualizer = ({ section }: { section: Section }) => {
   const { type, data } = section.visualization;
 
   return (
-    <div className="mt-6 p-6 bg-slate-900 rounded-2xl overflow-hidden border border-slate-700 shadow-inner">
+    <div className="mt-6 p-4 sm:p-6 bg-slate-900 rounded-2xl overflow-hidden border border-slate-700 shadow-inner">
       <div className="flex items-center gap-2 mb-4 text-indigo-400 font-bold text-[10px] uppercase tracking-widest">
         <Sparkles className="w-3 h-3" /> Visualisasi AI
       </div>
@@ -40,8 +40,8 @@ const Visualizer = ({ section }: { section: Section }) => {
       {type === 'workflow' && (
         <div className="flex flex-col md:flex-row items-center gap-4">
           {(data as string[]).map((step, i) => (
-            <div key={i} className="flex flex-col md:flex-row items-center gap-4 flex-1">
-              <div className="p-3 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-indigo-100 text-xs font-bold text-center w-full">
+            <div key={i} className="flex flex-col md:flex-row items-center gap-4 flex-1 w-full">
+              <div className="p-3 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-indigo-100 text-[10px] sm:text-xs font-bold text-center w-full">
                 {step}
               </div>
               {i < (data as string[]).length - 1 && (
@@ -53,22 +53,22 @@ const Visualizer = ({ section }: { section: Section }) => {
       )}
 
       {type === 'comparison' && (
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
            <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-xl">
              <p className="text-green-400 text-[10px] font-black uppercase mb-2">Tipe A</p>
-             <p className="text-white text-sm font-bold">{data.left}</p>
+             <p className="text-white text-xs sm:text-sm font-bold">{(data as any).left}</p>
            </div>
            <div className="p-4 bg-amber-500/10 border border-amber-500/20 rounded-xl">
               <p className="text-amber-400 text-[10px] font-black uppercase mb-2">Tipe B</p>
-              <p className="text-white text-sm font-bold">{data.right}</p>
+              <p className="text-white text-xs sm:text-sm font-bold">{(data as any).right}</p>
            </div>
         </div>
       )}
 
       {type === 'concept-map' && (
-        <div className="flex flex-wrap justify-center gap-4 p-4">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 p-2 sm:p-4">
           {(data as string[]).map((node, i) => (
-            <div key={i} className="px-5 py-2 bg-gradient-to-r from- indigo-600 to-indigo-800 rounded-full text-white text-sm font-bold shadow-lg shadow-indigo-500/20">
+            <div key={i} className="px-3 sm:px-5 py-1.5 sm:py-2 bg-gradient-to-r from-indigo-600 to-indigo-800 rounded-full text-white text-[10px] sm:text-sm font-bold shadow-lg shadow-indigo-500/20">
               {node}
             </div>
           ))}
@@ -306,35 +306,112 @@ const App = () => {
               </button>
 
               <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
-                <div className="p-8 border-b border-slate-100 bg-slate-50/30">
+                <div className="p-4 sm:p-8 border-b border-slate-100 bg-slate-50/30">
                   <span className="tag tag-blue mb-4">{selectedTopic.category}</span>
-                  <h1 className="text-3xl font-extrabold text-slate-900 mb-4">{selectedTopic.title}</h1>
-                  <p className="text-slate-500 leading-relaxed text-lg">{selectedTopic.summary}</p>
+                  <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2 sm:mb-4">{selectedTopic.title}</h1>
+                  <p className="text-slate-500 leading-relaxed text-sm sm:text-lg">{selectedTopic.summary}</p>
                 </div>
                 
-                <div className="p-8 space-y-10">
-                  {selectedTopic.sections.map((section, idx) => (
-                    <section key={idx} className="space-y-4">
-                      <h3 className="text-xl font-bold text-slate-800 flex items-center gap-2">
-                        <div className="w-1.5 h-6 bg-indigo-500 rounded-full" />
-                        {section.title}
-                      </h3>
-                      <p className="text-slate-600 leading-relaxed">{section.content}</p>
-                      {section.subsections && (
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                           {section.subsections.map((sub, sIdx) => (
-                             <div key={sIdx} className="p-5 bg-slate-50 rounded-xl border border-slate-200/60">
-                               <h4 className="font-bold text-slate-800 text-sm mb-2">{sub.title}</h4>
-                               <p className="text-sm text-slate-500 leading-relaxed">{sub.content}</p>
-                             </div>
-                           ))}
+                <div className="p-4 sm:p-8 space-y-12">
+                  {selectedTopic.sections.map((section, idx) => {
+                    const [activeTab, setActiveTab] = useState<'content' | 'activity' | 'daily'>('content');
+                    
+                    return (
+                      <section key={idx} className="space-y-6">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                          <h3 className="text-lg sm:text-xl font-bold text-slate-800 flex items-center gap-2">
+                            <div className="w-1.5 h-6 bg-indigo-500 rounded-full" />
+                            {section.title}
+                          </h3>
+                          
+                          {/* Tabs */}
+                          <div className="flex bg-slate-100 p-1 rounded-xl self-start">
+                            {[
+                              { id: 'content', label: 'Materi', icon: <Book className="w-3.5 h-3.5" /> },
+                              { id: 'activity', label: 'Kegiatan', icon: <FileText className="w-3.5 h-3.5" /> },
+                              { id: 'daily', label: 'Harian', icon: <Clock className="w-3.5 h-3.5" /> }
+                            ].map((tab) => (
+                              <button
+                                key={tab.id}
+                                onClick={() => setActiveTab(tab.id as any)}
+                                className={`px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
+                                  activeTab === tab.id 
+                                    ? 'bg-white text-indigo-600 shadow-sm' 
+                                    : 'text-slate-500 hover:text-slate-700'
+                                }`}
+                              >
+                                {tab.icon}
+                                {tab.label}
+                              </button>
+                            ))}
+                          </div>
                         </div>
-                      )}
-                      
-                      {/* Visualizer Component */}
-                      <Visualizer section={section} />
-                    </section>
-                  ))}
+
+                        <AnimatePresence mode="wait">
+                          <motion.div
+                            key={activeTab}
+                            initial={{ opacity: 0, x: 10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -10 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            {activeTab === 'content' && (
+                              <div className="space-y-6">
+                                <p className="text-slate-600 leading-relaxed text-sm sm:text-base">{section.content}</p>
+                                {section.subsections && (
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                                     {section.subsections.map((sub, sIdx) => (
+                                       <div key={sIdx} className="p-5 bg-slate-50 rounded-xl border border-slate-200/60 transition-all hover:bg-white hover:shadow-md hover:shadow-slate-200/50">
+                                         <h4 className="font-bold text-slate-800 text-sm mb-2">{sub.title}</h4>
+                                         <p className="text-sm text-slate-500 leading-relaxed mb-3">{sub.content}</p>
+                                         {sub.explanation && (
+                                           <div className="pt-3 border-t border-slate-200/60">
+                                             <p className="text-[11px] font-bold text-indigo-600 uppercase tracking-widest mb-1">Penjelasan Detail:</p>
+                                             <p className="text-[12px] text-slate-600 leading-relaxed italic">{sub.explanation}</p>
+                                           </div>
+                                         )}
+                                       </div>
+                                     ))}
+                                  </div>
+                                )}
+                                {section.explanation && !section.subsections && (
+                                   <div className="p-5 bg-indigo-50/50 rounded-2xl border border-indigo-100/50">
+                                     <p className="text-xs font-black text-indigo-900 uppercase mb-2">Penjelasan Mendalam</p>
+                                     <p className="text-sm text-slate-600 leading-relaxed italic">{section.explanation}</p>
+                                   </div>
+                                )}
+                              </div>
+                            )}
+
+                            {activeTab === 'activity' && (
+                              <div className="bg-amber-50/50 border border-amber-100 p-6 rounded-2xl">
+                                <h4 className="text-sm font-bold text-amber-900 mb-3 flex items-center gap-2">
+                                  <FileText className="w-4 h-4" /> Contoh Dalam Kegiatan Pembelajaran
+                                </h4>
+                                <p className="text-sm text-amber-800 leading-relaxed">
+                                  {section.learningActivity || "Belum ada contoh kegiatan pembelajaran spesifik untuk sub-materi ini. Gunakan metode diskusi atau pemecahan masalah sederhana di kelas."}
+                                </p>
+                              </div>
+                            )}
+
+                            {activeTab === 'daily' && (
+                              <div className="bg-green-50/50 border border-green-100 p-6 rounded-2xl">
+                                <h4 className="text-sm font-bold text-green-900 mb-3 flex items-center gap-2">
+                                  <Clock className="w-4 h-4" /> Contoh Dalam Kehidupan Sehari-hari
+                                </h4>
+                                <p className="text-sm text-green-800 leading-relaxed">
+                                  {section.dailyLife || "Penerapan utama dalam kehidupan adalah dengan mengamalkan nilai-nilai luhur dan menjaga akhlak yang baik di mana pun berada."}
+                                </p>
+                              </div>
+                            )}
+                          </motion.div>
+                        </AnimatePresence>
+                        
+                        {/* Visualizer Component */}
+                        <Visualizer section={section} />
+                      </section>
+                    );
+                  })}
 
                   {selectedTopic.readingMaterial && (
                     <div className="pt-10 border-t border-slate-100">
@@ -491,13 +568,16 @@ const App = () => {
               animate={{ opacity: 1 }}
               className="flex flex-col gap-8 w-full max-w-6xl mx-auto"
             >
-              <div className="flex justify-between items-end border-b border-slate-200 pb-6">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-slate-200 pb-6 gap-4">
                 <div className="space-y-1">
-                  <h1 className="text-4xl font-extrabold text-slate-900 tracking-tighter">Selamat Belajar, Guru! 👋</h1>
-                  <p className="text-slate-500 font-medium">{new Intl.DateTimeFormat('id-ID', { dateStyle: 'full' }).format(new Date())}</p>
+                  <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tighter">Selamat Belajar, Guru! 👋</h1>
+                  <p className="text-slate-500 font-medium text-sm sm:text-base">{new Intl.DateTimeFormat('id-ID', { dateStyle: 'full' }).format(new Date())}</p>
                 </div>
                 <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold">TERHUBUNG</span>
+                  <div className="flex items-center gap-2 px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold">
+                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+                    TERHUBUNG
+                  </div>
                 </div>
               </div>
 
