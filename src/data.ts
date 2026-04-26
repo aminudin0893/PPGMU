@@ -2104,5 +2104,76 @@ export const TOPICS: Topic[] = [
         ]
       }
     ]
+  },
+  {
+    id: "kode-etik-guru",
+    title: "11 Kode Etik Guru",
+    category: ModuleCategory.KODE_ETIK_GURU,
+    summary: "Pedoman perilaku dan norma profesional bagi pendidik dalam menjalankan tugasnya.",
+    sections: [
+      {
+        title: "Pokok-Pokok Kode Etik",
+        content: "Implementasi 11 nilai utama dalam profesi keguruan.",
+        learningActivity: "Simulasi Kasus Etika: Mendiskusikan berbagai dilema etika di sekolah dan bagaimana Kode Etik Guru memberikan solusi serta landasan bertindak.",
+        dailyLife: "Menjadikan kode etik sebagai cermin dalam bersikap kepada siswa, rekan sejawat, dan lingkungan masyarakat setiap hari.",
+        subsections: [
+          {
+            title: "1. Takwa & Akhlak Mulia",
+            content: "Bertakwa kepada Tuhan Yang Maha Esa dan berakhlak mulia.",
+            explanation: "Guru harus menjadi pribadi yang religius dan memiliki moralitas tinggi, karena guru adalah sumber inspirasi nilai bagi siswa."
+          },
+          {
+            title: "2. Martabat Profesi",
+            content: "Menjunjung tinggi martabat guru sebagai profesi terhormat.",
+            explanation: "Menjaga sikap dan wibawa agar profesi guru tetap dipandang mulia oleh masyarakat melalui prestasi dan perilaku positif."
+          },
+          {
+            title: "3. Keadilan & Profesionalitas",
+            content: "Bertindak adil dan profesional terhadap peserta didik tanpa membedakan latar belakang.",
+            explanation: "Memberikan layanan pendidikan yang sama kepada setiap siswa tanpa memandang status sosial, ekonomi, agama, maupun suku."
+          },
+          {
+            title: "4. Menjaga Rahasia Siswa",
+            content: "Menjaga rahasia peserta didik, kecuali dalam keadaan yang mengharuskan secara hukum.",
+            explanation: "Privasi siswa harus dilindungi guna membangun kepercayaan, kecuali jika informasi tersebut membahayakan atau diperlukan oleh hukum."
+          },
+          {
+            title: "5. Keteladanan",
+            content: "Menjadi teladan bagi peserta didik dalam sikap, ucapan, dan perilaku.",
+            explanation: "Semboyan 'Ing Ngarsa Sung Tulada'—guru adalah contoh nyata yang akan ditiru oleh peserta didik dalam kehidupan mereka."
+          },
+          {
+            title: "6. Pengembangan Kompetensi",
+            content: "Mengembangkan kompetensi secara berkelanjutan melalui pembelajaran dan pelatihan.",
+            explanation: "Seorang pendidik harus terus belajar (Long Life Education) agar kualitas pengajaran selalu relevan dengan perkembangan zaman."
+          },
+          {
+            title: "7. Komunikasi Positif",
+            content: "Membangun komunikasi yang baik dengan orang tua, kolega, dan masyarakat.",
+            explanation: "Pendidikan adalah tanggung jawab bersama; sinergi dengan berbagai pihak sangat diperlukan untuk mendukung keberhasilan siswa."
+          },
+          {
+            title: "8. Netralitas Sosial-Politik",
+            content: "Menjaga netralitas dalam kehidupan sosial-politik selama menjalankan tugas.",
+            explanation: "Guru tidak boleh menggunakan pengaruhnya di sekolah untuk kepentingan politik praktis tertentu demi menjaga objektivitas pendidikan."
+          },
+          {
+            title: "9. Integritas (Anti Kecurangan)",
+            content: "Menolak segala bentuk kecurangan, termasuk suap, gratifikasi, dan manipulasi nilai.",
+            explanation: "Kejujuran adalah pondasi ilmu. Guru harus memberikan nilai yang objektif dan menolak segala bentuk pemberian yang menyuap."
+          },
+          {
+            title: "10. Komitmen Kejujuran",
+            content: "Menolak segala bentuk kecurangan, termasuk suap, gratifikasi, dan manipulasi nilai.",
+            explanation: "Penekanan kembali pada pentingnya integritas finansial dan akademik guna menjaga kesucian lembaga pendidikan."
+          },
+          {
+            title: "11. Kepatuhan Hukum",
+            content: "Mematuhi Peraturan dan Kode Etik Profesi Guru.",
+            explanation: "Taat pada aturan profesi dan regulasi pemerintah sebagai bentuk tanggung jawab hukum dan etika seorang aparatur maupun pendidik."
+          }
+        ]
+      }
+    ]
   }
 ];

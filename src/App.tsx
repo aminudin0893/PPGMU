@@ -23,7 +23,8 @@ import {
   BookOpen,
   Heart,
   RotateCcw,
-  Quote
+  Quote,
+  Shield
 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -431,6 +432,7 @@ const App = () => {
     asmaulHusna: TOPICS.filter(t => t.category === ModuleCategory.ASMAUL_HUSNA).length,
     mahfudzat: TOPICS.filter(t => t.category === ModuleCategory.MAHFUDZAT).length,
     arbain: TOPICS.filter(t => t.category === ModuleCategory.ARBAIN).length,
+    kodeEtik: TOPICS.filter(t => t.category === ModuleCategory.KODE_ETIK_GURU).length,
     quizCount: 200
   };
 
@@ -448,6 +450,7 @@ const App = () => {
     { label: '10 Malaikat', icon: Sparkles, val: ModuleCategory.ANGELS, stat: stats.angels },
     { label: 'Rukun Iman & Islam', icon: Book, val: ModuleCategory.PILLARS, stat: stats.pillars },
     { label: 'Asmaul Husna', icon: Heart, val: ModuleCategory.ASMAUL_HUSNA, stat: stats.asmaulHusna },
+    { label: 'Kode Etik Guru', icon: Shield, val: ModuleCategory.KODE_ETIK_GURU, stat: stats.kodeEtik },
   ];
 
   const categories = [
@@ -463,6 +466,7 @@ const App = () => {
     { name: '10 Malaikat', icon: '🛡️', color: '#F5F3FF', val: ModuleCategory.ANGELS, detail: `${stats.angels} Tugas Suci` },
     { name: 'Rukun', icon: '⚖️', color: '#ECFDF5', val: ModuleCategory.PILLARS, detail: `${stats.pillars} Iman & Islam` },
     { name: 'Asmaul Husna', icon: '📿', color: '#FFF1F2', val: ModuleCategory.ASMAUL_HUSNA, detail: `${stats.asmaulHusna} Nama Allah` },
+    { name: 'Kode Etik', icon: '🛡️', color: '#F0F9FF', val: ModuleCategory.KODE_ETIK_GURU, detail: `${stats.kodeEtik} Pedoman Guru` },
   ];
 
   const handleSendMessage = async () => {
