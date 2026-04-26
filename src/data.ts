@@ -1656,23 +1656,94 @@ export const TOPICS: Topic[] = [
   // ==========================================
   {
     id: "pillars-1",
-    title: "Fondasi Agama: Rukun Islam & Iman",
+    title: "Rukun Islam: 5 Pilar Utama",
     category: ModuleCategory.PILLARS,
-    summary: "Memahami 5 pilar perbuatan (Islam) dan 6 pilar keyakinan (Iman).",
+    summary: "Lima fondasi utama perbuatan lahiriyah seorang muslim sebagai bukti ketaatan.",
     sections: [
       {
-        title: "5 Rukun Islam",
-        content: "Tindakan lahiriyah yang menjadi identitas seorang muslim.",
-        explanation: "1. Syahadat, 2. Shalat, 3. Zakat, 4. Puasa, 5. Haji (bagi yang mampu).",
-        learningActivity: "Simulasi Syahadat: Memahami makna pengakuan tauhid secara mendalam.",
-        dailyLife: "Menegakkan shalat lima waktu tepat pada waktunya."
+        title: "1. Syahadat: Persaksian Tauhid",
+        content: "Mengakui dengan lisan dan meyakini dalam hati bahwa tidak ada Tuhan selain Allah dan Muhammad adalah utusan Allah.",
+        explanation: "Kalimat 'Laa ilaa ha illallah, Muhammadur Rasulullah' adalah kunci masuk Islam.",
+        learningActivity: "Refleksi Makna: Menuliskan apa pengaruh kalimat syahadat dalam menjaga integritas diri setiap hari.",
+        dailyLife: "Menjauhi segala bentuk kemusyrikan dan menjadikan Rasulullah sebagai satu-satunya teladan hidup."
       },
       {
-        title: "6 Rukun Iman",
-        content: "Keyakinan batin yang menjadi ruh dari setiap amal perbuatan.",
-        explanation: "1. Iman kepada Allah, 2. Malaikat, 3. Kitab, 4. Rasul, 5. Hari Kiamat, 6. Qada & Qadar.",
-        learningActivity: "Diskusi: Bagaimana iman kepada hari kiamat mengubah perilaku kita saat ini?",
-        dailyLife: "Tetap tenang menghadapi kegagalan karena percaya pada ketetapan Allah (Qada Qadar)."
+        title: "2. Shalat: Tiang Agama",
+        content: "Melaksanakan ibadah wajib lima waktu sehari semalam.",
+        explanation: "Shalat adalah sarana komunikasi langsung antara hamba dengan Tuhannya.",
+        learningActivity: "Praktik Khusyuk: Berlatih teknik pernapasan dan pemaknaan bacaan shalat agar lebih tenang.",
+        dailyLife: "Mendisiplinkan waktu dengan selalu mengutamakan panggilan adzan di atas aktivitas lainnya."
+      },
+      {
+        title: "3. Zakat: Pensuci Harta",
+        content: "Mengeluarkan sebagian harta tertentu untuk diberikan kepada golongan yang berhak (mustahik).",
+        explanation: "Zakat membersihkan jiwa dari sifat kikir dan harta dari hak orang lain.",
+        learningActivity: "Simulasi Mudzaki: Menghitung zakat mal dari skenario tabungan selama satu tahun.",
+        dailyLife: "Gemar berbagi dan peduli terhadap kesulitan ekonomi tetangga atau teman."
+      },
+      {
+        title: "4. Puasa: Madrasah Kesabaran",
+        content: "Menahan diri dari makan, minum, dan hal-hal yang membatalkannya dari terbit fajar hingga terbenam matahari.",
+        explanation: "Puasa melatih kontrol diri (self-control) dan rasa empati kepada kaum dhuafa.",
+        learningActivity: "Tips Puasa Sehat: Berdiskusi tentang asupan nutrisi saat sahur dan buka sesuai sunnah Nabi.",
+        dailyLife: "Mampu menahan amarah dan menjaga lisan dari perkataan sia-sia meskipun sedang lapar."
+      },
+      {
+        title: "5. Haji: Puncak Ibadah",
+        content: "Melakukan perjalanan suci ke Baitullah Makkah sekali seumur hidup bagi yang mampu secara fisik dan finansial.",
+        explanation: "Haji adalah simbol persatuan umat Islam sedunia tanpa memandang kasta atau ras.",
+        learningActivity: "Manasik Haji: Mempelajari filosofi di balik simbol-simbol haji (Tawaf, Sa'i, Wukuf).",
+        dailyLife: "Memupuk semangat pengorbanan dan kerinduan untuk menyempurnakan rukun Islam."
+      }
+    ]
+  },
+  {
+    id: "pillars-2",
+    title: "Rukun Iman: 6 Fondasi Keyakinan",
+    category: ModuleCategory.PILLARS,
+    summary: "Enam pilar batiniah yang membangun cara pandang seorang muslim terhadap Tuhan, alam, dan hari akhir.",
+    sections: [
+      {
+        title: "1. Iman kepada Allah",
+        content: "Yakin sepenuhnya bahwa Allah adalah satu-satunya Pencipta, Pemilik, dan Pengatur alam semesta.",
+        explanation: "Tauhid adalah inti dari seluruh ajaran Islam.",
+        learningActivity: "Tadabbur Alam: Mengamati keteraturan alam semesta sebagai bukti keberadaan Sang Perancang Agung.",
+        dailyLife: "Hanya menggantungkan harapan dan doa kepada Allah semata (Tawakkal)."
+      },
+      {
+        title: "2. Iman kepada Malaikat",
+        content: "Yakin bahwa Allah menciptakan malaikat dari cahaya sebagai makhluk yang selalu taat.",
+        explanation: "Malaikat memiliki tugas-tugas khusus yang mendukung keteraturan alam dan mendukung manusia.",
+        learningActivity: "Table Tugas: Menghubungkan fenomena alam (hujan, rezeki) dengan malaikat yang bertugas.",
+        dailyLife: "Selalu berbuat baik karena merasa diawasi oleh malaikat Raqib dan Atid."
+      },
+      {
+        title: "3. Iman kepada Kitab-Kitab Allah",
+        content: "Yakin bahwa Allah menurunkan wahyu melalui para Rasul sebagai pedoman hidup.",
+        explanation: "Kitab-kitab (Taurat, Zabur, Injil, Al-Qur'an) berisi petunjuk untuk kebahagiaan dunia dan akhirat.",
+        learningActivity: "Literasi Wahyu: Mengkaji pesan moral utama yang ada dalam setiap kitab suci.",
+        dailyLife: "Menjadikan Al-Qur'an sebagai referensi utama dalam memutuskan sebuah perkara."
+      },
+      {
+        title: "4. Iman kepada Rasul-Rasul Allah",
+        content: "Yakin bahwa Allah memilih manusia terbaik untuk menyampaikan risalah-Nya.",
+        explanation: "Rasul adalah teladan nyata (uswatun hasanah) dalam memperjuangkan kebenaran.",
+        learningActivity: "Biografi Singkat: Menuliskan satu sifat nabi yang paling ingin diteladani dalam profesi impian.",
+        dailyLife: "Menghidupkan sunnah-sunnah kecil Rasulullah dalam pergaulan sehari-hari."
+      },
+      {
+        title: "5. Iman kepada Hari Akhir",
+        content: "Yakin bahwa kehidupan dunia akan berakhir dan akan ada hari pembalasan.",
+        explanation: "Keyakinan ini membuat manusia visioner dan berhati-hati dalam bertindak.",
+        learningActivity: "Muhasabah Akhirat: Membayangkan sisa umur yang ada dan apa investasi terbaik untuk akhirat.",
+        dailyLife: "Selalu jujur dan amanah karena yakin setiap perbuatan akan ada 'audit' di hari kiamat."
+      },
+      {
+        title: "6. Iman kepada Qada dan Qadar",
+        content: "Yakin bahwa segala sesuatu yang terjadi di alam semesta telah ditetapkan oleh Allah.",
+        explanation: "Meliputi ketetapan yang sudah terjadi (Qada) dan potensi yang bisa diusahakan (Qadar/Takdir).",
+        learningActivity: "Matriks Ikhtiar: Memisahkan hal yang bisa kita kendalikan (usaha) dan hal yang hanya bisa diterima (hasil).",
+        dailyLife: "Tidak putus asa saat gagal dan tidak sombong saat berhasil."
       }
     ]
   },
@@ -1682,50 +1753,62 @@ export const TOPICS: Topic[] = [
   // ==========================================
   {
     id: "asmaul-husna-1",
-    title: "99 Nama Indah Allah (Asmaul Husna)",
+    title: "99 Nama Indah Allah (Asmaul Husna) Terlengkap",
     category: ModuleCategory.ASMAUL_HUSNA,
-    summary: "Mengenal sifat-contoh doa, dan pengamalan nyata 99 Nama Allah dalam hidup.",
+    summary: "Mengenal sifat, pengamalan nyata, dan doa melalui 99 Nama Allah dalam kehidupan sehari-hari.",
     sections: [
       {
-        title: "Pengenalan Asmaul Husna",
-        content: "Allah memiliki nama-nama terbaik yang mencerminkan kesempurnaan-Nya.",
-        explanation: "Membaca dan memahami Asmaul Husna adalah kunci ketenangan hati dan dikabulkannya doa.",
-        learningActivity: "Tadabbur Alam: Melihat keindahan bunga lalu menyebut 'Ya Khaliq, Ya Mushawwir'.",
-        dailyLife: "Melazimi dzikir Asmaul Husna setiap selesai shalat."
+        title: "Fadilah & Cara Berdoa",
+        content: "Allah berfirman: 'Hanya milik Allah asmaul-husna, maka bermohonlah kepada-Nya dengan menyebut asmaul-husna itu.' (QS. Al-A'raf: 180)",
+        explanation: "Kunci diterimanya doa adalah dengan memuji Allah menggunakan nama-Nya yang relevan dengan hajat kita.",
+        learningActivity: "Zikir Pagi: Melazimi pembacaan 99 Asmaul Husna dengan penuh tadabbur makna.",
+        dailyLife: "Membangun kedekatan batin dengan Allah melalui pengenalan sifat-sifat-Nya."
       },
       {
-        title: "Penerapan & Doa (Sampel Utama)",
-        content: "Contoh bagaimana mengamalkan dan berdoa dengan Asmaul Husna.",
+        title: "1-20: Sifat Keagungan & Belas Kasih",
+        content: "Daftar 20 nama pertama yang menekankan pada sifat ketuhanan (Rububiyah) dan kasih sayang (Rahmaniyah).",
         subsections: [
-          { 
-            title: "Ar-Rahman (Maha Pengasih)", 
-            content: "Pengamalan: Menyayangi semua makhluk tanpa pilih kasih.",
-            explanation: "Doa: 'Ya Rahman, kasihilah kami dengan rahmat-Mu yang luas dalam setiap ujian kami.'"
-          },
-          { 
-            title: "Al-Aziz (Maha Perkasa)", 
-            content: "Pengamalan: Memiliki prinsip yang kuat and tidak mudah goyah oleh rayuan maksiat.",
-            explanation: "Doa: 'Ya Aziz, kuatkanlah kemuliaan diri kami agar tidak terhina oleh hawa nafsu.'"
-          },
-          { 
-            title: "Ar-Razzaq (Maha Pemberi Rezeki)", 
-            content: "Pengamalan: Gemar berbagi rezeki dan yakin rezeki tidak akan tertukar.",
-            explanation: "Doa: 'Ya Razzaq, bukakanlah pintu-pintu rezeki yang halal dan berkah bagi keluarga kami.'"
-          },
-          { 
-            title: "Al-Ghaffar (Maha Pengampun)", 
-            content: "Pengamalan: Menjadi pribadi yang pemaaf dan tidak pendendam.",
-            explanation: "Doa: 'Ya Ghaffar, ampunilah dosa-dosa kami yang sengaja maupun yang tidak kami sadari.'"
-          }
-        ],
-        learningActivity: "Jurnal Asmaul Husna: Menuliskan 1 nama Allah setiap hari dan bagaimana cara mempraktikkannya.",
-        dailyLife: "Memulai setiap doa dengan memuji Allah menggunakan Asmaul Husna yang relevan."
+          { title: "Ar-Rahman (Maha Pengasih)", content: "Pengamalan: Menyayangi semua makhluk tanpa pilih kasih. Doa: 'Ya Rahman, kasihilah kami dengan rahmat-Mu yang luas.'" },
+          { title: "Ar-Rahim (Maha Penyayang)", content: "Pengamalan: Memberikan kasih sayang khusus kepada sesama mukmin. Doa: 'Ya Rahim, sayangi kami di dunia dan akhirat.'" },
+          { title: "Al-Malik (Maha Raja)", content: "Pengamalan: Tidak sombong karena semua kekuasaan adalah milik Allah. Doa: 'Ya Malik, berikanlah kami kekuasaan yang berkah.'" },
+          { title: "Al-Quddus (Maha Suci)", content: "Pengamalan: Menjaga kebersihan hati dan lahir. Doa: 'Ya Quddus, sucikanlah hati kami dari sifat buruk.'" },
+          { title: "As-Salam (Maha Sejahtera)", content: "Pengamalan: Menjadi penebar kedamaian bagi orang lain. Doa: 'Ya Salam, berikanlah keselamatan dan kedamaian di rumah kami.'" },
+          { title: "Al-Mu'min (Maha Memberi Keamanan)", content: "Pengamalan: Memberikan rasa aman kepada tetangga. Doa: 'Ya Mu'min, jagalah keamanan negeri dan keluarga kami.'" },
+          { title: "Al-Muhaimin (Maha Memelihara)", content: "Pengamalan: Bertanggung jawab menjaga amanah yang diberikan. Doa: 'Ya Muhaimin, peliharalah kami dari godaan fitnah.'" },
+          { title: "Al-Aziz (Maha Perkasa)", content: "Pengamalan: Kuat dalam prinsip kebenaran. Doa: 'Ya Aziz, kuatkanlah iman kami agar tidak goyah.'" },
+          { title: "Al-Jabbar (Maha Gagah)", content: "Pengamalan: Tidak memaksakan kehendak dengan dzalim. Doa: 'Ya Jabbar, perbaikilah urusan kami yang sedang carut-marut.'" },
+          { title: "Al-Mutakabbir (Maha Megah)", content: "Pengamalan: Tawadhu (rendah hati) karena hanya Allah yang berhak Megah. Doa: 'Ya Mutakabbir, jauhkan kami dari sifat riya dan ujub.'" }
+        ]
       },
       {
-        title: "Daftar Lengkap 99 Nama",
-        content: "Allah, Ar-Rahman, Ar-Rahim, Al-Malik, Al-Quddus, As-Salam, Al-Mu'min, Al-Muhaimin, Al-Aziz, Al-Jabbar, Al-Mutakabbir, Al-Khaliq, Al-Bari', Al-Mushawwir, Al-Ghaffar, Al-Qahhar, Al-Wahhab, Ar-Razzaq, Al-Fattah, Al-'Alim, Al-Qabidh, Al-Basith, Al-Khafidz, Ar-Rafi', Al-Mu'izz, Al-Mudzill, As-Sami', Al-Bashir, Al-Hakam, Al-'Adl, Al-Lathif, Al-Khabir, Al-Halim, Al-'Azhim, Al-Ghafur, Asy-Syakur, Al-'Aliy, Al-Kabir, Al-Hafizh, Al-Muqit, Al-Hasib, Al-Jalil, Al-Karim, Ar-Raqib, Al-Mujib, Al-Wasi', Al-Hakim, Al-Wadud, Al-Majid, Al-Ba'its, Asy-Syahid, Al-Haqq, Al-Wakil, Al-Qawiy, Al-Matin, Al-Waliy, Al-Hamid, Al-Muhshi, Al-Mubdi', Al-Mu'id, Al-Muhyi, Al-Mumit, Al-Hayy, Al-Qayyum, Al-Wajid, Al-Majid, Al-Wahid, Al-Ahad, Ash-Shamad, Al-Qadir, Al-Muqtadir, Al-Muqaddim, Al-Mu'akhkhir, Al-Awwal, Al-Akhir, Azh-Zhahir, Al-Bathin, Al-Wali, Al-Muta'ali, Al-Barr, At-Tawwab, Al-Muntaqim, Al-'Afuww, Ar-Ra'uf, Malikul Mulk, Dzul Jalali wal Ikram, Al-Muqsith, Al-Jami', Al-Ghaniy, Al-Mughni, Al-Mani', Adh-Dhar, An-Nafi', An-Nur, Al-Hadi, Al-Badi', Al-Baqi, Al-Warits, Ar-Rasyid, Ash-Shabur.",
-        learningActivity: "Hafalan Berjamaah: Mengaji Asmaul Husna bersama-sama dengan nada (lagu) setiap pagi di sekolah.",
-        dailyLife: "Berdoa 'Ya Fattah' saat kesulitan belajar agar Allah membukakan pintu ilmu."
+        title: "21-40: Sifat Penciptaan & Pemberian",
+        content: "Nama-nama yang berkaitan dengan proses penciptaan alam semesta dan distribusi karunia kepada makhluk.",
+        subsections: [
+          { title: "Al-Khaliq (Maha Pencipta)", content: "Pengamalan: Menghargai inovasi dan kreasi positif. Doa: 'Ya Khaliq, ciptakanlah ide-ide cemerlang untuk kebermanfaatan umat.'" },
+          { title: "Al-Bari' (Maha Melepaskan)", content: "Pengamalan: Membantu orang lain lepas dari kesulitan. Doa: 'Ya Bari', lepaskanlah kami dari belenggu hutang dan dosa.'" },
+          { title: "Al-Mushawwir (Maha Membentuk)", content: "Pengamalan: Bersyukur atas bentuk tubuh yang diberikan. Doa: 'Ya Mushawwir, baguskanlah akhlak kami sebagaimana Engkau baguskan rupa kami.'" },
+          { title: "Al-Ghaffar (Maha Pengampun)", content: "Pengamalan: Mudah memaafkan kesalahan orang lain. Doa: 'Ya Ghaffar, ampuni dosa kami yang melampaui batas.'" },
+          { title: "Al-Qahhar (Maha Menaklukkan)", content: "Pengamalan: Menundukkan nafsu buruk dalam diri. Doa: 'Ya Qahhar, tundukkanlah musuh-musuh Islam yang sedang berbuat dzalim.'" },
+          { title: "Al-Wahhab (Maha Pemberi Karunia)", content: "Pengamalan: Gemar memberi tanpa mengharap balasan. Doa: 'Ya Wahhab, limpahkanlah karunia-Mu yang tak terputus.'" },
+          { title: "Ar-Razzaq (Maha Pemberi Rezeki)", content: "Pengamalan: Sedekah setiap hari meskipun sedikit. Doa: 'Ya Razzaq, bukakanlah pintu rezeki dari jalan yang tidak disangka-sangka.'" },
+          { title: "Al-Fattah (Maha Pembuka)", content: "Pengamalan: Membantu memberi jalan keluar bagi masalah orang. Doa: 'Ya Fattah, bukakanlah pintu rahmat dan ilmu bagi kami.'" },
+          { title: "Al-'Alim (Maha Mengetahui)", content: "Pengamalan: Terus belajar karena ilmu Allah luas. Doa: 'Ya 'Alim, tambahkanlah kepada kami ilmu yang bermanfaat.'" },
+          { title: "Al-Qabidh (Maha Menyempitkan)", content: "Pengamalan: Sabar saat ekonomi atau urusan sedang sempit. Doa: 'Ya Qabidh, bimbinglah kami agar tetap ridha saat Engkau menguji lewat kesempitan.'" }
+        ]
+      },
+      {
+        title: "Lengkap 99 Nama (Zikir & Doa Ringkas)",
+        content: "Daftar 99 Asmaul Husna beserta penggalan Doa Tawassul singkat untuk setiap namanya.",
+        explanation: "Latihlah untuk memanggil Allah dengan Nama-Nya sebelum mengutarakan doa spesifikmu.",
+        subsections: [
+          { title: "41-50: Al-Basith s/d Al-Ba'its", content: "Ya Basith (Lapangkan kami), Ya Khafidz (Rendahkan kesombongan kami), Ya Rafi' (Angkat derajat kami), Ya Mu'izz (Muliakan kami), Ya Mudzill (Hinakan nafsu kami), Ya Sami' (Dengar doa kami), Ya Bashir (Lihat amal kami), Ya Hakam (Adili urusan kami), Ya 'Adl (Berlaku adillah pada kami), Ya Lathif (Lembutkan hati kami)." },
+          { title: "51-60: Al-Khabir s/d Al-Halim", content: "Ya Khabir (Teliti niat kami), Ya Halim (Beri kami kesabaran), Ya 'Azhim (Agungkan iman kami), Ya Ghafur (Maafkan khilaf kami), Ya Syakur (Terima syukur kami), Ya 'Aliy (Tinggikan visi kami), Ya Kabir (Besarkan tekad kami), Ya Hafizh (Jaga keluarga kami), Ya Muqit (Berkahi makan kami), Ya Hasib (Hisablah kami dengan rahmat-Mu)." },
+          { title: "61-70: Al-Jalil s/d Al-Wakil", content: "Ya Jalil (Tampakkan keagungan Islam), Ya Karim (Muliakan tamu kami), Ya Raqib (Awasi kami dari maksiat), Ya Mujib (Kabulkanlah doa kami), Ya Wasi' (Luaskan pengetahuan kami), Ya Hakim (Bijaksanakan lisan kami), Ya Wadud (Cintai kami), Ya Majid (Muliakan sejarah kami), Ya Ba'its (Bangkitkan semangat kami), Ya Syahid (Saksikan taubat kami)." },
+          { title: "71-80: Al-Haqq s/d Al-Qayyum", content: "Ya Haqq (Tegakkan kebenaran), Ya Wakil (Kami berserah pada-Mu), Ya Qawiy (Kuatkan raga kami), Ya Matin (Kokohkan prinsip kami), Ya Waliy (Jadilah pelindung kami), Ya Hamid (Hanya Engkau yang terpuji), Ya Muhshi (Hitunglah pahala kami), Ya Mubdi' (Awali sukses kami), Ya Mu'id (Kembalikan kejayaan kami), Ya Muhyi (Hidupkan jiwa kami)." },
+          { title: "81-99: Al-Mumit s/d Ash-Shabur", content: "Ya Mumit (Matikan kami dalam Husnul Khatimah), Ya Hayy (Berikan hidup yang berkah), Ya Qayyum (Mandirikan kami), Ya Wajid (Temukan kami dengan petunjuk), Ya Majid (Muliakan langkah kami), Ya Wahid (Satukan visi kami), Ya Ahad (Eskan niat kami), Ya Shamad (Tempat kami meminta), Ya Qadir (Mampukan cita-cita kami), Ya Muqtadir (Berkuasalah atas nasib kami), Ya Muqaddim (Dahulukan kebaikan bagi kami), Ya Mu'akhkhir (Akhirkan kami dengan selamat), Ya Awwal (Awali hari kami), Ya Akhir (Akhiri usia kami dengan iman), Ya Zhahir (Tampakkan cahaya ilmu), Ya Bathin (Bersihkan rahasia hati), Ya Wali (Pimpinlah pemimpin kami), Ya Muta'ali (Tinggikan derajat guru), Ya Barr (Kebaikan-Mu abadi), Ya Tawwab (Terima taubat kami), Ya Muntaqim (Balaslah keadilan), Ya 'Afuww (Hapus duka kami), Ya Ra'uf (Belas kasihilah kami), Ya Malikul Mulk (Pemilik semesta), Ya Dzul Jalali wal Ikram (Pemilik kemuliaan), Ya Muqsith (Tegakkan adil), Ya Jami' (Satukan hati kami), Ya Ghaniy (Kayakan batin kami), Ya Mughni (Cukupkan kebutuhan kami), Ya Mani' (Cegah kami dari maksiat), Ya Adh-Dhar (Pemberi derita agar kami sadar), Ya Nafi' (Beri kami manfaat), Ya Nur (Terangi jalan kami), Ya Hadi (Beri kami hidayah), Ya Badi' (Pencipta Keindahan), Ya Baqi (Yang kekal), Ya Warits (Wariskan ilmu-Mu), Ya Rasyid (Tunjukkan kebenaran), Ya Shabur (Sabar dalam ujian)." }
+        ],
+        learningActivity: "Katalog Doa: Membuat kartu-kartu kecil berisi 1 Nama Allah dan 1 Doa terkait untuk dibawa di saku.",
+        dailyLife: "Membiasakan diri mengucapkan salah satu Asmaul Husna saat melihat peristiwa yang relevan (misal: Subhanallah Ya Razzaq saat melihat panen melimpah)."
       }
     ]
   }
