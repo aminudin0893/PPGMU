@@ -1526,5 +1526,207 @@ export const TOPICS: Topic[] = [
       learningActivity: "Deep Talk: Ngopi/ngeteh bareng tanpa nasehat, hanya mendengarkan ceritanya.",
       dailyLife: "Minta pendapat remaja saat keluarga akan membeli barang atau pindah rumah.",
     }]
+  },
+
+  // ==========================================
+  // BULAN HIJRIYAH & KISAH
+  // ==========================================
+  {
+    id: "hijriyah-1",
+    title: "Mengenal 12 Bulan Hijriyah",
+    category: ModuleCategory.HIJRIYAH,
+    summary: "Urutan bulan dalam kalender Islam beserta makna dan peristiwa pentingnya.",
+    sections: [
+      {
+        title: "Kalender Qomariyah",
+        content: "Sistem penanggalan berdasarkan peredaran bulan yang dimulai sejak peristiwa Hijrah Rasulullah.",
+        explanation: "12 Bulan: Muharram, Safar, Rabiul Awal, Rabiul Akhir, Jumadil Uwal, Jumadil Akhir, Rajab, Sya'ban, Ramadhan, Syawal, Dzulqa'dah, Dzulhijjah.",
+        learningActivity: "Bernyanyi Nama Bulan: Menghafal urutan bulan Hijriyah melalui lagu anak islami.",
+        dailyLife: "Mengecek tanggal Hijriyah setiap hari untuk mengetahui waktu-waktu sunnah ibadah."
+      },
+      {
+        title: "Kisah Bulan-Bulan Mulia",
+        content: "Peristiwa besar yang terjadi pada bulan-bulan tertentu.",
+        subsections: [
+          { title: "Muharram", content: "Bulan kemenangan Nabi Musa atas Fir'aun dan hijrahnya Nabi Muhammad." },
+          { title: "Rabiul Awal", content: "Bulan kelahiran Baginda Nabi Muhammad SAW (Maulid)." },
+          { title: "Ramadhan", content: "Bulan turunnya Al-Qur'an dan kewajiban puasa." },
+          { title: "Dzulhijjah", content: "Bulan pelaksanaan Ibadah Haji dan kurban." }
+        ],
+        learningActivity: "Storytelling: Menceritakan kembali kisah kepahlawanan Nabi di bulan Muharram.",
+        dailyLife: "Meningkatkan kualitas ibadah di bulan-bulan haram (suci)."
+      }
+    ]
+  },
+
+  // ==========================================
+  // KISAH 25 NABI & RASUL
+  // ==========================================
+  {
+    id: "prophets-1",
+    title: "Timeline & Mukjizat 25 Nabi",
+    category: ModuleCategory.PROPHETS,
+    summary: "Sejarah perjuangan para utusan Allah mulai dari Nabi Adam AS hingga Nabi Muhammad SAW.",
+    sections: [
+      {
+        title: "Nabi Ulul Azmi",
+        content: "Lima Rasul yang memiliki keteguhan hati luar biasa dalam menghadapi rintangan dakwah.",
+        explanation: "Nuh AS (Bertahan pada banjir besar), Ibrahim AS (Sabar saat dibakar), Musa AS (Melawan Fir'aun), Isa AS (Sabar dengan kaumnya), Muhammad SAW (Penyempurna ajaran).",
+        learningActivity: "Peta Perjalanan: Menggambar peta dakwah para Nabi Ulul Azmi di Timur Tengah.",
+        dailyLife: "Meneladani kesabaran para Nabi saat menghadapi kesulitan belajar atau pergaulan."
+      },
+      {
+        title: "Keluarga Besar 25 Nabi (A-Z)",
+        content: "Daftar lengkap 25 Nabi yang wajib diketahui beserta poin utama kisahnya.",
+        subsections: [
+          { title: "1. Adam AS", content: "Manusia pertama dan Khalifah pertama di bumi." },
+          { title: "2. Idris AS", content: "Nabi pertama yang pandai menulis, menjahit, dan menguasai ilmu falaq." },
+          { title: "3. Nuh AS", content: "Membuat kapal besar (Bahtera) untuk menyelamatkan umat beriman dari banjir bandang." },
+          { title: "4. Hud AS", content: "Diutus kepada kaum 'Ad yang sombong, mukjizatnya mendatangkan angin badai dahsyat." },
+          { title: "5. Shaleh AS", content: "Mukjizat memunculkan unta betina dari balik batu besar untuk kaum Tsamud." },
+          { title: "6. Ibrahim AS", content: "Bapak para Nabi (Abul Anbiya), tetap hidup meski dibakar serta pembangun Ka'bah bersama Ismail AS." },
+          { title: "7. Luth AS", content: "Diutus kepada kaum Sodom, memperjuangkan moralitas dan keluarga yang suci." },
+          { title: "8. Ismail AS", content: "Anak yang sabar saat hendak dikurban, asal muasal air Zamzam dan ibadah Kurban." },
+          { title: "9. Ishaq AS", content: "Nabi yang shalih, leluhur dari banyak nabi Bani Israil." },
+          { title: "10. Ya'qub AS", content: "Ayah dari Nabi Yusuf, memiliki kesabaran luar biasa atas kerinduan pada anaknya." },
+          { title: "11. Yusuf AS", content: "Nabi tertampan dengan mukjizat tafsir mimpi dan menjadi penguasa Mesir yang adil." },
+          { title: "12. Ayyub AS", content: "Simbol kesabaran dalam menghadapi penyakit menahun dan kehilangan segalanya." },
+          { title: "13. Syu'aib AS", content: "Nabi yang diutus kepada kaum Madyan, ahli retorika (Khatibul Anbiya) yang membela kejujuran timbangan." },
+          { title: "14. Musa AS", content: "Penyampai kitab Taurat, membelah laut dan memimpin Bani Israil dari perbudakan Mesir." },
+          { title: "15. Harun AS", content: "Saudara Nabi Musa yang fasih bicaranya dan membantu dakwah di hadapan Fir'aun." },
+          { title: "16. Dzulkifli AS", content: "Nabi yang sangat disiplin, tegas, dan selalu menepati janji (sanggup berpuasa siang & ibadah malam)." },
+          { title: "17. Daud AS", content: "Penerima Zabur, memiliki suara sangat merdu dan mampu melunakkan besi dengan tangan." },
+          { title: "18. Sulaiman AS", content: "Raja bijaksana yang memahami bahasa binatang dan memimpin bala tentara dari manusia, jin, dan burung." },
+          { title: "19. Ilyas AS", content: "Menasihati kaumnya agar tidak menyembah berhala Ba'al, selalu bersabar menghadapi penguasa jahat." },
+          { title: "20. Ilyasa AS", content: "Penerus dakwah Nabi Ilyas, berdakwah dengan mukjizat menyembuhkan penyakit dan membangkitkan yang mati (izin Allah)." },
+          { title: "21. Yunus AS", content: "Nabi yang bertahan hidup di dalam perut ikan paus (Nun) setelah meninggalkan kaumnya sejenak." },
+          { title: "22. Zakaria AS", content: "Pelayan Baitul Maqdis yang tetap berdoa minta keturunan meski sudah lanjut usia, ayah Nabi Yahya." },
+          { title: "23. Yahya AS", content: "Nabi yang rendah hati, berani membela kebenaran meski harus berhadapan dengan raja zalim." },
+          { title: "24. Isa AS", content: "Lahir tanpa ayah, berbicara saat bayi, penerima Injil, dan diangkat ke langit." },
+          { title: "25. Muhammad SAW", content: "Penutup para nabi (Khatamun Nabiyyin), penerima mukjizat agung Al-Qur'an untuk seluruh alam." }
+        ],
+        learningActivity: "Peta Pohon Nabi: Membuat bagan silsilah atau urutan nabi 1-25 dengan hiasan kreatif.",
+        dailyLife: "Membaca kisah satu nabi setiap minggu untuk diambil inspirasi kebaikannya."
+      },
+      {
+        title: "Mukjizat Para Nabi",
+        content: "Kelebihan luar biasa yang diberikan Allah sebagai bukti kebenaran risalah.",
+        subsections: [
+          { title: "Nabi Sulaiman AS", content: "Bisa bicara dengan hewan dan memerintah jin." },
+          { title: "Nabi Ibrahim AS", content: "Tidak hangus saat dibakar api Raja Namrud." },
+          { title: "Nabi Musa AS", content: "Tongkat menjadi ular dan membelah Laut Merah." },
+          { title: "Nabi Isa AS", content: "Menyembuhkan orang buta dan menghidupkan orang mati (izin Allah)." },
+          { title: "Nabi Muhammad SAW", content: "Al-Qur'an, Isra Mi'raj, dan terbelahnya bulan." }
+        ],
+        learningActivity: "Quiz Mukjizat: Mencocokkan nama Nabi dengan mukjizat yang dimilikinya.",
+        dailyLife: "Yakin bahwa pertolongan Allah selalu ada bagi hamba yang beriman."
+      }
+    ]
+  },
+
+  // ==========================================
+  // 10 MALAIKAT & TUGASNYA
+  // ==========================================
+  {
+    id: "angels-1",
+    title: "Mengimani 10 Malaikat Utama",
+    category: ModuleCategory.ANGELS,
+    summary: "Tugas-tugas spesifik para malaikat dalam mengatur alam semesta dan mencatat amal manusia.",
+    sections: [
+      {
+        title: "Daftar Malaikat & Tugasnya",
+        content: "Makhluk cahaya yang selalu taat dan tidak pernah membangkang perintah Allah.",
+        subsections: [
+          { title: "Jibril", content: "Menyampaikan wahyu kepada Nabi dan Rasul." },
+          { title: "Mikail", content: "Membagi rezeki dan mengatur fenomena alam (hujan/angin)." },
+          { title: "Israfil", content: "Meniup sangkakala pada hari kiamat." },
+          { title: "Izrail", content: "Mencabut nyawa setiap makhluk hidup." },
+          { title: "Munkar & Nakir", content: "Menanya manusia di dalam alam kubur." },
+          { title: "Raqib & Atid", content: "Mencatat amal baik dan amal buruk manusia." },
+          { title: "Malik & Ridwan", content: "Menjaga pintu neraka dan pintu surga." }
+        ],
+        learningActivity: "Flashcard: Menghafal 10 Malaikat beserta tugas masing-masing secara interaktif.",
+        dailyLife: "Merasa diawasi (Muraqabah) oleh Raqib dan Atid sehingga takut berbuat dosa."
+      }
+    ]
+  },
+
+  // ==========================================
+  // RUKUN IMAN & ISLAM
+  // ==========================================
+  {
+    id: "pillars-1",
+    title: "Fondasi Agama: Rukun Islam & Iman",
+    category: ModuleCategory.PILLARS,
+    summary: "Memahami 5 pilar perbuatan (Islam) dan 6 pilar keyakinan (Iman).",
+    sections: [
+      {
+        title: "5 Rukun Islam",
+        content: "Tindakan lahiriyah yang menjadi identitas seorang muslim.",
+        explanation: "1. Syahadat, 2. Shalat, 3. Zakat, 4. Puasa, 5. Haji (bagi yang mampu).",
+        learningActivity: "Simulasi Syahadat: Memahami makna pengakuan tauhid secara mendalam.",
+        dailyLife: "Menegakkan shalat lima waktu tepat pada waktunya."
+      },
+      {
+        title: "6 Rukun Iman",
+        content: "Keyakinan batin yang menjadi ruh dari setiap amal perbuatan.",
+        explanation: "1. Iman kepada Allah, 2. Malaikat, 3. Kitab, 4. Rasul, 5. Hari Kiamat, 6. Qada & Qadar.",
+        learningActivity: "Diskusi: Bagaimana iman kepada hari kiamat mengubah perilaku kita saat ini?",
+        dailyLife: "Tetap tenang menghadapi kegagalan karena percaya pada ketetapan Allah (Qada Qadar)."
+      }
+    ]
+  },
+
+  // ==========================================
+  // 99 ASMAUL HUSNA
+  // ==========================================
+  {
+    id: "asmaul-husna-1",
+    title: "99 Nama Indah Allah (Asmaul Husna)",
+    category: ModuleCategory.ASMAUL_HUSNA,
+    summary: "Mengenal sifat-contoh doa, dan pengamalan nyata 99 Nama Allah dalam hidup.",
+    sections: [
+      {
+        title: "Pengenalan Asmaul Husna",
+        content: "Allah memiliki nama-nama terbaik yang mencerminkan kesempurnaan-Nya.",
+        explanation: "Membaca dan memahami Asmaul Husna adalah kunci ketenangan hati dan dikabulkannya doa.",
+        learningActivity: "Tadabbur Alam: Melihat keindahan bunga lalu menyebut 'Ya Khaliq, Ya Mushawwir'.",
+        dailyLife: "Melazimi dzikir Asmaul Husna setiap selesai shalat."
+      },
+      {
+        title: "Penerapan & Doa (Sampel Utama)",
+        content: "Contoh bagaimana mengamalkan dan berdoa dengan Asmaul Husna.",
+        subsections: [
+          { 
+            title: "Ar-Rahman (Maha Pengasih)", 
+            content: "Pengamalan: Menyayangi semua makhluk tanpa pilih kasih.",
+            explanation: "Doa: 'Ya Rahman, kasihilah kami dengan rahmat-Mu yang luas dalam setiap ujian kami.'"
+          },
+          { 
+            title: "Al-Aziz (Maha Perkasa)", 
+            content: "Pengamalan: Memiliki prinsip yang kuat and tidak mudah goyah oleh rayuan maksiat.",
+            explanation: "Doa: 'Ya Aziz, kuatkanlah kemuliaan diri kami agar tidak terhina oleh hawa nafsu.'"
+          },
+          { 
+            title: "Ar-Razzaq (Maha Pemberi Rezeki)", 
+            content: "Pengamalan: Gemar berbagi rezeki dan yakin rezeki tidak akan tertukar.",
+            explanation: "Doa: 'Ya Razzaq, bukakanlah pintu-pintu rezeki yang halal dan berkah bagi keluarga kami.'"
+          },
+          { 
+            title: "Al-Ghaffar (Maha Pengampun)", 
+            content: "Pengamalan: Menjadi pribadi yang pemaaf dan tidak pendendam.",
+            explanation: "Doa: 'Ya Ghaffar, ampunilah dosa-dosa kami yang sengaja maupun yang tidak kami sadari.'"
+          }
+        ],
+        learningActivity: "Jurnal Asmaul Husna: Menuliskan 1 nama Allah setiap hari dan bagaimana cara mempraktikkannya.",
+        dailyLife: "Memulai setiap doa dengan memuji Allah menggunakan Asmaul Husna yang relevan."
+      },
+      {
+        title: "Daftar Lengkap 99 Nama",
+        content: "Allah, Ar-Rahman, Ar-Rahim, Al-Malik, Al-Quddus, As-Salam, Al-Mu'min, Al-Muhaimin, Al-Aziz, Al-Jabbar, Al-Mutakabbir, Al-Khaliq, Al-Bari', Al-Mushawwir, Al-Ghaffar, Al-Qahhar, Al-Wahhab, Ar-Razzaq, Al-Fattah, Al-'Alim, Al-Qabidh, Al-Basith, Al-Khafidz, Ar-Rafi', Al-Mu'izz, Al-Mudzill, As-Sami', Al-Bashir, Al-Hakam, Al-'Adl, Al-Lathif, Al-Khabir, Al-Halim, Al-'Azhim, Al-Ghafur, Asy-Syakur, Al-'Aliy, Al-Kabir, Al-Hafizh, Al-Muqit, Al-Hasib, Al-Jalil, Al-Karim, Ar-Raqib, Al-Mujib, Al-Wasi', Al-Hakim, Al-Wadud, Al-Majid, Al-Ba'its, Asy-Syahid, Al-Haqq, Al-Wakil, Al-Qawiy, Al-Matin, Al-Waliy, Al-Hamid, Al-Muhshi, Al-Mubdi', Al-Mu'id, Al-Muhyi, Al-Mumit, Al-Hayy, Al-Qayyum, Al-Wajid, Al-Majid, Al-Wahid, Al-Ahad, Ash-Shamad, Al-Qadir, Al-Muqtadir, Al-Muqaddim, Al-Mu'akhkhir, Al-Awwal, Al-Akhir, Azh-Zhahir, Al-Bathin, Al-Wali, Al-Muta'ali, Al-Barr, At-Tawwab, Al-Muntaqim, Al-'Afuww, Ar-Ra'uf, Malikul Mulk, Dzul Jalali wal Ikram, Al-Muqsith, Al-Jami', Al-Ghaniy, Al-Mughni, Al-Mani', Adh-Dhar, An-Nafi', An-Nur, Al-Hadi, Al-Badi', Al-Baqi, Al-Warits, Ar-Rasyid, Ash-Shabur.",
+        learningActivity: "Hafalan Berjamaah: Mengaji Asmaul Husna bersama-sama dengan nada (lagu) setiap pagi di sekolah.",
+        dailyLife: "Berdoa 'Ya Fattah' saat kesulitan belajar agar Allah membukakan pintu ilmu."
+      }
+    ]
   }
 ];

@@ -228,6 +228,11 @@ const App = () => {
     smp9: TOPICS.filter(t => t.category === ModuleCategory.SMP_9).length,
     parenting: TOPICS.filter(t => t.category === ModuleCategory.PARENTING).length,
     psikologi: TOPICS.filter(t => t.category === ModuleCategory.PSIKOLOGI).length,
+    hijriyah: TOPICS.filter(t => t.category === ModuleCategory.HIJRIYAH).length,
+    prophets: TOPICS.filter(t => t.category === ModuleCategory.PROPHETS).length,
+    angels: TOPICS.filter(t => t.category === ModuleCategory.ANGELS).length,
+    pillars: TOPICS.filter(t => t.category === ModuleCategory.PILLARS).length,
+    asmaulHusna: TOPICS.filter(t => t.category === ModuleCategory.ASMAUL_HUSNA).length,
     quizCount: 200
   };
 
@@ -241,6 +246,11 @@ const App = () => {
     { label: 'PAI IX', icon: BookOpen, val: ModuleCategory.SMP_9, stat: stats.smp9 },
     { label: 'Parenting', icon: Heart, val: ModuleCategory.PARENTING, stat: stats.parenting },
     { label: 'Psikologi', icon: Brain, val: ModuleCategory.PSIKOLOGI, stat: stats.psikologi },
+    { label: 'Hijriyah', icon: Clock, val: ModuleCategory.HIJRIYAH, stat: stats.hijriyah },
+    { label: '25 Nabi', icon: GraduationCap, val: ModuleCategory.PROPHETS, stat: stats.prophets },
+    { label: '10 Malaikat', icon: Sparkles, val: ModuleCategory.ANGELS, stat: stats.angels },
+    { label: 'Rukun Iman & Islam', icon: Book, val: ModuleCategory.PILLARS, stat: stats.pillars },
+    { label: 'Asmaul Husna', icon: Heart, val: ModuleCategory.ASMAUL_HUSNA, stat: stats.asmaulHusna },
   ];
 
   const categories = [
@@ -252,6 +262,11 @@ const App = () => {
     { name: 'PAI Kelas IX', icon: '📚', color: '#E0F2FE', val: ModuleCategory.SMP_9, detail: `${stats.smp9} Materi SMP` },
     { name: 'Parenting', icon: '❤️', color: '#FDF2F8', val: ModuleCategory.PARENTING, detail: `${stats.parenting} Materi Keluarga` },
     { name: 'Psikologi', icon: '🧠', color: '#F3E8FF', val: ModuleCategory.PSIKOLOGI, detail: `${stats.psikologi} Teori & Praktik` },
+    { name: 'Hijriyah', icon: '🌙', color: '#F0F9FF', val: ModuleCategory.HIJRIYAH, detail: `${stats.hijriyah} Kisah Bulan` },
+    { name: '25 Nabi', icon: '✨', color: '#FFF7ED', val: ModuleCategory.PROPHETS, detail: `${stats.prophets} Kisah Rasul` },
+    { name: '10 Malaikat', icon: '🛡️', color: '#F5F3FF', val: ModuleCategory.ANGELS, detail: `${stats.angels} Tugas Suci` },
+    { name: 'Rukun', icon: '⚖️', color: '#ECFDF5', val: ModuleCategory.PILLARS, detail: `${stats.pillars} Iman & Islam` },
+    { name: 'Asmaul Husna', icon: '📿', color: '#FFF1F2', val: ModuleCategory.ASMAUL_HUSNA, detail: `${stats.asmaulHusna} Nama Allah` },
   ];
 
   const handleSendMessage = async () => {

@@ -6,7 +6,12 @@ export enum ModuleCategory {
   SMP_8 = "PAI Kelas VIII",
   SMP_9 = "PAI Kelas IX",
   PARENTING = "Parenting & Keluarga",
-  PSIKOLOGI = "Psikologi Anak"
+  PSIKOLOGI = "Psikologi Anak",
+  HIJRIYAH = "Bulan Hijriyah & Kisah",
+  PROPHETS = "Kisah 25 Nabi & Rasul",
+  ANGELS = "10 Malaikat & Tugasnya",
+  PILLARS = "Rukun Iman & Islam",
+  ASMAUL_HUSNA = "99 Asmaul Husna"
 }
 
 export interface Section {
