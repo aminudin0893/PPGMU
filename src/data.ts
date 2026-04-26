@@ -1332,5 +1332,199 @@ export const TOPICS: Topic[] = [
       learningActivity: "Dilema Moral: Mendiskusikan kasus 'Heinz Dilemma' (mencuri obat demi menyelamatkan nyawa istri).",
       dailyLife: "Membantu anak memahami alasan di balik sebuah aturan, bukan sekadar 'karena dilarang'.",
     }]
+  },
+
+  // ==========================================
+  // PEDAGOGIK: MODEL PEMBELAJARAN MODERN
+  // ==========================================
+  {
+    id: "ped-model-1",
+    title: "Problem Based Learning (PBL)",
+    category: ModuleCategory.PEDAGOGIK,
+    summary: "Berfokus pada masalah otentik dunia nyata untuk melatih berpikir kritis.",
+    sections: [{
+      title: "Sintaks Dasar",
+      content: "Orientasi, Organisasi, Penyelidikan, Pengembangan, Analisis.",
+      explanation: "Guru menyajikan masalah dilematis, siswa mencari solusi secara kolaboratif.",
+      learningActivity: "Diskusikan: 'Bagaimana solusi syariah untuk mengatasi riba di lingkungan pasar?'",
+      dailyLife: "Melatih anak mencari solusi saat mainannya rusak daripada langsung menangis.",
+    }]
+  },
+  {
+    id: "ped-model-2",
+    title: "Project Based Learning (PjBL)",
+    category: ModuleCategory.PEDAGOGIK,
+    summary: "Pembelajaran berbasis proyek untuk menghasilkan karya nyata.",
+    sections: [{
+      title: "Output Berorientasi Produk",
+      content: "Merancang, melaksanakan, dan mengevaluasi proyek jangka panjang.",
+      learningActivity: "Proyek: Membuat maket Masjid Nabawi atau miniatur Ka'bah.",
+      dailyLife: "Mengajak anak membuat prakarya dari barang bekas di rumah.",
+    }]
+  },
+  {
+    id: "ped-model-3",
+    title: "Discovery Learning",
+    category: ModuleCategory.PEDAGOGIK,
+    summary: "Mendorong siswa menemukan konsep sendiri melalui eksplorasi.",
+    sections: [{
+      title: "Prinsip Penemuan",
+      content: "Stimulasi, Identifikasi, Pengumpulan Data, Pengolahan, Verifikasi, Generalisasi.",
+      learningActivity: "Eksperimen: Menemukan arah kiblat menggunakan bayangan matahari.",
+      dailyLife: "Membiarkan anak mengutak-atik mainan untuk tahu cara kerjanya.",
+    }]
+  },
+  {
+    id: "ped-model-4",
+    title: "Inquiry Learning",
+    category: ModuleCategory.PEDAGOGIK,
+    summary: "Berbasis pertanyaan mendalam untuk mengungkap kebenaran ilmiah.",
+    sections: [{
+      title: "Siklus Inkuri",
+      content: "Observasi, Bertanya, Hipotesis, Eksperimen, Kesimpulan.",
+      learningActivity: "Riset: Kenapa kita diperintahkan berwudhu sebelum shalat? (Mencari sisi kesehatan).",
+      dailyLife: "Menjawab pertanyaan 'Kenapa' anak dengan riset bersama di buku.",
+    }]
+  },
+  {
+    id: "ped-model-5",
+    title: "Contextual Teaching and Learning (CTL)",
+    category: ModuleCategory.PEDAGOGIK,
+    summary: "Mengaitkan materi dengan situasi nyata kehidupan siswa.",
+    sections: [{
+      title: "7 Komponen Utama",
+      content: "Konstruktivisme, Inkuiri, Bertanya, Masyarakat Belajar, Pemodelan, Refleksi, Penilaian Otentik.",
+      learningActivity: "Belajar Zakat dengan simulasi menghitung beras di gudang petani lokal.",
+      dailyLife: "Menjelaskan konsep kejujuran saat berbelanja di warung tetangga.",
+    }]
+  },
+  {
+    id: "ped-model-6",
+    title: "Flipped Classroom",
+    category: ModuleCategory.PEDAGOGIK,
+    summary: "Materi dipelajari di rumah, kelas untuk diskusi dan aplikasi.",
+    sections: [{
+      title: "Efisiensi Tatap Muka",
+      content: "Siswa menonton video penjelasan di rumah, di kelas hanya tanya jawab dan proyek.",
+      learningActivity: "Tugas: Nonton video sejarah Nabi semalam, besok di kelas sesi debat nilai moral.",
+      dailyLife: "Membaca petunjuk permainan sebelum mulai bermain bersama.",
+    }]
+  },
+  {
+    id: "ped-model-7",
+    title: "Blended Learning",
+    category: ModuleCategory.PEDAGOGIK,
+    summary: "Kombinasi belajar mandiri digital dan tatap muka.",
+    sections: [{
+      title: "Fleksibilitas Belajar",
+      content: "Rotasi stasiun: digital, kelompok kecil, dan diskusi guru.",
+      learningActivity: "Hafalan Quran via aplikasi aplikasi setoran langsung ke guru.",
+      dailyLife: "Belajar bahasa lewat video YouTube sekaligus les privat.",
+    }]
+  },
+  {
+    id: "ped-model-8",
+    title: "Cooperative Learning (Jigsaw)",
+    category: ModuleCategory.PEDAGOGIK,
+    summary: "Siswa menjadi ahli di satu bagian lalu mengajar teman kelompoknya.",
+    sections: [{
+      title: "Ketergantungan Positif",
+      content: "Setiap anggota memegang kunci sukses kelompok melalui penguasaan materi berbeda.",
+      learningActivity: "Materi: 4 Kitab Suci. Setiap anak ahli 1 kitab lalu sharing.",
+      dailyLife: "Berbagi tugas piknik: satu bawa bekal, satu tenda, satu alat masak.",
+    }]
+  },
+  {
+    id: "ped-model-9",
+    title: "Differentiated Instruction",
+    category: ModuleCategory.PEDAGOGIK,
+    summary: "Menyesuaikan cara mengajar dengan gaya belajar unik siswa.",
+    sections: [{
+      title: "Personalisasi Belajar",
+      content: "Modifikasi konten, proses, dan produk sesuai minat siswa.",
+      learningActivity: "Tugas akhir bebas pilih: bikin video, poster, atau tulisan tangan.",
+      dailyLife: "Memberikan hadiah yang berbeda sesuai hobi masing-masing anak.",
+    }]
+  },
+  {
+    id: "ped-model-10",
+    title: "Team Based Learning (TBL)",
+    category: ModuleCategory.PEDAGOGIK,
+    summary: "Pembelajaran berbasis tim dengan penekanan pada akuntabilitas individu dan tim.",
+    sections: [{
+      title: "Struktur TBL",
+      content: "Preparation, Readiness Assurance, Application of Course Concepts.",
+      learningActivity: "Ujian individu dulu, lalu ujian kelompok dengan soal yang sama, lalu diskusi.",
+      dailyLife: "Diskusi keluarga menentukan anggaran pengeluaran bulanan.",
+    }]
+  },
+
+  // ==========================================
+  // PARENTING: DETAIL FASE USIA
+  // ==========================================
+  {
+    id: "parenting-fase-1",
+    title: "Fase 0-2 Tahun: Membangun Kepercayaan (Trust)",
+    category: ModuleCategory.PARENTING,
+    summary: "Fase krusial untuk keterikatan emosional (attachment) dan rasa aman.",
+    sections: [{
+      title: "Sentuhan dan Responsitas",
+      content: "Segera merespon tangisan dan memberikan banyak sentuhan fisik (skin-to-skin).",
+      explanation: "Di usia ini, bayi belajar apakah dunia ini tempat yang aman atau tidak.",
+      learningActivity: "Baby Massage: Melakukan pijat bayi lembut sambil berbisik doa-doa kebaikan.",
+      dailyLife: "Menatap mata bayi saat menyusui atau memberi makan.",
+    }]
+  },
+  {
+    id: "parenting-fase-2",
+    title: "Fase 2-7 Tahun: Eksplorasi & Imajinasi",
+    category: ModuleCategory.PARENTING,
+    summary: "Masa anak melihat orang tua sebagai raja/ratu dan meniru segala hal.",
+    sections: [{
+      title: "Disiplin Lemah Lembut",
+      content: "Gunakan kalimat positif daripada larangan 'Jangan'.",
+      explanation: "Anak usia ini belum paham logika abstrak, mereka paham contoh nyata.",
+      learningActivity: "Role-Play: Bermain peran menjadi pedagang jujur atau pahlawan penolong.",
+      dailyLife: "Memberitahu 'Jalan pelan-pelan ya' daripada 'Jangan lari!'.",
+    }]
+  },
+  {
+    id: "parenting-fase-3",
+    title: "Fase 7-10 Tahun: Formasi Kebiasaan (Tamyiz)",
+    category: ModuleCategory.PARENTING,
+    summary: "Masa anak mulai bisa membedakan yang baik dan buruk secara logika sederhana.",
+    sections: [{
+      title: "Pembiasaan Ibadah",
+      content: "Mulai diperintahkan shalat dengan cara yang menyenangkan tanpa paksaan keras.",
+      explanation: "Sesuai hadis, kenalkan shalat di usia 7 tahun.",
+      learningActivity: "Star Chart: Memberikan stiker bintang setiap anak shalat tepat waktu.",
+      dailyLife: "Melibatkan anak dalam ibadah sosial seperti membagikan nasi kotak ke dhuafa.",
+    }]
+  },
+  {
+    id: "parenting-fase-4",
+    title: "Fase 10-14 Tahun: Transisi & Akil Baligh",
+    category: ModuleCategory.PARENTING,
+    summary: "Masa prapuber di mana hormon mulai berubah dan anak mencari identitas.",
+    sections: [{
+      title: "Dialog Logika & Tanggung Jawab",
+      content: "Berikan alasan di balik aturan agama (kenapa harus menutup aurat, dst).",
+      explanation: "Anak mulai mengkritisi aturan, maka butuh penjelasan logis.",
+      learningActivity: "Q&A Box: Kotak pertanyaan rahasia tentang perubahan tubuh atau perasaan.",
+      dailyLife: "Mengajak anak diskusi tentang berita viral dari sudut pandang Islam.",
+    }]
+  },
+  {
+    id: "parenting-fase-5",
+    title: "Fase 14-18 Tahun: Sahabat & Independensi",
+    category: ModuleCategory.PARENTING,
+    summary: "Orang tua berperan sebagai konsultan/sahabat, bukan lagi penguasa.",
+    sections: [{
+      title: "Membangun Kepercayaan Diri",
+      content: "Berikan ruang privasi dan tanggung jawab penuh atas pilihan mereka.",
+      explanation: "Remaja butuh merasa dihargai pendapatnya agar tidak memberontak.",
+      learningActivity: "Deep Talk: Ngopi/ngeteh bareng tanpa nasehat, hanya mendengarkan ceritanya.",
+      dailyLife: "Minta pendapat remaja saat keluarga akan membeli barang atau pindah rumah.",
+    }]
   }
 ];
