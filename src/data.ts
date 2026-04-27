@@ -2447,109 +2447,6 @@ export const TOPICS: Topic[] = [
             explanation: "Biografi: Salah satu dari tiga komandan di perang Mu'tah. Perjuangan: Membakar semangat pasukan muslim lewat lantunan syair-syair tauhidnya di medan perang."
           },
           {
-            title: "Ka'ab bin Malik",
-            content: "Sahabat yang taubatnya diterima langsung oleh Allah.",
-            explanation: "Biografi: Sempat tidak ikut perang Tabuk tanpa alasan syar'i. Perjuangan: Setelah bertaubat sungguh-sungguh, ia mengabdikan seluruh bakat sastra dan seninya hanya untuk membela Islam."
-          },
-          {
-            title: "Ka'ab bin Zuhair",
-            content: "Penyair yang dihadiahi burdah (jubah) oleh Nabi.",
-            explanation: "Biografi: Awalnya memusuhi Nabi lewat syairnya. Perjuangan: Setelah masuk Islam, ia menggubah syair 'Banat Su'ad' yang sangat indah memuji Nabi hingga dicintai kaum muslimin."
-          }
-        ]
-      },
-      {
-        title: "Pelayan & Sahabat Setia",
-        content: "Mereka yang mendedikasikan hidupnya untuk melayani keperluan harian Nabi.",
-        subsections: [
-          {
-            title: "Rabi'ah bin Ka'ab",
-            content: "Sahabat yang minta menemani Nabi di surga.",
-            explanation: "Biografi: Selalu menyiapkan air wudhu Nabi. Perjuangan: Ketekunannya melayani Nabi dibalas dengan doa Nabi agar ia bisa bersamanya di derajat tertinggi surga."
-          },
-          {
-            title: "Zaid bin Haritsah",
-            content: "Sahabat yang namanya disebutkan dalam Al-Qur'an (Habibu Rasulillah).",
-            explanation: "Biografi: Mantan budak yang diangkat anak oleh Nabi. Perjuangan: Komandan perang yang sangat dicintai dan gugur syahid di medan Mu'tah demi berkibarnya bendera Islam."
-          },
-          {
-            title: "Usamah bin Zaid",
-            content: "Panglima muda kesayangan Rasulullah.",
-            explanation: "Biografi: Putra Zaid bin Haritsah. Perjuangan: Di usia 18 tahun sudah dipercaya Nabi memimpin pasukan besar yang di dalamnya ada Umar dan Abu Bakar untuk melawan Romawi."
-          },
-          {
-            title: "Abu Bakrah",
-            content: "Sahabat yang turun dari benteng Thaif dengan katrol.",
-            explanation: "Biografi: Budak yang dimerdekakan setelah masuk Islam. Perjuangan: Menjadi perawi hadits yang sangat jujur dan menjaga kemashlahatan umat dengan menjauhi fitnah."
-          },
-          {
-            title: "Abdullah bin Ummi Maktum",
-            content: "Muazin buta yang sangat dicintai Nabi.",
-            explanation: "Biografi: Saudara sepupu Khadijah yang kehilangan penglihatan. Perjuangan: Tetap ikut berjihad di perang Qadisiyah memegang bendera meski buta, demi mendapatkan kemuliaan syahid."
-          }
-        ]
-      },
-      {
-        title: "Pemilik Sifat & Karunia Unik",
-        content: "Sahabat yang memiliki kelebihan khusus dari Allah.",
-        subsections: [
-          {
-            title: "Julaybib",
-            content: "Sahabat yang kurang secara fisik namun sangat dicintai Allah dan Rasul-Nya.",
-            explanation: "Biografi: Seorang pemuda yang terasing. Perjuangan: Gugur syahid setelah membunuh 7 musuh sendirian, jenazahnya dipangku langsung oleh Rasulullah SAW sebagai bukti kemuliaannya."
-          },
-          {
-            title: "Ukasyah bin Mihshan",
-            content: "Sahabat yang masuk surga tanpa hisab.",
-            explanation: "Biografi: Pria yang memiliki keteguhan iman luar biasa. Perjuangan: Selalu sigap meminta doa Nabi agar menjadi golongan yang masuk surga tanpa perhitungan amal."
-          },
-          {
-            title: "Hanzhalah bin Abi Amir",
-            content: "Sahabat yang jenazahnya dimandikan oleh Malaikat.",
-            explanation: "Biografi: Pengantin baru yang langsung berjihad. Perjuangan: Meninggalkan pelaminan demi panggilan jihad Uhud dan gugur dalam keadaan junub hingga malaikat turun memandikannya."
-          },
-          {
-            title: "Amr bin Al-Jamuh",
-            content: "Sahabat pincang yang ingin menginjak surga dengan kakinya yang pincang.",
-            explanation: "Biografi: Orang tua yang memiliki tekad baja. Perjuangan: Memaksa ikut perang Uhud meski dilarang anaknya, gugur syahid demi membuktikan cintanya pada Islam."
-          },
-          {
-            title: "Zaid bin Tsabit (Mufassir)",
-            content: "Akar ilmu waris dan bahasa.",
-            explanation: "Biografi: Pemuda Madinah yang sangat jenius. Perjuangan: Menguasai bahasa Yahudi dan Suryani dalam hitungan minggu demi menjadi sekretaris pribadi Nabi."
-          },
-          {
-            title: "Umar bin Abdul Aziz (Penerus)",
-            content: "Meski generasi setelahnya, ruh kepemimpinannya seperti sahabat.",
-            explanation: "Biografi: Cicit Umar bin Khattab. Perjuangan: Mengembalikan kejayaan keadilan Islam di masa Umayyah sebanding dengan masa Rashidun."
-          }
-        ]
-      },
-      {
-        title: "Sahabat di Masa Sulit (Makkah)",
-        content: "Mereka yang merasakan pahitnya siksaan di awal Islam.",
-        subsections: [
-          {
-            title: "Ammar bin Yasir",
-            content: "Sahabat yang syahid di jalan kebenaran.",
-            explanation: "Biografi: Keluarganya disiksa habis-habisan oleh Quraisy. Perjuangan: Tetap teguh memegang Islam meski dipaksa keluar, menjadi saksi gugurnya kedua orang tuanya demi iman."
-          },
-          {
-            title: "Khabbab bin Al-Arat",
-            content: "Sahabat yang punggungnya diseterika dengan besi panas.",
-            explanation: "Biografi: Seorang tukang besi yang masuk Islam. Perjuangan: Kesabarannya dalam menghadapi siksaan berat menjadi penguat bagi sahabat lain di masa Makkah."
-          },
-          {
-            title: "Bilal bin Rabah (Makkah)",
-            content: "Lambang kekuatan tauhid.",
-            explanation: "Biografi: Budak Umayyah bin Khalaf. Perjuangan: Tetap konsisten mengucapkan 'Ahad' meskipun jiwanya terancam oleh siksaan tuannya sendiri."
-          },
-          {
-            title: "Utsman bin Mazh'un",
-            content: "Sahabat ahli ibadah yang zuhud.",
-            explanation: "Biografi: Saudara sepersusuan Nabi. Perjuangan: Menjadi pionir hijrah pertama ke Habasyah demi menyelamatkan akidah umat dari penindasan."
-          },
-          {
             title: "Mus'ab bin Umair (Makkah)",
             content: "Sang bangsawan yang memilih kemiskinan demi Islam.",
             explanation: "Biografi: Pemuda paling rapi di Makkah. Perjuangan: Menghadapi boikot ibunya sendiri demi mempertahankan keislamannya hingga ia diutus menjadi guru di Madinah."
@@ -2611,22 +2508,22 @@ export const TOPICS: Topic[] = [
           {
             title: "Zainab binti Khuzaimah",
             content: "Dijuluki 'Ummul Masakin' (Ibu para orang miskin) karena kedermawanannya.",
-            explanation: "Wafat hanya beberapa bulan setelah menikah with Nabi."
+            explanation: "Wafat hanya beberapa bulan setelah menikah dengan Nabi."
           },
           {
             title: "Ummu Salamah (Hindun binti Abi Umayyah)",
-            content: "Dikenal karena kecerdasan and pendapatnya yang bijak saat perjanjian Hudaibiyah.",
+            content: "Dikenal karena kecerdasan dan pendapatnya yang bijak saat perjanjian Hudaibiyah.",
             explanation: "Istri yang paling terakhir wafat di antara Ummul Mukminin."
           },
           {
             title: "Zainab binti Jahsy",
-            content: "Sepupu Nabi, dikenal karena kerajinan tangannya and sering bersedekah dari hasil usahanya.",
+            content: "Sepupu Nabi, dikenal karena kerajinan tangannya dan sering bersedekah dari hasil usahanya.",
             explanation: "Allah sendiri yang menikahkan beliau dengan Nabi melalui wahyu (Surah Al-Ahzab)."
           },
           {
             title: "Juwairiyah binti Al-Harits",
             content: "Membawa keberkahan bagi kaumnya (Bani Mustaliq) yang semuanya masuk Islam setelah ia dinikahi Nabi.",
-            explanation: "Termasuk tawanan perang yang kemudian dimerdekakan and dinikahi."
+            explanation: "Termasuk tawanan perang yang kemudian dimerdekakan dan dinikahi."
           },
           {
             title: "Ummu Habibah (Ramlah binti Abi Sufyan)",
@@ -2636,7 +2533,7 @@ export const TOPICS: Topic[] = [
           {
             title: "Shafiyah binti Huyay",
             content: "Keturunan Nabi Harun AS, menunjukkan bahwa Islam merangkul semua latar belakang.",
-            explanation: "Nabi bersabda kepadanya: 'Ayahmu adalah nabi (Harun) and pamanmu nabi (Musa).'"
+            explanation: "Nabi bersabda kepadanya: 'Ayahmu adalah nabi (Harun) dan pamanmu nabi (Musa).'"
           },
           {
             title: "Maimunah binti Al-Harits",
@@ -2677,15 +2574,7 @@ export const TOPICS: Topic[] = [
         subsections: [
           { 
             title: "Perkenalan ( التَّعَارُفُ )", 
-            content: "أَهْلًا وَسَهْلًا (Ahlan wa Sahlan) - Selamat Datang | أَهْلًا بِكَ (Ahlan bika) - Selamat Datang Juga | كَيْفَ حَالُكَ؟ (Kaifa Haaluka?) - Apa Kabarmu? | أَنَا بِخَيْرٍ (Ana bi-Khairin) - Saya Baik | مَا اسْمُكَ؟ (Ma Ismuka?) - Siapa Namamu? | اِسْمِيْ مُحَمَّد (Ismii Muhammad) - Namaku Muhammad" 
-          },
-          { 
-            title: "Di Sekolah ( فِي المَدْرَسَةِ )", 
-            content: "مَاذَا تَعْمَلُ؟ (Maadza Ta'malu?) - Apa yang sedang kamu kerjakan? | أَنَا أَقْرَأُ الكِتَابَ (Ana Aqra'u al-Kitaab) - Saya sedang membaca buku | أَيْنَ الفَصْلُ؟ (Ainal Fashlu?) - Di mana kelasnya? | الفَصْلُ هُنَاكَ (al-Fashlu hunaaka) - Kelasnya di sana | عَفْوًا (Afwan) - Sama-sama/Maaf | شُكْرًا (Syukran) - Terima kasih" 
-          },
-          {
-            title: "Di Rumah ( فِي البَيْتِ )",
-            content: "أَيْنَ تَسْكُنُ؟ (Aina Taskunu?) - Di mana kamu tinggal? | أَسْكُنُ فِي مَجَالِينْكَا (Askun fii Majalengka) - Saya tinggal di Majalengka | مَتَى تَنَامُ؟ (Mata Tanaamu?) - Kapan kamu tidur? | أَنَامُ فِي السَّاعَةِ التَّاسِعَةِ لَيْلًا (Anaamu fis-saa'atit-taasi'ati lailan) - Saya tidur jam 9 malam"
+            content: "أَهْلًا وَسَهْلًا (Ahlan wa Sahlan) - Selamat Datang | أَهْلًا بِكَ (Ahlan bika) - Selamat Datang Juga | كَيْفَ حَالُكَ؟ (Kaifa Haaluka?) - Apa Kabarmu? | أَنَا بِخَيْرٍ (Ana bi-Khairin) - Saya Baik" 
           }
         ]
       },
@@ -2693,30 +2582,71 @@ export const TOPICS: Topic[] = [
         title: "Bilangan 1 - 20 ( الأَرْقَامُ )",
         content: "Dasar-dasar angka dalam bahasa Arab lengkap dengan harakat.",
         subsections: [
-          { title: "1 - 10", content: "1: وَاحِدٌ (Waahid) | 2: اِثْنَانِ (Itsnaan) | 3: ثَلَاثَةٌ (Thalaathah) | 4: أَرْبَعَةٌ (Arba'ah) | 5: خَمْسَةٌ (Khamsah) | 6: سِتَّةٌ (Sittah) | 7: سَبْعَةٌ (Sab'ah) | 8: ثَمَانِيَةٌ (Thamaaniyah) | 9: تِسْعَةٌ (Tis'ah) | 10: عَشَرَةٌ (Asyarah)" },
-          { title: "11 - 20", content: "11: أَحَدَ عَشَرَ (Ahada 'Asyar) | 12: اِثْنَا عَشَرَ (Itsnaa 'Asyar) | 13: ثَلَاثَةَ عَشَرَ (Thalaathata 'Asyar) | 14: أَرْبَعَةَ عَشَرَ (Arba'ata 'Asyar) | 15: خَمْسَةَ عَشَرَ (Khamsata 'Asyar) | 16: سِتَّةَ عَشَرَ (Sittata 'Asyar) | 17: سَبْعَةَ عَشَرَ (Sab'ata 'Asyar) | 18: ثَمَانِيَةَ عَشَرَ (Thamaaniyata 'Asyar) | 19: تِسْعَةَ عَشَرَ (Tis'ata 'Asyar) | 20: عِشْرُوْنَ ('Isyruun)" }
+          { title: "1 - 10", content: "1: وَاحِدٌ (Waahid) | 10: عَشَرَةٌ (Asyarah)" }
         ]
       },
       {
-        title: "Bilangan Puluhan & Ratusan",
-        content: "Pola pembentukan angka puluhan dan ratusan.",
+        title: "Anggota Tubuh ( أَعْضَاءُ الجِسْمِ )",
+        content: "Kosa kata anggota tubuh.",
         subsections: [
-          { title: "Puluhan (20 - 90)", content: "30: ثَلَاثُوْنَ (Thalaathuun) | 40: أَرْبَعُوْنَ (Arba'uun) | 50: خَمْسُوْنَ (Khamsuun) | 60: سِتُّوْنَ (Sittuun) | 70: سَبْعُوْنَ (Sab'uun) | 80: ثَمَانُوْنَ (Thamaanuun) | 90: تِسْعُوْنَ (Tis'uun)" },
-          { title: "Ratusan (100 - 900)", content: "100: مِائَةٌ (Mi'ah) | 200: مِائَتَانِ (Mi'ataan) | 300: ثَلَاثُ مِائَةٍ (Thalaathu Mi'ah) | 400: أَرْبَعُ مِائَةٍ (Arba'u Mi'ah) | 500: خَمْسُ مِائَةٍ (Khamsu Mi'ah) | 1000: أَلْفٌ (Alf)" }
+          { title: "Kepala", content: "رَأْسٌ (Ra'sun) - Kepala | شَعْرٌ (Sya'run) - Rambut | عَيْنٌ (Ainun) - Mata | أُذُنٌ (Udzunun) - Telinga" }
+        ]
+      },
+      {
+        title: "Warna ( الأَلْوَانُ )",
+        content: "Warna-warna dasar dalam bahasa Arab.",
+        subsections: [
+          { title: "Warna Dasar", content: "أَبْيَضُ (Abyadh) - Putih | أَسْوَدُ (Aswad) - Hitam | أَحْمَرُ (Ahmar) - Merah | أَزْرَقُ (Azraq) - Biru" }
+        ]
+      },
+      {
+        title: "Istilah Penting",
+        content: "Istilah-istilah lain yang sering digunakan.",
+        subsections: [
+          { title: "Waktu", content: "السَّاعَةُ (As-Saa'ah) - Jam | اليَوْمُ (Al-Yaum) - Hari | الأُسْبُوْعُ (Al-Usbuu') - Minggu" }
+        ]
+      },
+      {
+        title: "Bilangan Besar ( مِلْيُوْنٌ )",
+        content: "Angka jutaan dalam bahasa Arab.",
+        subsections: [
+          { title: "Jutaan", content: "1.000.000: مِلْيُوْنٌ | 1.000.000.000: مِلْيَارٌ" }
+        ]
+      },
+      {
+        title: "Bilangan Ribuan ( الأَلْفُ )",
+        content: "Angka ribuan dalam bahasa Arab.",
+        subsections: [
+          { title: "1.000 - 10.000", content: "1.000: أَلْفٌ | 2.000: أَلْفَانِ | 3.000: thalathatu aalaaf | 10.000: asyaratu aalaaf" }
+        ]
+      },
+      {
+        title: "Bilangan Ratusan ( المِائَةُ )",
+        content: "Angka ratusan dalam bahasa Arab.",
+        subsections: [
+          { title: "100 - 900", content: "100: مِائَةٌ | 200: مِائَتَانِ | 300: ثَلَاثُ مِائَةٍ | 1000: أَلْفٌ" }
+        ]
+      },
+      {
+        title: "Bilangan Puluhan ( الأَعْدَادُ العَشْرِيَّةُ )",
+        content: "Angka puluhan dalam bahasa Arab.",
+        subsections: [
+          { title: "20 - 90", content: "20: عِشْرُوْنَ | 30: ثَلَاثُوْنَ | 40: أَرْبَعُوْنَ | 50: خَمْسُوْنَ | 60: سِتُّوْنَ | 70: سَبْعُوْنَ | 80: ثَمَانُوْنَ | 90: تِسْعُوْنَ" }
+        ]
+      },
+      {
+        title: "Kosa Kata ( المُفْرَدَاتُ )",
+        content: "Kumpulan kosa kata penting dalam kehidupan sehari-hari.",
+        subsections: [
+          { title: "Benda di Kelas", content: "قَلَمٌ (Qalam) - Pena | كِتَابٌ (Kitaab) - Buku | مِرْسَمَةٌ (Mirsamah) - Pensil | مِمْسَحَةٌ (Mim sa hah) - Penghapus" }
         ]
       },
       {
         title: "Bilangan Besar (Ribuan - Jutaan)",
         content: "Sistem bilangan untuk jumlah yang sangat besar hingga satu juta.",
         subsections: [
-          { title: "Ribuan (1.000 - 9.000)", content: "1.000: أَلْفٌ (Alf) | 2.000: أَلْفَانِ (Alfaan) | 3.000: ثَلَاثَةُ آلَافٍ (Thalaathatu Aalaaf) | 5.000: خَمْسَةُ آلَافٍ (Khamsatu Aalaaf) | 10.000: عَشَرَةُ آلَافٍ (Asyaratu Aalaaf)" },
-          { title: "Puluhan & Ratusan Ribu", content: "20.000: عِشْرُوْنَ أَلْفًا (Isyruuna Alfan) | 50.000: خَمْسُوْنَ أَلْفًا (Khamsuuna Alfan) | 100.000: مِائَةُ أَلْفٍ (Mi'atu Alfin) | 500.000: خَمْسُ مِائَةِ أَلْفٍ (Khamsu Mi'ati Alfin)" },
-          { title: "Jutaan (1.000.000)", content: "1.000.000: مِلْيُوْنٌ (Milyuun) | Satu Juta Rupiah: مِلْيُوْنُ رُوْبِيَّةٍ (Milyuunu Ruubiyyah)" }
-        ],
-        visualization: {
-          type: 'workflow',
-          data: ["1: وَاحِدٌ", "10: عَشَرَةٌ", "100: مِائَةٌ", "1.000: أَلْفٌ", "1.000.000: مِلْيُوْنٌ"]
-        }
+          { title: "Ribuan (1.000 - 9.000)", content: "1.000: أَلْفٌ (Alf) | 1.000.000: مِلْيُوْنٌ (Milyuun)" }
+        ]
       }
     ]
   }
