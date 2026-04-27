@@ -2557,5 +2557,112 @@ export const TOPICS: Topic[] = [
         ]
       }
     ]
+  },
+  {
+    id: "keluarga-nabi",
+    title: "Keluarga Rasulullah SAW",
+    category: ModuleCategory.KELUARGA_NABI,
+    summary: "Mengenal lebih dekat silsilah, istri-istri, dan putra-putri Baginda Nabi Muhammad SAW sebagai teladan keluarga sakinah.",
+    sections: [
+      {
+        title: "Pohon Keturunan (Silsilah)",
+        content: "Garis keturunan mulia dari jalur ayah dan ibu hingga Nabi Ismail AS dan Nabi Ibrahim AS.",
+        visualization: {
+          type: 'concept-map',
+          data: ["Adnan", "Ma'ad", "Nizar", "Mudhar", "Ilyas", "Mudrikah", "Khuzaimah", "Kinanah", "Al-Nadr", "Malik", "Fihr (Quraisy)", "Ghalib", "Lu'ay", "Ka'ab", "Murrah", "Kilab", "Qushay", "Abdu Manaf", "Hashim", "Abdul Muthalib", "Abdullah", "MUHAMMAD SAW"]
+        },
+        subsections: [
+          {
+            title: "Nasab Ayah",
+            content: "Muhammad bin Abdullah bin Abdul Muthalib bin Hashim bin Abdu Manaf bin Qushay bin Kilab...",
+            explanation: "Nasab Nabi Muhammad adalah nasab yang paling mulia di kalangan bangsa Arab."
+          },
+          {
+            title: "Nasab Ibu",
+            content: "Aminah binti Wahb bin Abdu Manaf bin Zuhrah bin Kilab.",
+            explanation: "Kedua orang tua Nabi bertemu di kakek yang sama yaitu Kilab bin Murrah."
+          }
+        ]
+      },
+      {
+        title: "Ummul Mukminin (Istri-Istri Nabi)",
+        content: "Wanita-wanita mulia yang mendampingi perjuangan dakwah Rasulullah SAW.",
+        subsections: [
+          {
+            title: "Khadijah binti Khuwailid",
+            content: "Istri pertama, cinta sejati Nabi, dan orang pertama yang mengimani kerasulan beliau.",
+            explanation: "Mendampingi Nabi selama 25 tahun hingga wafat di tahun kesedihan (Amul Huzni)."
+          },
+          {
+            title: "Saudah binti Zam'ah",
+            content: "Wanita pertama yang dinikahi Nabi setelah wafatnya Khadijah, dikenal karena kedermawanannya.",
+            explanation: "Dinikahi untuk menjaga beliau dan anak-anak beliau setelah Khadijah wafat."
+          },
+          {
+            title: "Aisyah binti Abu Bakar",
+            content: "Putri sahabat terdekat Nabi, dikenal sangat cerdas dan banyak meriwayatkan hadits.",
+            explanation: "Menjadi rujukan ilmu bagi para sahabat setelah wafatnya Rasulullah."
+          },
+          {
+            title: "Hafshah binti Umar",
+            content: "Putri Umar bin Khattab, penjaga mushaf Al-Qur'an yang pertama.",
+            explanation: "Dikenal sebagai ahli ibadah yang tekun (puasa dan shalat malam)."
+          },
+          {
+            title: "Zainab binti Khuzaimah",
+            content: "Dijuluki 'Ummul Masakin' (Ibu para orang miskin) karena kedermawanannya.",
+            explanation: "Wafat hanya beberapa bulan setelah menikah dengan Nabi."
+          },
+          {
+            title: "Ummu Salamah (Hindun binti Abi Umayyah)",
+            content: "Dikenal karena kecerdasan dan pendapatnya yang bijak saat perjanjian Hudaibiyah.",
+            explanation: "Istri yang paling terakhir wafat di antara Ummul Mukminin."
+          },
+          {
+            title: "Zainab binti Jahsy",
+            content: "Sepupu Nabi, dikenal karena kerajinan tangannya dan sering bersedekah dari hasil usahanya.",
+            explanation: "Allah sendiri yang menikahkan beliau dengan Nabi melalui wahyu (Surah Al-Ahzab)."
+          },
+          {
+            title: "Juwairiyah binti Al-Harits",
+            content: "Membawa keberkahan bagi kaumnya (Bani Mustaliq) yang semuanya masuk Islam setelah ia dinikahi Nabi.",
+            explanation: "Termasuk tawanan perang yang kemudian dimerdekakan dan dinikahi."
+          },
+          {
+            title: "Ummu Habibah (Ramlah binti Abi Sufyan)",
+            content: "Teguh memegang Islam meskipun ayahnya saat itu adalah musuh utama Islam di Makkah.",
+            explanation: "Melakukan hijrah ke Habasyah demi mempertahankan akidah."
+          },
+          {
+            title: "Shafiyah binti Huyay",
+            content: "Keturunan Nabi Harun AS, menunjukkan bahwa Islam merangkul semua latar belakang.",
+            explanation: "Nabi bersabda kepadanya: 'Ayahmu adalah nabi (Harun) dan pamanmu nabi (Musa).'"
+          },
+          {
+            title: "Maimunah binti Al-Harits",
+            content: "Istri terakhir yang dinikahi Nabi, dikenal sangat menjaga silaturahmi.",
+            explanation: "Meninggal di tempat yang sama saat ia menikah dengan Nabi (Saraf)."
+          },
+          {
+            title: "Maria Al-Qibthiyah",
+            content: "Ibunda Ibrahim (putra Nabi), pemberian dari Raja Muqauqis dari Mesir.",
+            explanation: "Meskipun sering disebut istri, beberapa sejarawan menyebut beliau sebagai Ummu Walad."
+          }
+        ]
+      },
+      {
+        title: "Putra-Putri Rasulullah SAW",
+        content: "Tujuh orang putra dan putri Nabi, enam dari Khadijah dan satu dari Maria.",
+        subsections: [
+          { title: "Al-Qasim", content: "Putra tertua Nabi, darinya Nabi mendapat kunyah 'Abul Qasim'. Wafat saat masih kecil." },
+          { title: "Zainab", content: "Putri tertua, dinikahi oleh Abul Ash bin Al-Rabi'. Memberi Nabi cucu bernama Ali dan Umamah." },
+          { title: "Ruqayyah", content: "Dinikahi oleh Usman bin Affan, ikut hijrah ke Habasyah dan Madinah." },
+          { title: "Ummu Kultsum", content: "Dinikahi oleh Usman bin Affan setelah wafatnya Ruqayyah (sehingga Usman dijuluki Dzun Nurain)." },
+          { title: "Fathimah Az-Zahra", content: "Putri bungsu kesayangan, pemimpin wanita surga, istri Ali bin Abi Thalib, ibunda Hasan dan Husain." },
+          { title: "Abdullah", content: "Dijuluki At-Thayyib dan At-Thahir. Wafat saat masih kanak-kanak." },
+          { title: "Ibrahim", content: "Putra dari Maria Al-Qibthiyah, lahir di Madinah dan wafat saat masih bayi." }
+        ]
+      }
+    ]
   }
 ];
