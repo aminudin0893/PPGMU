@@ -40,20 +40,20 @@ const Visualizer = ({ section }: { section: Section }) => {
   const { type, data } = section.visualization;
 
   return (
-    <div className="mt-6 p-4 sm:p-6 bg-slate-900 rounded-2xl overflow-hidden border border-slate-700 shadow-inner">
+    <div className="mt-6 p-3 sm:p-6 bg-slate-900 rounded-2xl overflow-hidden border border-slate-700 shadow-inner">
       <div className="flex items-center gap-2 mb-4 text-indigo-400 font-bold text-[10px] uppercase tracking-widest">
         <Sparkles className="w-3 h-3" /> Visualisasi AI
       </div>
       
       {type === 'workflow' && (
-        <div className="flex flex-col md:flex-row items-center gap-4">
+        <div className="flex flex-col lg:flex-row items-center gap-4">
           {(data as string[]).map((step, i) => (
-            <div key={i} className="flex flex-col md:flex-row items-center gap-4 flex-1 w-full">
+            <div key={i} className="flex flex-col lg:flex-row items-center gap-4 flex-1 w-full">
               <div className="p-3 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-indigo-100 text-[10px] sm:text-xs font-bold text-center w-full">
                 {step}
               </div>
               {i < (data as string[]).length - 1 && (
-                <ChevronRight className="w-4 h-4 text-slate-600 rotate-90 md:rotate-0" />
+                <ChevronRight className="w-4 h-4 text-slate-600 rotate-90 lg:rotate-0" />
               )}
             </div>
           ))}
@@ -99,12 +99,12 @@ const ProphetTimeline = ({ subsections }: { subsections: any[] }) => {
         return (
           <div key={idx} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
             {/* Dot */}
-            <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-100 group-hover:bg-indigo-600 transition-colors shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+            <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-100 group-hover:bg-indigo-600 transition-colors shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 sticky top-20 md:relative md:top-0">
               <span className="text-xs font-black text-slate-500 group-hover:text-white">{idx + 1}</span>
             </div>
             
             {/* Card */}
-            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 sm:p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+            <div className="w-[calc(100%-3rem)] sm:w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 sm:p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
                 <h4 className="font-black text-lg text-indigo-950 uppercase tracking-tight">{sub.title}</h4>
                 <div className="px-3 py-1 bg-indigo-50 text-indigo-700 text-[10px] font-black rounded-full uppercase tracking-widest whitespace-nowrap">
@@ -507,24 +507,24 @@ const App = () => {
   return (
     <div className="flex flex-col md:grid md:grid-cols-[260px_1fr] grid-rows-[64px_1fr] h-screen w-full bg-slate-50 overflow-hidden font-sans">
       {/* Existing Header... */}
-      <header className="col-span-2 bg-white border-b border-slate-200 flex items-center px-4 md:px-6 justify-between z-40 h-16 shrink-0 shadow-sm">
-        <div className="flex items-center gap-3">
+      <header className="col-span-2 bg-white border-b border-slate-200 flex items-center px-4 md:px-6 justify-between z-40 h-16 shrink-0 shadow-sm sticky top-0">
+        <div className="flex items-center gap-2 sm:gap-3">
           <button 
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-            className="p-2 md:hidden hover:bg-slate-100 rounded-lg transition-colors"
+            className="p-1.5 sm:p-2 md:hidden hover:bg-slate-100 rounded-lg transition-colors"
           >
             <Menu className="w-5 h-5 text-slate-600" />
           </button>
-          <div className="bg-gradient-to-br from-indigo-600 to-indigo-800 w-9 h-9 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-200">
-            <Sparkles className="w-5 h-5 text-white" />
+          <div className="bg-gradient-to-br from-indigo-600 to-indigo-800 w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-200">
+            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
           </div>
-          <div>
-            <span className="text-xl font-black tracking-tighter text-slate-900">SakuPedia</span>
-            <span className="text-[10px] block font-bold text-indigo-500 tracking-widest uppercase -mt-1 ml-0.5">Guru AI Edition</span>
+          <div className="hidden xs:block">
+            <span className="text-lg sm:text-xl font-black tracking-tighter text-slate-900 leading-none">SakuPedia</span>
+            <span className="text-[8px] sm:text-[10px] block font-bold text-indigo-500 tracking-widest uppercase -mt-0.5 sm:-mt-1 ml-0.5">Guru AI Edition</span>
           </div>
         </div>
 
-        <div className="hidden md:flex flex-1 max-w-xl mx-12 relative group">
+        <div className="hidden md:flex flex-1 max-w-xl mx-8 lg:mx-12 relative group">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 group-focus-within:text-indigo-500 transition-colors" />
           <input
             type="text"
@@ -534,14 +534,14 @@ const App = () => {
               setSearchQuery(e.target.value);
               if (selectedTopic) setSelectedTopic(null);
             }}
-            className="w-full bg-slate-100/80 border-2 border-transparent rounded-2xl py-2.5 pl-12 pr-4 text-sm focus:bg-white focus:border-indigo-100 focus:ring-4 focus:ring-indigo-500/5 transition-all outline-none"
+            className="w-full bg-slate-100/80 border-2 border-transparent rounded-2xl py-2 pl-12 pr-4 text-sm focus:bg-white focus:border-indigo-100 focus:ring-4 focus:ring-indigo-500/5 transition-all outline-none"
           />
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
            <button 
              onClick={() => setIsChatOpen(!isChatOpen)}
-             className="relative flex items-center justify-center w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all group"
+             className="relative flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 bg-indigo-50 text-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all group"
            >
              <MessageCircle className="w-5 h-5" />
              {chatMessages.length > 0 && (
@@ -550,12 +550,12 @@ const App = () => {
                 </span>
              )}
            </button>
-           <div className="hidden sm:block text-right">
+           <div className="hidden lg:block text-right">
               <p className="text-xs font-bold text-slate-900">Aminudin</p>
               <p className="text-[9px] font-bold text-green-600 uppercase tracking-wider">Online</p>
            </div>
-           <div className="w-10 h-10 bg-slate-100 rounded-xl border border-slate-200 flex items-center justify-center text-slate-400">
-             <GraduationCap className="w-6 h-6" />
+           <div className="w-9 h-9 sm:w-10 sm:h-10 bg-slate-100 rounded-xl border border-slate-200 flex items-center justify-center text-slate-400">
+             <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
            </div>
         </div>
       </header>
@@ -611,7 +611,7 @@ const App = () => {
       </aside>
 
       {/* Main Content Area */}
-      <main className="p-4 md:p-8 overflow-y-auto flex flex-col gap-8 custom-scrollbar col-start-2 row-start-2 h-full">
+      <main className="p-4 md:p-8 overflow-y-auto flex-1 flex flex-col gap-6 md:gap-8 custom-scrollbar col-start-2 row-start-2 h-full lg:max-h-full">
         {/* Mobile Search */}
         <div className="md:hidden relative group">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
@@ -861,8 +861,8 @@ const App = () => {
               </div>
 
               {/* Content Preview */}
-              <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] min-h-[400px]">
-                <div className="p-8 border-r border-slate-100">
+              <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] min-h-0">
+                <div className="p-6 sm:p-8 lg:border-r border-slate-100 border-b lg:border-b-0">
                    <span className="tag tag-blue mb-4">Materi Unggulan</span>
                    <h2 className="text-3xl font-extrabold text-slate-900 mb-4">{TOPICS[2].title}</h2>
                    <p className="text-slate-500 leading-relaxed mb-8">
@@ -893,7 +893,7 @@ const App = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="pt-8 space-y-3">
+                  <div className="pt-6 sm:pt-8 space-y-3 mt-auto">
                     <button 
                       onClick={() => setSelectedTopic(TOPICS[2])}
                       className="w-full py-3 bg-indigo-600 text-white rounded-xl font-bold text-sm hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200"
