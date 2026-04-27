@@ -12,6 +12,7 @@ export enum ModuleCategory {
   MAHFUDZAT = "100 Mahfudzat",
   ARBAIN = "42 Hadits Arba'in",
   KODE_ETIK_GURU = "Kode Etik Guru",
+  SAHABAT = "200 Kisah Sahabat Nabi",
 }
 
 export interface Section {

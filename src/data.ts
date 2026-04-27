@@ -2175,5 +2175,387 @@ export const TOPICS: Topic[] = [
         ]
       }
     ]
+  },
+  {
+    id: "sahabat-nabi",
+    title: "200 Kisah Sahabat Nabi",
+    category: ModuleCategory.SAHABAT,
+    summary: "Kumpulan biografi dan perjuangan para sahabat Nabi Muhammad SAW yang menjadi teladan bagi umat Islam.",
+    sections: [
+      {
+        title: "Khulafaur Rasyidin",
+        content: "Empat pemimpin besar setelah wafatnya Rasulullah SAW.",
+        learningActivity: "Peta Konsep Kepemimpinan: Membuat diagram perbandingan gaya kepemimpinan keempat khalifah dan kontribusi utamanya bagi dakwah Islam.",
+        dailyLife: "Meneladani keberanian Ali, kedermawanan Usman, ketegasan Umar, dan kelembutan hati Abu Bakar dalam pergaulan.",
+        subsections: [
+          {
+            title: "Abu Bakar Ash-Shiddiq",
+            content: "Khalifah pertama yang dikenal dengan gelar Ash-Shiddiq (yang membenarkan). Mempertaruhkan harta dan nyawa untuk menemani Rasulullah hijrah.",
+            explanation: "Biografi: Lahir di Makkah, sahabat terdekat Nabi. Perjuangan: Memerangi nabi palsu, mengumpulkan Al-Qur'an, dan membebaskan budak (termasuk Bilal) demi tegaknya kalimat tauhid."
+          },
+          {
+            title: "Umar bin Khattab",
+            content: "Khalifah kedua yang dijuluki Al-Faruq (pemisah antara hak dan batil). Dikenal dengan keadilannya yang sangat tinggi.",
+            explanation: "Biografi: Dari suku Quraisy, awalnya penentang Islam hingga hidayah masuk lewat surah Thaha. Perjuangan: Memperluas wilayah Islam, membangun sistem pemerintahan modern (baitul mal), dan dikenal sangat tegas melawan kezaliman."
+          },
+          {
+            title: "Usman bin Affan",
+            content: "Khalifah ketiga yang dijuluki Dzun Nurain (pemilik dua cahaya). Sahabat yang sangat kaya namun sangat dermawan.",
+            explanation: "Biografi: Menikahi dua putri Rasulullah (Ruqayyah dan Ummu Kultsum). Perjuangan: Membiayai sumur Rum yang sangat mahal untuk umat, melengkapi pasukan Tabuk, dan membukukan Al-Qur'an menjadi standar Mushaf Usmani."
+          },
+          {
+            title: "Ali bin Abi Thalib",
+            content: "Khalifah keempat, sepupu sekaligus menantu Rasulullah. Pintu ilmu dan pemberani di medan perang.",
+            explanation: "Biografi: Orang pertama dari kalangan anak-anak yang masuk Islam. Perjuangan: Tidur di ranjang Nabi saat malam hijrah untuk mengelabui kafir Quraisy, menjadi panglima di setiap perang, dan menjaga integritas ilmu umat."
+          }
+        ]
+      },
+      {
+        title: "Sahabat yang Dijamin Masuk Surga (Lainnya)",
+        content: "Tokoh-tokoh mulia yang disebutkan langsung kesuciannya oleh Rasulullah.",
+        subsections: [
+          {
+            title: "Thalhah bin Ubaidillah",
+            content: "Burung elang Uhud yang melindungi Rasulullah dengan tangannya hingga cacat.",
+            explanation: "Biografi: Pedagang sukses yang menginfakkan hartanya di jalan Allah. Perjuangan: Menjadi perisai hidup bagi Rasulullah di perang Uhud hingga menderita puluhan luka tusukan."
+          },
+          {
+            title: "Az-Zubair bin Al-Awwam",
+            content: "Hawari (pengawal setia) Rasulullah SAW.",
+            explanation: "Biografi: Orang pertama yang menghunus pedang di jalan Allah saat mendengar isu Nabi wafat. Perjuangan: Selalu berada di barisan terdepan dalam setiap peperangan Islam."
+          },
+          {
+            title: "Abdurrahman bin Auf",
+            content: "Sahabat paling kaya namun sangat rendah hati dan dermawan.",
+            explanation: "Biografi: Berhijrah ke Madinah tanpa membawa apa-apa, mulai dari pasar hingga menjadi jutawan kembali. Perjuangan: Menginfakkan ratusan unta beserta muatannya untuk penduduk Madinah yang kelaparan."
+          },
+          {
+            title: "Sa'ad bin Abi Waqqash",
+            content: "Orang pertama yang melepaskan anak panah di jalan Allah.",
+            explanation: "Biografi: Paman Rasulullah dari garis ibu. Perjuangan: Panglima perang Qadisiyah yang menaklukkan Persia, dikenal sebagai mustajab doanya."
+          },
+          {
+            title: "Said bin Zaid",
+            content: "Sahabat yang doanya mengguncang dunia.",
+            explanation: "Biografi: Adik ipar Umar bin Khattab, termasuk golongan awal masuk Islam. Perjuangan: Mengabdikan seluruh hidupnya untuk dakwah tanpa pamrih kekuasaan."
+          },
+          {
+            title: "Abu Ubaidah bin Al-Jarrah",
+            content: "Aminu hadzihil Ummah (Kepercayaan umat ini).",
+            explanation: "Biografi: Panglima perang yang sangat rendah hati. Perjuangan: Memimpin pasukan di Syam dan memilih hidup sederhana hingga wafatnya karena wabah thun."
+          }
+        ]
+      },
+      {
+        title: "Sahabatiat (Wanita Mulia)",
+        content: "Para pejuang wanita di masa awal Islam.",
+        subsections: [
+          {
+            title: "Khadijah binti Khuwailid",
+            content: "Istri pertama Rasulullah SAW dan orang pertama yang masuk Islam.",
+            explanation: "Biografi: Seorang pengusaha sukses di Makkah. Perjuangan: Mengorbankan seluruh harta kekayaannya untuk mendukung dakwah Nabi di saat-saat tersulit."
+          },
+          {
+            title: "Aisyah binti Abu Bakar",
+            content: "Ibu guru kaum muslimin (Ummul Mukminin).",
+            explanation: "Biografi: Putri Abu Bakar yang cerdas. Perjuangan: Mengajarkan ribuan hadits kepada umat Islam, menjadi rujukan ilmu setelah wafatnya Nabi."
+          },
+          {
+            title: "Fathimah Az-Zahra",
+            content: "Putri kesayangan Rasulullah SAW dan pemimpin wanita di surga.",
+            explanation: "Biografi: Putri bungsu Nabi, istri Ali bin Abi Thalib. Perjuangan: Sabar mendampingi Nabi saat disakiti kaum kafir, hidup sangat sederhana namun penuh keberkahan."
+          },
+          {
+            title: "Sumayyah binti Khayyat",
+            content: "Syahidah (wanita syahid) pertama dalam Islam.",
+            explanation: "Biografi: Ibu dari Ammar bin Yasir. Perjuangan: Teguh mempertahankan tauhid meski disiksa dengan kejam oleh Abu Jahl hingga nyawanya melayang."
+          },
+          {
+            title: "Nusaibah binti Ka'ab (Ummu Umarah)",
+            content: "Perisai hidup Rasulullah di perang Uhud.",
+            explanation: "Biografi: Seorang wanita Ansar. Perjuangan: Memanggul senjata dan mendapatkan belasan luka demi melindungi tubuh Nabi dari serangan musuh."
+          }
+        ]
+      },
+      {
+        title: "Ahli Al-Qur'an & Ilmu",
+        content: "Para sahabat yang menjadi rujukan dalam ilmu syariah.",
+        subsections: [
+          {
+            title: "Abdullah bin Abbas",
+            content: "Turjumanul Qur'an (Penerjemah Al-Qur'an).",
+            explanation: "Biografi: Sepupu Nabi yang doanya diberkahi Allah untuk memahami ta'wil. Perjuangan: Menjadi samudera ilmu bagi umat Islam lintas generasi."
+          },
+          {
+            title: "Abdullah bin Mas'ud",
+            content: "Sahabat yang paling mirip suaranya dengan Nabi saat membaca Al-Qur'an.",
+            explanation: "Biografi: Bekas penggembala kambing yang menjadi ulama besar. Perjuangan: Orang pertama yang berani melantuntkan Al-Qur'an secara terang-terangan di depan Ka'bah."
+          },
+          {
+            title: "Mu'adz bin Jabal",
+            content: "Imam para Ulama di hari kiamat.",
+            explanation: "Biografi: Sangat paham tentang halal dan haram. Perjuangan: Diutus Nabi ke Yaman sebagai hakim dan guru pertama untuk mengajarkan Islam."
+          },
+          {
+            title: "Zaid bin Tsabit",
+            content: "Penulis wahyu dan ahli waris.",
+            explanation: "Biografi: Pemuda cerdas yang menguasai berbagai bahasa asing dalam waktu singkat. Perjuangan: Ketua tim pengumpul dan pembukuan Al-Qur'an di masa Abu Bakar dan Usman."
+          },
+          {
+            title: "Ubay bin Ka'ab",
+            content: "Sayyidul Qurra (Pemimpin para pembaca Al-Qur'an).",
+            explanation: "Biografi: Salah satu penulis wahyu terbaik. Perjuangan: Menjadi rujukan utama sahabat lain dalam hal bacaan (qira'ah) Al-Qur'an."
+          }
+        ]
+      },
+      {
+        title: "Panglima & Ksatria Islam",
+        content: "Para pembela Islam di medan jihad.",
+        subsections: [
+          {
+            title: "Khalid bin Walid",
+            content: "Saifullah Al-Maslul (Pedang Allah yang Terhunus).",
+            explanation: "Biografi: Panglima perang tak terkalahkan yang memimpin ratusan pertempuran. Perjuangan: Kunci kemenangan di perang Yamamah dan Yarmuk, menghabiskan seluruh hidupnya demi kejayaan Islam."
+          },
+          {
+            title: "Hamzah bin Abdul Muthalib",
+            content: "Asadullah (Singa Allah) dan Sayyidus Syuhada.",
+            explanation: "Biografi: Paman tercinta Rasulullah SAW yang gagah perkasa. Perjuangan: Menjadi pembela utama Nabi di Makkah dan gugur syahid di perang Uhud dengan sangat mulia."
+          },
+          {
+            title: "Ja'far bin Abi Thalib",
+            content: "Abul Masakin (Bapak orang miskin) dan At-Thayyar (yang terbang dengan dua sayap di surga).",
+            explanation: "Biografi: Kakak Ali bin Abi Thalib. Perjuangan: Memimpin hijrah ke Habasyah dan gugur syahid di perang Mu'tah setelah kedua tangannya putus menjaga bendera tauhid."
+          },
+          {
+            title: "Amru bin Ash",
+            content: "Sang Penakluk Mesir.",
+            explanation: "Biografi: Seorang diplomat ulung yang sangat cerdas. Perjuangan: Membawa cahaya Islam ke bumi Mesir dan membangun peradaban Islam yang kuat di sana."
+          },
+          {
+            title: "Ikrimah bin Abu Jahl",
+            content: "Putra musuh Islam yang menjadi pahlawan Islam.",
+            explanation: "Biografi: Putra Abu Jahl yang awalnya sangat membenci Islam. Perjuangan: Setelah masuk Islam, ia menebus masa lalunya dengan menjadi pejuang paling tangguh di barisan depan perang Yarmuk."
+          }
+        ]
+      },
+      {
+        title: "Ahli Ibadah & Pecinta Nabi",
+        content: "Sahabat yang dikenal dengan kedekatannya secara spiritual dengan Rasulullah.",
+        subsections: [
+          {
+            title: "Bilal bin Rabah",
+            content: "Muazin Rasulullah SAW.",
+            explanation: "Biografi: Budak dari Habasyah yang dimerdekakan Abu Bakar. Perjuangan: Tetap berteriak 'Ahad! Ahad!' meski ditindih batu panas, suaranya menjadi penyejuk hati umat di setiap waktu shalat."
+          },
+          {
+            title: "Salman Al-Farisi",
+            content: "Pencari kebenaran dari Persia.",
+            explanation: "Biografi: Anak pembesar Majusi yang berkelana mencari Nabi terakhir. Perjuangan: Memberikan ide cerdas membangun parit (Khandaq) yang menyelamatkan Madinah dari kehancuran."
+          },
+          {
+            title: "Abu Hurairah",
+            content: "Sahabat yang paling banyak meriwayatkan hadits.",
+            explanation: "Biografi: Penghuni Shuffah (terras masjid) yang hidup sangat sederhana. Perjuangan: Mengabdikan seluruh waktunya untuk menemani dan menghafal setiap sabda Nabi demi terjaganya ilmu."
+          },
+          {
+            title: "Abdullah bin Umar",
+            content: "Peniru setia jejak langkah Rasulullah SAW.",
+            explanation: "Biografi: Putra Umar bin Khattab. Perjuangan: Sangat teliti dalam mengikuti setiap sunnah Nabi, bahkan dalam cara berjalan dan duduk, menjadi teladan bagi ahli ibadah."
+          },
+          {
+            title: "Anas bin Malik",
+            content: "Pelayan setia Rasulullah SAW selama 10 tahun.",
+            explanation: "Biografi: Memulai khidmahnya saat masih kecil hingga Nabi wafat. Perjuangan: Menjadi saksi kunci kehidupan pribadi Nabi dan meneruskan kasih sayang Nabi lewat pengajaran ilmu."
+          }
+        ]
+      },
+      {
+        title: "Pemuka Kaum Ansar",
+        content: "Para penduduk Madinah yang menolong kaum Muhajirin.",
+        subsections: [
+          {
+            title: "Sa'ad bin Mu'adz",
+            content: "Sahabat yang kematiannya membuat Arasy Allah berguncang.",
+            explanation: "Biografi: Pemimpin suku Aus yang masuk Islam di tangan Mush'ab bin Umair. Perjuangan: Menjadi pembela utama Nabi di Madinah dan penentu keputusan adil dalam perang Ahzab."
+          },
+          {
+            title: "Sa'ad bin Ubadah",
+            content: "Pemimpin suku Khazraj yang sangat dermawan.",
+            explanation: "Biografi: Pemimpin Ansar yang selalu menyediakan makanan bagi tamu dan nabi. Perjuangan: Menyerahkan seluruh pengaruh dan kekuatannya demi kejayaan Islam di Madinah."
+          },
+          {
+            title: "Abu Ayyub Al-Anshari",
+            content: "Tuan rumah Rasulullah SAW saat pertama kali tiba di Madinah.",
+            explanation: "Biografi: Rumahnya terpilih menjadi tempat singgah Nabi. Perjuangan: Terus berjihad hingga usia senja, bahkan makamnya berada di Konstantinopel karena cita-citanya membebaskan kota tersebut."
+          },
+          {
+            title: "Usaid bin Hudhair",
+            content: "Sahabat yang bacaan Al-Qur'annya didengar oleh malaikat.",
+            explanation: "Biografi: Memiliki suara yang sangat merdu saat melantunkan wahyu. Perjuangan: Salah satu tokoh penting yang memfasilitasi konversi besar-besaran penduduk Madinah ke Islam."
+          },
+          {
+            title: "Abdurrahman bin Zaid",
+            content: "Salah satu tokoh Ansar yang taat.",
+            explanation: "Biografi: Penduduk Madinah yang setia. Perjuangan: Membantu dakwah di Madinah dengan tulus ikhlas."
+          }
+        ]
+      },
+      {
+        title: "Duta & Diplomat Islam",
+        content: "Para sahabat yang menjadi penyambung lidah dakwah ke berbagai negeri.",
+        subsections: [
+          {
+            title: "Mush'ab bin Umair",
+            content: "Duta Islam pertama (The First Teacher).",
+            explanation: "Biografi: Pemuda bangsawan paling tampan dan kaya di Makkah yang meninggalkan segalanya demi Islam. Perjuangan: Mengislamkan Madinah sendirian sebelum Nabi hijrah, gugur syahid di Uhud dengan kain kafan yang tidak cukup menutupi tubuhnya."
+          },
+          {
+            title: "Dihyah Al-Kalbi",
+            content: "Sahabat yang wajahnya seringkali dipinjam oleh Malaikat Jibril saat menemui Nabi.",
+            explanation: "Biografi: Pria yang sangat rupawan. Perjuangan: Menjadi utusan Nabi mengirimkan surat dakwah kepada Kaisar Heraklius dari Romawi."
+          },
+          {
+            title: "Thumamah bin Utsal",
+            content: "Pemimpin Yamamah yang masuk Islam karena terpesona akhlak Nabi.",
+            explanation: "Biografi: Awalnya ditawan di masjid, kemudian jatuh cinta pada Islam. Perjuangan: Menjadi pembela tegar saat munculnya nabi palsu Musailamah Al-Kadzab."
+          },
+          {
+            title: "Abdullah bin Hudzafah",
+            content: "Sahabat yang mencium kening Raja Romawi demi membebaskan tawanan muslim.",
+            explanation: "Biografi: Seorang diplomat yang sangat pemberani. Perjuangan: Teguh pada imannya meski diancam disiksa dalam kuali panas oleh kaisar Romawi, hingga kaisar pun kagum padanya."
+          },
+          {
+            title: "Hatib bin Abi Balta'ah",
+            content: "Utusan Nabi ke Mesir (Muqauqis).",
+            explanation: "Biografi: Diplomat yang cakap. Perjuangan: Membuka komunikasi dengan pemimpin Mesir yang kemudian memberikan hadiah-hadiah mulia termasuk Maria al-Qibthiyah kepada Nabi."
+          }
+        ]
+      },
+      {
+        title: "Penyair & Sastrawan Islam",
+        content: "Para pembela Islam lewat bait-bait syair yang tajam.",
+        subsections: [
+          {
+            title: "Hassan bin Tsabit",
+            content: "Penyair Rasulullah SAW.",
+            explanation: "Biografi: Memiliki lisan yang sangat tajam bagi musuh Islam. Perjuangan: Membela kehormatan Nabi lewat syair-syairnya yang membuat nyali kafir Quraisy ciut."
+          },
+          {
+            title: "Abdullah bin Rawahah",
+            content: "Penyair yang syahid di medan Mu'tah.",
+            explanation: "Biografi: Salah satu dari tiga komandan di perang Mu'tah. Perjuangan: Membakar semangat pasukan muslim lewat lantunan syair-syair tauhidnya di medan perang."
+          },
+          {
+            title: "Ka'ab bin Malik",
+            content: "Sahabat yang taubatnya diterima langsung oleh Allah.",
+            explanation: "Biografi: Sempat tidak ikut perang Tabuk tanpa alasan syar'i. Perjuangan: Setelah bertaubat sungguh-sungguh, ia mengabdikan seluruh bakat sastra dan seninya hanya untuk membela Islam."
+          },
+          {
+            title: "Ka'ab bin Zuhair",
+            content: "Penyair yang dihadiahi burdah (jubah) oleh Nabi.",
+            explanation: "Biografi: Awalnya memusuhi Nabi lewat syairnya. Perjuangan: Setelah masuk Islam, ia menggubah syair 'Banat Su'ad' yang sangat indah memuji Nabi hingga dicintai kaum muslimin."
+          }
+        ]
+      },
+      {
+        title: "Pelayan & Sahabat Setia",
+        content: "Mereka yang mendedikasikan hidupnya untuk melayani keperluan harian Nabi.",
+        subsections: [
+          {
+            title: "Rabi'ah bin Ka'ab",
+            content: "Sahabat yang minta menemani Nabi di surga.",
+            explanation: "Biografi: Selalu menyiapkan air wudhu Nabi. Perjuangan: Ketekunannya melayani Nabi dibalas dengan doa Nabi agar ia bisa bersamanya di derajat tertinggi surga."
+          },
+          {
+            title: "Zaid bin Haritsah",
+            content: "Sahabat yang namanya disebutkan dalam Al-Qur'an (Habibu Rasulillah).",
+            explanation: "Biografi: Mantan budak yang diangkat anak oleh Nabi. Perjuangan: Komandan perang yang sangat dicintai dan gugur syahid di medan Mu'tah demi berkibarnya bendera Islam."
+          },
+          {
+            title: "Usamah bin Zaid",
+            content: "Panglima muda kesayangan Rasulullah.",
+            explanation: "Biografi: Putra Zaid bin Haritsah. Perjuangan: Di usia 18 tahun sudah dipercaya Nabi memimpin pasukan besar yang di dalamnya ada Umar dan Abu Bakar untuk melawan Romawi."
+          },
+          {
+            title: "Abu Bakrah",
+            content: "Sahabat yang turun dari benteng Thaif dengan katrol.",
+            explanation: "Biografi: Budak yang dimerdekakan setelah masuk Islam. Perjuangan: Menjadi perawi hadits yang sangat jujur dan menjaga kemashlahatan umat dengan menjauhi fitnah."
+          },
+          {
+            title: "Abdullah bin Ummi Maktum",
+            content: "Muazin buta yang sangat dicintai Nabi.",
+            explanation: "Biografi: Saudara sepupu Khadijah yang kehilangan penglihatan. Perjuangan: Tetap ikut berjihad di perang Qadisiyah memegang bendera meski buta, demi mendapatkan kemuliaan syahid."
+          }
+        ]
+      },
+      {
+        title: "Pemilik Sifat & Karunia Unik",
+        content: "Sahabat yang memiliki kelebihan khusus dari Allah.",
+        subsections: [
+          {
+            title: "Julaybib",
+            content: "Sahabat yang kurang secara fisik namun sangat dicintai Allah dan Rasul-Nya.",
+            explanation: "Biografi: Seorang pemuda yang terasing. Perjuangan: Gugur syahid setelah membunuh 7 musuh sendirian, jenazahnya dipangku langsung oleh Rasulullah SAW sebagai bukti kemuliaannya."
+          },
+          {
+            title: "Ukasyah bin Mihshan",
+            content: "Sahabat yang masuk surga tanpa hisab.",
+            explanation: "Biografi: Pria yang memiliki keteguhan iman luar biasa. Perjuangan: Selalu sigap meminta doa Nabi agar menjadi golongan yang masuk surga tanpa perhitungan amal."
+          },
+          {
+            title: "Hanzhalah bin Abi Amir",
+            content: "Sahabat yang jenazahnya dimandikan oleh Malaikat.",
+            explanation: "Biografi: Pengantin baru yang langsung berjihad. Perjuangan: Meninggalkan pelaminan demi panggilan jihad Uhud dan gugur dalam keadaan junub hingga malaikat turun memandikannya."
+          },
+          {
+            title: "Amr bin Al-Jamuh",
+            content: "Sahabat pincang yang ingin menginjak surga dengan kakinya yang pincang.",
+            explanation: "Biografi: Orang tua yang memiliki tekad baja. Perjuangan: Memaksa ikut perang Uhud meski dilarang anaknya, gugur syahid demi membuktikan cintanya pada Islam."
+          },
+          {
+            title: "Zaid bin Tsabit (Mufassir)",
+            content: "Akar ilmu waris dan bahasa.",
+            explanation: "Biografi: Pemuda Madinah yang sangat jenius. Perjuangan: Menguasai bahasa Yahudi dan Suryani dalam hitungan minggu demi menjadi sekretaris pribadi Nabi."
+          },
+          {
+            title: "Umar bin Abdul Aziz (Penerus)",
+            content: "Meski generasi setelahnya, ruh kepemimpinannya seperti sahabat.",
+            explanation: "Biografi: Cicit Umar bin Khattab. Perjuangan: Mengembalikan kejayaan keadilan Islam di masa Umayyah sebanding dengan masa Rashidun."
+          }
+        ]
+      },
+      {
+        title: "Sahabat di Masa Sulit (Makkah)",
+        content: "Mereka yang merasakan pahitnya siksaan di awal Islam.",
+        subsections: [
+          {
+            title: "Ammar bin Yasir",
+            content: "Sahabat yang syahid di jalan kebenaran.",
+            explanation: "Biografi: Keluarganya disiksa habis-habisan oleh Quraisy. Perjuangan: Tetap teguh memegang Islam meski dipaksa keluar, menjadi saksi gugurnya kedua orang tuanya demi iman."
+          },
+          {
+            title: "Khabbab bin Al-Arat",
+            content: "Sahabat yang punggungnya diseterika dengan besi panas.",
+            explanation: "Biografi: Seorang tukang besi yang masuk Islam. Perjuangan: Kesabarannya dalam menghadapi siksaan berat menjadi penguat bagi sahabat lain di masa Makkah."
+          },
+          {
+            title: "Bilal bin Rabah (Makkah)",
+            content: "Lambang kekuatan tauhid.",
+            explanation: "Biografi: Budak Umayyah bin Khalaf. Perjuangan: Tetap konsisten mengucapkan 'Ahad' meskipun jiwanya terancam oleh siksaan tuannya sendiri."
+          },
+          {
+            title: "Utsman bin Mazh'un",
+            content: "Sahabat ahli ibadah yang zuhud.",
+            explanation: "Biografi: Saudara sepersusuan Nabi. Perjuangan: Menjadi pionir hijrah pertama ke Habasyah demi menyelamatkan akidah umat dari penindasan."
+          },
+          {
+            title: "Mus'ab bin Umair (Makkah)",
+            content: "Sang bangsawan yang memilih kemiskinan demi Islam.",
+            explanation: "Biografi: Pemuda paling rapi di Makkah. Perjuangan: Menghadapi boikot ibunya sendiri demi mempertahankan keislamannya hingga ia diutus menjadi guru di Madinah."
+          }
+        ]
+      }
+    ]
   }
 ];
