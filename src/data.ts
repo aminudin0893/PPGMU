@@ -2611,22 +2611,22 @@ export const TOPICS: Topic[] = [
           {
             title: "Zainab binti Khuzaimah",
             content: "Dijuluki 'Ummul Masakin' (Ibu para orang miskin) karena kedermawanannya.",
-            explanation: "Wafat hanya beberapa bulan setelah menikah dengan Nabi."
+            explanation: "Wafat hanya beberapa bulan setelah menikah with Nabi."
           },
           {
             title: "Ummu Salamah (Hindun binti Abi Umayyah)",
-            content: "Dikenal karena kecerdasan dan pendapatnya yang bijak saat perjanjian Hudaibiyah.",
+            content: "Dikenal karena kecerdasan and pendapatnya yang bijak saat perjanjian Hudaibiyah.",
             explanation: "Istri yang paling terakhir wafat di antara Ummul Mukminin."
           },
           {
             title: "Zainab binti Jahsy",
-            content: "Sepupu Nabi, dikenal karena kerajinan tangannya dan sering bersedekah dari hasil usahanya.",
+            content: "Sepupu Nabi, dikenal karena kerajinan tangannya and sering bersedekah dari hasil usahanya.",
             explanation: "Allah sendiri yang menikahkan beliau dengan Nabi melalui wahyu (Surah Al-Ahzab)."
           },
           {
             title: "Juwairiyah binti Al-Harits",
             content: "Membawa keberkahan bagi kaumnya (Bani Mustaliq) yang semuanya masuk Islam setelah ia dinikahi Nabi.",
-            explanation: "Termasuk tawanan perang yang kemudian dimerdekakan dan dinikahi."
+            explanation: "Termasuk tawanan perang yang kemudian dimerdekakan and dinikahi."
           },
           {
             title: "Ummu Habibah (Ramlah binti Abi Sufyan)",
@@ -2636,7 +2636,7 @@ export const TOPICS: Topic[] = [
           {
             title: "Shafiyah binti Huyay",
             content: "Keturunan Nabi Harun AS, menunjukkan bahwa Islam merangkul semua latar belakang.",
-            explanation: "Nabi bersabda kepadanya: 'Ayahmu adalah nabi (Harun) dan pamanmu nabi (Musa).'"
+            explanation: "Nabi bersabda kepadanya: 'Ayahmu adalah nabi (Harun) and pamanmu nabi (Musa).'"
           },
           {
             title: "Maimunah binti Al-Harits",
@@ -2662,6 +2662,61 @@ export const TOPICS: Topic[] = [
           { title: "Abdullah", content: "Dijuluki At-Thayyib dan At-Thahir. Wafat saat masih kanak-kanak." },
           { title: "Ibrahim", content: "Putra dari Maria Al-Qibthiyah, lahir di Madinah dan wafat saat masih bayi." }
         ]
+      }
+    ]
+  },
+  {
+    id: "kamus-arab",
+    title: "Kamus Bahasa Arab & Bilangan",
+    category: ModuleCategory.KAMUS_ARAB,
+    summary: "Panduan kosa kata tematik, percakapan harian, dan sistem bilangan Arab dari 1 hingga 1.000.000 dengan harakat.",
+    sections: [
+      {
+        title: "Percakapan Arab ( المُحَادَثَةُ العَرَبِيَّةُ )",
+        content: "Contoh percakapan sehari-hari dengan harakat dan terjemahan untuk melatih kelancaran lisan.",
+        subsections: [
+          { 
+            title: "Perkenalan ( التَّعَارُفُ )", 
+            content: "أَهْلًا وَسَهْلًا (Ahlan wa Sahlan) - Selamat Datang | أَهْلًا بِكَ (Ahlan bika) - Selamat Datang Juga | كَيْفَ حَالُكَ؟ (Kaifa Haaluka?) - Apa Kabarmu? | أَنَا بِخَيْرٍ (Ana bi-Khairin) - Saya Baik | مَا اسْمُكَ؟ (Ma Ismuka?) - Siapa Namamu? | اِسْمِيْ مُحَمَّد (Ismii Muhammad) - Namaku Muhammad" 
+          },
+          { 
+            title: "Di Sekolah ( فِي المَدْرَسَةِ )", 
+            content: "مَاذَا تَعْمَلُ؟ (Maadza Ta'malu?) - Apa yang sedang kamu kerjakan? | أَنَا أَقْرَأُ الكِتَابَ (Ana Aqra'u al-Kitaab) - Saya sedang membaca buku | أَيْنَ الفَصْلُ؟ (Ainal Fashlu?) - Di mana kelasnya? | الفَصْلُ هُنَاكَ (al-Fashlu hunaaka) - Kelasnya di sana | عَفْوًا (Afwan) - Sama-sama/Maaf | شُكْرًا (Syukran) - Terima kasih" 
+          },
+          {
+            title: "Di Rumah ( فِي البَيْتِ )",
+            content: "أَيْنَ تَسْكُنُ؟ (Aina Taskunu?) - Di mana kamu tinggal? | أَسْكُنُ فِي مَجَالِينْكَا (Askun fii Majalengka) - Saya tinggal di Majalengka | مَتَى تَنَامُ؟ (Mata Tanaamu?) - Kapan kamu tidur? | أَنَامُ فِي السَّاعَةِ التَّاسِعَةِ لَيْلًا (Anaamu fis-saa'atit-taasi'ati lailan) - Saya tidur jam 9 malam"
+          }
+        ]
+      },
+      {
+        title: "Bilangan 1 - 20 ( الأَرْقَامُ )",
+        content: "Dasar-dasar angka dalam bahasa Arab lengkap dengan harakat.",
+        subsections: [
+          { title: "1 - 10", content: "1: وَاحِدٌ (Waahid) | 2: اِثْنَانِ (Itsnaan) | 3: ثَلَاثَةٌ (Thalaathah) | 4: أَرْبَعَةٌ (Arba'ah) | 5: خَمْسَةٌ (Khamsah) | 6: سِتَّةٌ (Sittah) | 7: سَبْعَةٌ (Sab'ah) | 8: ثَمَانِيَةٌ (Thamaaniyah) | 9: تِسْعَةٌ (Tis'ah) | 10: عَشَرَةٌ (Asyarah)" },
+          { title: "11 - 20", content: "11: أَحَدَ عَشَرَ (Ahada 'Asyar) | 12: اِثْنَا عَشَرَ (Itsnaa 'Asyar) | 13: ثَلَاثَةَ عَشَرَ (Thalaathata 'Asyar) | 14: أَرْبَعَةَ عَشَرَ (Arba'ata 'Asyar) | 15: خَمْسَةَ عَشَرَ (Khamsata 'Asyar) | 16: سِتَّةَ عَشَرَ (Sittata 'Asyar) | 17: سَبْعَةَ عَشَرَ (Sab'ata 'Asyar) | 18: ثَمَانِيَةَ عَشَرَ (Thamaaniyata 'Asyar) | 19: تِسْعَةَ عَشَرَ (Tis'ata 'Asyar) | 20: عِشْرُوْنَ ('Isyruun)" }
+        ]
+      },
+      {
+        title: "Bilangan Puluhan & Ratusan",
+        content: "Pola pembentukan angka puluhan dan ratusan.",
+        subsections: [
+          { title: "Puluhan (20 - 90)", content: "30: ثَلَاثُوْنَ (Thalaathuun) | 40: أَرْبَعُوْنَ (Arba'uun) | 50: خَمْسُوْنَ (Khamsuun) | 60: سِتُّوْنَ (Sittuun) | 70: سَبْعُوْنَ (Sab'uun) | 80: ثَمَانُوْنَ (Thamaanuun) | 90: تِسْعُوْنَ (Tis'uun)" },
+          { title: "Ratusan (100 - 900)", content: "100: مِائَةٌ (Mi'ah) | 200: مِائَتَانِ (Mi'ataan) | 300: ثَلَاثُ مِائَةٍ (Thalaathu Mi'ah) | 400: أَرْبَعُ مِائَةٍ (Arba'u Mi'ah) | 500: خَمْسُ مِائَةٍ (Khamsu Mi'ah) | 1000: أَلْفٌ (Alf)" }
+        ]
+      },
+      {
+        title: "Bilangan Besar (Ribuan - Jutaan)",
+        content: "Sistem bilangan untuk jumlah yang sangat besar hingga satu juta.",
+        subsections: [
+          { title: "Ribuan (1.000 - 9.000)", content: "1.000: أَلْفٌ (Alf) | 2.000: أَلْفَانِ (Alfaan) | 3.000: ثَلَاثَةُ آلَافٍ (Thalaathatu Aalaaf) | 5.000: خَمْسَةُ آلَافٍ (Khamsatu Aalaaf) | 10.000: عَشَرَةُ آلَافٍ (Asyaratu Aalaaf)" },
+          { title: "Puluhan & Ratusan Ribu", content: "20.000: عِشْرُوْنَ أَلْفًا (Isyruuna Alfan) | 50.000: خَمْسُوْنَ أَلْفًا (Khamsuuna Alfan) | 100.000: مِائَةُ أَلْفٍ (Mi'atu Alfin) | 500.000: خَمْسُ مِائَةِ أَلْفٍ (Khamsu Mi'ati Alfin)" },
+          { title: "Jutaan (1.000.000)", content: "1.000.000: مِلْيُوْنٌ (Milyuun) | Satu Juta Rupiah: مِلْيُوْنُ رُوْبِيَّةٍ (Milyuunu Ruubiyyah)" }
+        ],
+        visualization: {
+          type: 'workflow',
+          data: ["1: وَاحِدٌ", "10: عَشَرَةٌ", "100: مِائَةٌ", "1.000: أَلْفٌ", "1.000.000: مِلْيُوْنٌ"]
+        }
       }
     ]
   }

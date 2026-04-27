@@ -410,7 +410,16 @@ const App = () => {
       const matchesSearch =
         t.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         t.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        t.sections.some(s => s.content.toLowerCase().includes(searchQuery.toLowerCase()));
+        (t.readingMaterial && t.readingMaterial.toLowerCase().includes(searchQuery.toLowerCase())) ||
+        t.sections.some(s => 
+          s.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          s.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          s.subsections.some(ss => 
+            ss.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            ss.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            (ss.explanation && ss.explanation.toLowerCase().includes(searchQuery.toLowerCase()))
+          )
+        );
 
       const matchesCategory =
         selectedCategory === 'Dashboard' || t.category === selectedCategory;
@@ -436,6 +445,7 @@ const App = () => {
     kodeEtik: TOPICS.filter(t => t.category === ModuleCategory.KODE_ETIK_GURU).length,
     sahabat: TOPICS.filter(t => t.category === ModuleCategory.SAHABAT).length,
     keluargaNabi: TOPICS.filter(t => t.category === ModuleCategory.KELUARGA_NABI).length,
+    kamusArab: TOPICS.filter(t => t.category === ModuleCategory.KAMUS_ARAB).length,
     quizCount: 200
   };
 
@@ -455,6 +465,7 @@ const App = () => {
     { label: 'Asmaul Husna', icon: Heart, val: ModuleCategory.ASMAUL_HUSNA, stat: stats.asmaulHusna },
     { label: '200 Sahabat', icon: Users, val: ModuleCategory.SAHABAT, stat: stats.sahabat },
     { label: 'Keluarga Nabi', icon: Heart, val: ModuleCategory.KELUARGA_NABI, stat: stats.keluargaNabi },
+    { label: 'Kamus Arab', icon: BookOpen, val: ModuleCategory.KAMUS_ARAB, stat: stats.kamusArab },
     { label: 'Kode Etik Guru', icon: Shield, val: ModuleCategory.KODE_ETIK_GURU, stat: stats.kodeEtik },
   ];
 
@@ -473,6 +484,7 @@ const App = () => {
     { name: 'Asmaul Husna', icon: '📿', color: '#FFF1F2', val: ModuleCategory.ASMAUL_HUSNA, detail: `${stats.asmaulHusna} Nama Allah` },
     { name: '200 Sahabat', icon: '👥', color: '#FDF4FF', val: ModuleCategory.SAHABAT, detail: `${stats.sahabat} Kisah Teladan` },
     { name: 'Keluarga Nabi', icon: '🕌', color: '#F0FDF4', val: ModuleCategory.KELUARGA_NABI, detail: `${stats.keluargaNabi} Silsilah Mulia` },
+    { name: 'Kamus Arab', icon: '🗣️', color: '#FFFBEB', val: ModuleCategory.KAMUS_ARAB, detail: `${stats.kamusArab} Kosa Kata & Angka` },
     { name: 'Kode Etik', icon: '🛡️', color: '#F0F9FF', val: ModuleCategory.KODE_ETIK_GURU, detail: `${stats.kodeEtik} Pedoman Guru` },
   ];
 
@@ -725,7 +737,11 @@ const App = () => {
                     </h2>
                   </div>
                   <p className="text-slate-500 font-medium">
-                    {activeQuizType ? `Total ${QUIZ_DATA.filter(q => q.type === activeQuizType).length} Soal` : '100 Soal PG & 100 Soal Essay Terintegrasi'}
+                    {activeQuizType ? (
+                      searchQuery 
+                        ? `Ditemukan ${QUIZ_DATA.filter(q => q.type === activeQuizType && (q.question.toLowerCase().includes(searchQuery.toLowerCase()) || q.explanation.toLowerCase().includes(searchQuery.toLowerCase()))).length} Soal`
+                        : `Total ${QUIZ_DATA.filter(q => q.type === activeQuizType).length} Soal`
+                    ) : '100 Soal PG & 100 Soal Essay Terintegrasi'}
                   </p>
                 </div>
               </div>
@@ -762,7 +778,15 @@ const App = () => {
                 </div>
               ) : (
                 <div className="space-y-4">
-                  {QUIZ_DATA.filter(q => q.type === activeQuizType).map((quiz, idx) => (
+                  {QUIZ_DATA.filter(q => 
+                    q.type === activeQuizType && 
+                    (searchQuery === '' || 
+                     q.question.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                     q.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                     q.explanation.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                     (q.options && q.options.some(opt => opt.toLowerCase().includes(searchQuery.toLowerCase())))
+                    )
+                  ).map((quiz, idx) => (
                     <div key={quiz.id} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
                       <div className="flex justify-between items-start">
                         <span className="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-[10px] font-black uppercase tracking-widest border border-slate-200">
