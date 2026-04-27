@@ -450,7 +450,7 @@ const App = () => {
     { label: 'Hijriyah', icon: Clock, val: ModuleCategory.HIJRIYAH, stat: stats.hijriyah },
     { label: '25 Nabi', icon: GraduationCap, val: ModuleCategory.PROPHETS, stat: stats.prophets },
     { label: '10 Malaikat', icon: Sparkles, val: ModuleCategory.ANGELS, stat: stats.angels },
-    { label: 'Rukun Iman & Islam', icon: Book, val: ModuleCategory.PILLARS, stat: stats.pillars },
+    { label: 'Rukun', icon: Book, val: ModuleCategory.PILLARS, stat: stats.pillars },
     { label: 'Asmaul Husna', icon: Heart, val: ModuleCategory.ASMAUL_HUSNA, stat: stats.asmaulHusna },
     { label: '200 Sahabat', icon: Users, val: ModuleCategory.SAHABAT, stat: stats.sahabat },
     { label: 'Kode Etik Guru', icon: Shield, val: ModuleCategory.KODE_ETIK_GURU, stat: stats.kodeEtik },
