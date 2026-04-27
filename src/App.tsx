@@ -440,11 +440,11 @@ const App = () => {
 
   const navItems = [
     { label: 'Dashboard', icon: LayoutDashboard, val: 'Dashboard' },
-    { label: "Arba'in Nawawi", icon: BookOpen, val: ModuleCategory.ARBAIN, stat: stats.arbain },
-    { label: 'Mahfudzat', icon: Quote, val: ModuleCategory.MAHFUDZAT, stat: stats.mahfudzat },
     { label: 'Profesional', icon: GraduationCap, val: ModuleCategory.PROFESIONAL, stat: stats.profesional },
     { label: 'Pedagogik', icon: Brain, val: ModuleCategory.PEDAGOGIK, stat: stats.pedagogik },
     { label: 'Perangkat', icon: Book, val: ModuleCategory.PERANGKAT, stat: stats.perangkat },
+    { label: "Arba'in Nawawi", icon: BookOpen, val: ModuleCategory.ARBAIN, stat: stats.arbain },
+    { label: 'Mahfudzat', icon: Quote, val: ModuleCategory.MAHFUDZAT, stat: stats.mahfudzat },
     { label: 'Parenting', icon: Heart, val: ModuleCategory.PARENTING, stat: stats.parenting },
     { label: 'Psikologi', icon: Brain, val: ModuleCategory.PSIKOLOGI, stat: stats.psikologi },
     { label: 'Hijriyah', icon: Clock, val: ModuleCategory.HIJRIYAH, stat: stats.hijriyah },
@@ -457,11 +457,11 @@ const App = () => {
   ];
 
   const categories = [
-    { name: "Arba'in", icon: '📚', color: '#F0FDFA', val: ModuleCategory.ARBAIN, detail: `${stats.arbain} Hadits Terbaik` },
-    { name: 'Mahfudzat', icon: '📜', color: '#FFF7ED', val: ModuleCategory.MAHFUDZAT, detail: `${stats.mahfudzat} Kata Mutiara` },
     { name: 'Profesional', icon: '📐', color: '#DCFCE7', val: ModuleCategory.PROFESIONAL, detail: `${stats.profesional} Materi PAI` },
     { name: 'Pedagogik', icon: '🧬', color: '#E0E7FF', val: ModuleCategory.PEDAGOGIK, detail: `${stats.pedagogik} Materi Utama` },
     { name: 'Perangkat', icon: '📂', color: '#FEF9C3', val: ModuleCategory.PERANGKAT, detail: `${stats.perangkat} Modul Belajar` },
+    { name: "Arba'in", icon: '📚', color: '#F0FDFA', val: ModuleCategory.ARBAIN, detail: `${stats.arbain} Hadits Terbaik` },
+    { name: 'Mahfudzat', icon: '📜', color: '#FFF7ED', val: ModuleCategory.MAHFUDZAT, detail: `${stats.mahfudzat} Kata Mutiara` },
     { name: 'Parenting', icon: '❤️', color: '#FDF2F8', val: ModuleCategory.PARENTING, detail: `${stats.parenting} Materi Keluarga` },
     { name: 'Psikologi', icon: '🧠', color: '#F3E8FF', val: ModuleCategory.PSIKOLOGI, detail: `${stats.psikologi} Teori & Praktik` },
     { name: 'Hijriyah', icon: '🌙', color: '#F0F9FF', val: ModuleCategory.HIJRIYAH, detail: `${stats.hijriyah} Kisah Bulan` },
