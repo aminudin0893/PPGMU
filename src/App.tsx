@@ -505,9 +505,9 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col md:grid md:grid-cols-[260px_1fr] grid-rows-[64px_1fr] h-screen w-full bg-slate-50 overflow-hidden font-sans">
+    <div className="flex flex-col h-screen w-full bg-slate-50 overflow-hidden font-sans">
       {/* Existing Header... */}
-      <header className="col-span-2 bg-white border-b border-slate-200 flex items-center px-4 md:px-6 justify-between z-40 h-16 shrink-0 shadow-sm sticky top-0">
+      <header className="w-full bg-white border-b border-slate-200 flex items-center px-4 md:px-6 justify-between z-40 h-16 shrink-0 shadow-sm">
         <div className="flex items-center gap-2 sm:gap-3">
           <button 
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -562,7 +562,8 @@ const App = () => {
 
 
 
-      {/* Sidebar Overlay */}
+      <div className="flex flex-1 overflow-hidden relative min-h-0">
+        {/* Sidebar Overlay */}
       <AnimatePresence>
         {isSidebarOpen && (
           <motion.div
@@ -611,7 +612,7 @@ const App = () => {
       </aside>
 
       {/* Main Content Area */}
-      <main className="p-4 md:p-8 overflow-y-auto flex-1 flex flex-col gap-6 md:gap-8 custom-scrollbar col-start-2 row-start-2 h-full lg:max-h-full">
+      <main className="p-4 md:p-8 pb-32 md:pb-40 overflow-y-auto flex-1 flex flex-col gap-6 md:gap-8 custom-scrollbar col-start-2 row-start-2 min-h-0 relative">
         {/* Mobile Search */}
         <div className="md:hidden relative group">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
@@ -1141,6 +1142,7 @@ const App = () => {
           </>
         )}
       </AnimatePresence>
+      </div>
     </div>
   );
 };
